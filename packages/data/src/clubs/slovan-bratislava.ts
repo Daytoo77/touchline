@@ -1,0 +1,143 @@
+// Slovan Bratislava: 2026-27 squad. Ratings are Touchline's own estimates from each player's level and role
+// (not taken from any game or ratings database). Generated from packages/data/scouting/slovan-bratislava.ts;
+// this file is now the source of truth: edit any number by hand (1-20), then run `npm run data:check`.
+import { defineClub } from '../define';
+
+export default defineClub({
+  id: 'slovan-bratislava',
+  name: "Slovan Bratislava",
+  shortName: "Slovan",
+  abbr: 'SLO',
+  country: 'SVK',
+  pot: 4,
+  kits: {
+    home: {"shirt":"#5ea9dd","trim":"#ffffff","pattern":"plain","shorts":"#ffffff","number":"#ffffff"},
+    away: {"shirt":"#1f2a44","trim":"#5ea9dd","pattern":"plain","shorts":"#1f2a44","number":"#ffffff"},
+    gk: {"shirt":"#f97316","trim":"#111111","pattern":"plain","shorts":"#111111","number":"#111111"},
+  },
+  defaultTactic: { formation: '4-2-3-1', instructions: {"mentality":0,"pressing":0,"line":0,"width":0,"tempo":0,"directness":0,"timeWasting":0} },
+  dataAsOf: '2026-11-03',
+  notes: "Squad pieced together from partial 2026-27 listings; shirt numbers, ages and exact positions are estimates for some players.",
+  players: [
+    {
+      id: 'slo-dominik-takac', name: "Dominik Takáč", number: 71, age: 26, nationality: 'SVK', positions: ['GK'], foot: 'R',
+      technical: { corners: 1, crossing: 1, dribbling: 2, finishing: 2, firstTouch: 12, freeKicks: 2, heading: 1, longShots: 1, marking: 1, passing: 6, penalties: 2, tackling: 2, technique: 5 },
+      mental: { aggression: 6, anticipation: 14, bravery: 13, composure: 14, concentration: 16, decisions: 13, determination: 13, flair: 1, leadership: 7, offTheBall: 2, positioning: 16, teamwork: 11, vision: 6, workRate: 6 },
+      physical: { acceleration: 6, agility: 15, balance: 11, jumping: 13, naturalFitness: 13, pace: 6, stamina: 7, strength: 12 },
+      goalkeeping: { aerialReach: 14, commandOfArea: 14, communication: 13, handling: 16, kicking: 9, oneOnOnes: 14, reflexes: 15, rushingOut: 9, throwing: 11 },
+      flag: "Not found in 2026-27 squad listings; carried over from earlier seasons.",
+    },
+    {
+      id: 'slo-michal-sulla', name: "Michal Šulla", number: 30, age: 35, nationality: 'SVK', positions: ['GK'], foot: 'R',
+      technical: { corners: 1, crossing: 1, dribbling: 1, finishing: 1, firstTouch: 10, freeKicks: 1, heading: 1, longShots: 1, marking: 1, passing: 5, penalties: 1, tackling: 1, technique: 4 },
+      mental: { aggression: 5, anticipation: 12, bravery: 11, composure: 13, concentration: 14, decisions: 12, determination: 11, flair: 1, leadership: 10, offTheBall: 1, positioning: 15, teamwork: 9, vision: 5, workRate: 5 },
+      physical: { acceleration: 2, agility: 10, balance: 9, jumping: 11, naturalFitness: 8, pace: 2, stamina: 3, strength: 10 },
+      goalkeeping: { aerialReach: 12, commandOfArea: 12, communication: 11, handling: 14, kicking: 7, oneOnOnes: 12, reflexes: 13, rushingOut: 7, throwing: 9 },
+      flag: "Not found in 2026-27 squad listings; carried over from earlier seasons.",
+    },
+    {
+      id: 'slo-kevin-wimmer', name: "Kevin Wimmer", number: 4, age: 33, nationality: 'AUT', positions: ['DC'], foot: 'L',
+      technical: { corners: 8, crossing: 8, dribbling: 6, finishing: 1, firstTouch: 14, freeKicks: 6, heading: 15, longShots: 7, marking: 15, passing: 15, penalties: 6, tackling: 15, technique: 15 },
+      mental: { aggression: 14, anticipation: 13, bravery: 13, composure: 14, concentration: 12, decisions: 15, determination: 13, flair: 8, leadership: 10, offTheBall: 7, positioning: 15, teamwork: 12, vision: 12, workRate: 10 },
+      physical: { acceleration: 9, agility: 8, balance: 11, jumping: 15, naturalFitness: 9, pace: 7, stamina: 7, strength: 15 },
+    },
+    {
+      id: 'slo-kenan-bajric', name: "Kenan Bajrić", number: 5, age: 31, nationality: 'SVN', positions: ['DC', 'DM'], foot: 'R',
+      technical: { corners: 8, crossing: 8, dribbling: 6, finishing: 1, firstTouch: 11, freeKicks: 6, heading: 17, longShots: 7, marking: 15, passing: 9, penalties: 6, tackling: 15, technique: 12 },
+      mental: { aggression: 16, anticipation: 13, bravery: 13, composure: 9, concentration: 12, decisions: 14, determination: 13, flair: 8, leadership: 16, offTheBall: 7, positioning: 15, teamwork: 12, vision: 8, workRate: 10 },
+      physical: { acceleration: 11, agility: 10, balance: 11, jumping: 15, naturalFitness: 11, pace: 8, stamina: 9, strength: 16 },
+    },
+    {
+      id: 'slo-siemen-voet', name: "Siemen Voet", number: 6, age: 26, nationality: 'BEL', positions: ['DC'], foot: 'R',
+      technical: { corners: 6, crossing: 7, dribbling: 8, finishing: 3, firstTouch: 12, freeKicks: 8, heading: 15, longShots: 7, marking: 15, passing: 9, penalties: 8, tackling: 16, technique: 10 },
+      mental: { aggression: 15, anticipation: 14, bravery: 13, composure: 11, concentration: 14, decisions: 13, determination: 13, flair: 6, leadership: 8, offTheBall: 8, positioning: 16, teamwork: 11, vision: 7, workRate: 11 },
+      physical: { acceleration: 11, agility: 11, balance: 11, jumping: 15, naturalFitness: 13, pace: 10, stamina: 12, strength: 17 },
+    },
+    {
+      id: 'slo-cesar-blackman', name: "César Blackman", number: 17, age: 28, nationality: 'PAN', positions: ['DR'], foot: 'R',
+      technical: { corners: 7, crossing: 16, dribbling: 15, finishing: 7, firstTouch: 11, freeKicks: 7, heading: 11, longShots: 8, marking: 12, passing: 14, penalties: 7, tackling: 13, technique: 12 },
+      mental: { aggression: 10, anticipation: 13, bravery: 12, composure: 11, concentration: 13, decisions: 12, determination: 14, flair: 7, leadership: 10, offTheBall: 14, positioning: 11, teamwork: 12, vision: 6, workRate: 16 },
+      physical: { acceleration: 14, agility: 14, balance: 10, jumping: 10, naturalFitness: 14, pace: 16, stamina: 15, strength: 11 },
+      flag: "Not found in 2026-27 squad listings; carried over from earlier seasons.",
+    },
+    {
+      id: 'slo-sandro-cruz', name: "Sandro Cruz", number: 3, age: 25, nationality: 'POR', positions: ['DL'], foot: 'L',
+      technical: { corners: 5, crossing: 17, dribbling: 16, finishing: 7, firstTouch: 12, freeKicks: 7, heading: 10, longShots: 6, marking: 11, passing: 13, penalties: 7, tackling: 14, technique: 11 },
+      mental: { aggression: 11, anticipation: 14, bravery: 11, composure: 12, concentration: 14, decisions: 11, determination: 13, flair: 5, leadership: 7, offTheBall: 15, positioning: 12, teamwork: 13, vision: 6, workRate: 15 },
+      physical: { acceleration: 15, agility: 13, balance: 11, jumping: 11, naturalFitness: 13, pace: 15, stamina: 16, strength: 12 },
+    },
+    {
+      id: 'slo-alen-mustafic', name: "Alen Mustafić", number: 21, age: 26, nationality: 'BIH', positions: ['DM', 'MC'], foot: 'R',
+      technical: { corners: 7, crossing: 7, dribbling: 7, finishing: 7, firstTouch: 12, freeKicks: 7, heading: 11, longShots: 10, marking: 12, passing: 14, penalties: 7, tackling: 17, technique: 9 },
+      mental: { aggression: 15, anticipation: 14, bravery: 12, composure: 12, concentration: 13, decisions: 14, determination: 12, flair: 7, leadership: 8, offTheBall: 6, positioning: 15, teamwork: 15, vision: 8, workRate: 16 },
+      physical: { acceleration: 11, agility: 10, balance: 12, jumping: 12, naturalFitness: 13, pace: 11, stamina: 15, strength: 12 },
+    },
+    {
+      id: 'slo-danylo-ignatenko', name: "Danylo Ignatenko", number: 8, age: 29, nationality: 'UKR', positions: ['DM'], foot: 'R',
+      technical: { corners: 7, crossing: 6, dribbling: 5, finishing: 7, firstTouch: 13, freeKicks: 7, heading: 11, longShots: 12, marking: 16, passing: 14, penalties: 7, tackling: 16, technique: 11 },
+      mental: { aggression: 10, anticipation: 15, bravery: 12, composure: 13, concentration: 13, decisions: 16, determination: 14, flair: 7, leadership: 12, offTheBall: 7, positioning: 17, teamwork: 14, vision: 7, workRate: 14 },
+      physical: { acceleration: 10, agility: 12, balance: 10, jumping: 10, naturalFitness: 14, pace: 12, stamina: 13, strength: 15 },
+      flag: "Not found in 2026-27 squad listings; carried over from earlier seasons.",
+    },
+    {
+      id: 'slo-kyriakos-savvidis', name: "Kyriakos Savvidis", number: 27, age: 31, nationality: 'GRE', positions: ['MC'], foot: 'R',
+      technical: { corners: 11, crossing: 11, dribbling: 13, finishing: 6, firstTouch: 14, freeKicks: 11, heading: 6, longShots: 12, marking: 10, passing: 17, penalties: 6, tackling: 10, technique: 17 },
+      mental: { aggression: 11, anticipation: 12, bravery: 10, composure: 15, concentration: 11, decisions: 17, determination: 12, flair: 11, leadership: 10, offTheBall: 12, positioning: 14, teamwork: 15, vision: 17, workRate: 14 },
+      physical: { acceleration: 9, agility: 8, balance: 12, jumping: 7, naturalFitness: 11, pace: 9, stamina: 12, strength: 10 },
+      flag: "Not found in 2026-27 squad listings; carried over from earlier seasons.",
+    },
+    {
+      id: 'slo-artur-gajdos', name: "Artur Gajdoš", number: 14, age: 22, nationality: 'SVK', positions: ['MC'], foot: 'R',
+      technical: { corners: 12, crossing: 12, dribbling: 12, finishing: 9, firstTouch: 15, freeKicks: 10, heading: 7, longShots: 13, marking: 11, passing: 15, penalties: 5, tackling: 14, technique: 16 },
+      mental: { aggression: 12, anticipation: 13, bravery: 11, composure: 11, concentration: 10, decisions: 14, determination: 13, flair: 12, leadership: 3, offTheBall: 15, positioning: 12, teamwork: 16, vision: 13, workRate: 17 },
+      physical: { acceleration: 12, agility: 11, balance: 11, jumping: 6, naturalFitness: 12, pace: 10, stamina: 17, strength: 11 },
+    },
+    {
+      id: 'slo-marko-tolic', name: "Marko Tolić", number: 10, age: 29, nationality: 'CRO', positions: ['AMC'], foot: 'R',
+      technical: { corners: 11, crossing: 10, dribbling: 15, finishing: 13, firstTouch: 15, freeKicks: 11, heading: 7, longShots: 14, marking: 8, passing: 18, penalties: 11, tackling: 7, technique: 15 },
+      mental: { aggression: 6, anticipation: 13, bravery: 8, composure: 13, concentration: 11, decisions: 15, determination: 12, flair: 17, leadership: 12, offTheBall: 13, positioning: 7, teamwork: 10, vision: 16, workRate: 12 },
+      physical: { acceleration: 10, agility: 14, balance: 12, jumping: 6, naturalFitness: 14, pace: 12, stamina: 11, strength: 7 },
+      flag: "Not found in 2026-27 squad listings; carried over from earlier seasons.",
+    },
+    {
+      id: 'slo-tigran-barseghyan', name: "Tigran Barseghyan", number: 11, age: 33, nationality: 'ARM', positions: ['AML', 'AMR'], foot: 'L',
+      technical: { corners: 11, crossing: 16, dribbling: 19, finishing: 18, firstTouch: 15, freeKicks: 13, heading: 7, longShots: 14, marking: 8, passing: 14, penalties: 13, tackling: 9, technique: 15 },
+      mental: { aggression: 8, anticipation: 13, bravery: 8, composure: 15, concentration: 13, decisions: 13, determination: 12, flair: 15, leadership: 13, offTheBall: 15, positioning: 10, teamwork: 12, vision: 12, workRate: 14 },
+      physical: { acceleration: 13, agility: 13, balance: 14, jumping: 8, naturalFitness: 11, pace: 13, stamina: 12, strength: 9 },
+    },
+    {
+      id: 'slo-aleksandar-cavric', name: "Aleksandar Čavrić", number: 77, age: 32, nationality: 'SRB', positions: ['AML', 'AMR'], foot: 'R',
+      technical: { corners: 11, crossing: 12, dribbling: 17, finishing: 16, firstTouch: 12, freeKicks: 11, heading: 7, longShots: 12, marking: 6, passing: 12, penalties: 11, tackling: 6, technique: 15 },
+      mental: { aggression: 7, anticipation: 10, bravery: 6, composure: 12, concentration: 11, decisions: 11, determination: 10, flair: 15, leadership: 11, offTheBall: 12, positioning: 8, teamwork: 11, vision: 11, workRate: 13 },
+      physical: { acceleration: 14, agility: 13, balance: 14, jumping: 8, naturalFitness: 12, pace: 14, stamina: 12, strength: 6 },
+      flag: "Not found in 2026-27 squad listings; carried over from earlier seasons.",
+    },
+    {
+      id: 'slo-nino-marcelli', name: "Nino Marcelli", number: 24, age: 21, nationality: 'SVK', positions: ['AMR', 'AML'], foot: 'R',
+      technical: { corners: 10, crossing: 17, dribbling: 17, finishing: 12, firstTouch: 14, freeKicks: 12, heading: 6, longShots: 10, marking: 7, passing: 13, penalties: 12, tackling: 8, technique: 14 },
+      mental: { aggression: 7, anticipation: 12, bravery: 7, composure: 11, concentration: 12, decisions: 10, determination: 11, flair: 12, leadership: 6, offTheBall: 14, positioning: 8, teamwork: 11, vision: 11, workRate: 13 },
+      physical: { acceleration: 16, agility: 15, balance: 13, jumping: 7, naturalFitness: 13, pace: 16, stamina: 14, strength: 8 },
+      flag: "Not found in 2026-27 squad listings; carried over from earlier seasons.",
+    },
+    {
+      id: 'slo-vladimir-weiss', name: "Vladimír Weiss", number: 79, age: 36, nationality: 'SVK', positions: ['AMR'], foot: 'R',
+      technical: { corners: 9, crossing: 11, dribbling: 17, finishing: 16, firstTouch: 13, freeKicks: 11, heading: 5, longShots: 12, marking: 6, passing: 12, penalties: 11, tackling: 7, technique: 13 },
+      mental: { aggression: 6, anticipation: 11, bravery: 6, composure: 13, concentration: 11, decisions: 11, determination: 10, flair: 13, leadership: 11, offTheBall: 13, positioning: 8, teamwork: 10, vision: 10, workRate: 12 },
+      physical: { acceleration: 11, agility: 11, balance: 12, jumping: 6, naturalFitness: 9, pace: 11, stamina: 10, strength: 7 },
+      flag: "Not found in 2026-27 squad listings; carried over from earlier seasons.",
+    },
+    {
+      id: 'slo-rahim-ibrahim', name: "Rahim Ibrahim", number: 20, age: 24, nationality: 'GHA', positions: ['MC'], foot: 'R',
+      technical: { corners: 11, crossing: 10, dribbling: 13, finishing: 10, firstTouch: 15, freeKicks: 11, heading: 6, longShots: 14, marking: 12, passing: 16, penalties: 6, tackling: 14, technique: 15 },
+      mental: { aggression: 10, anticipation: 13, bravery: 12, composure: 13, concentration: 11, decisions: 16, determination: 14, flair: 11, leadership: 9, offTheBall: 15, positioning: 13, teamwork: 14, vision: 11, workRate: 19 },
+      physical: { acceleration: 10, agility: 12, balance: 10, jumping: 5, naturalFitness: 14, pace: 12, stamina: 18, strength: 11 },
+      flag: "Not found in 2026-27 squad listings; carried over from earlier seasons.",
+    },
+    {
+      id: 'slo-andraz-sporar', name: "Andraž Šporar", number: 9, age: 32, nationality: 'SVN', positions: ['ST'], foot: 'R',
+      technical: { corners: 8, crossing: 7, dribbling: 14, finishing: 16, firstTouch: 16, freeKicks: 8, heading: 14, longShots: 13, marking: 9, passing: 10, penalties: 14, tackling: 8, technique: 14 },
+      mental: { aggression: 7, anticipation: 18, bravery: 13, composure: 17, concentration: 12, decisions: 14, determination: 15, flair: 12, leadership: 15, offTheBall: 18, positioning: 9, teamwork: 11, vision: 8, workRate: 11 },
+      physical: { acceleration: 12, agility: 14, balance: 13, jumping: 13, naturalFitness: 14, pace: 14, stamina: 9, strength: 14 },
+    },
+  ],
+});

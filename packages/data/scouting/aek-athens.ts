@@ -1,0 +1,31 @@
+import { FLAG_LEAVE, FLAG_NEW, kit, scout } from '../src/scout';
+
+export default scout({
+  id: 'aek-athens', name: 'AEK Athens', shortName: 'AEK', abbr: 'AEK', country: 'GRE', pot: 4, prefix: 'aek',
+  kits: { home: kit('#ffd200', '#111111', 'plain', '#111111', '#111111'), away: kit('#111111', '#ffd200', 'plain', '#111111', '#ffd200'), gk: kit('#22c55e', '#111111', 'plain', '#111111', '#111111') },
+  formation: '4-2-3-1', instructions: { mentality: 0, pressing: 1, tempo: 0 },
+  players: [
+    [1, 'Thomas Strakosha', 31, 'ALB', 'GK', 'R', 13.5, 'gk'],
+    [30, 'Georgios Athanasiadis', 33, 'GRE', 'GK', 'R', 11.5, 'gk'],
+    [21, 'Domagoj Vida', 37, 'CRO', 'DC', 'R', 12.5, 'cbStopper', { leadership: 18 }],
+    [2, 'Harold Moukoudi', 28, 'CMR', 'DC', 'R', 13.5, 'cbStopper'],
+    [5, 'Alexander Callens', 34, 'PER', 'DC,DL', 'L', 12.5, 'cbBallPlayer', {}, FLAG_NEW],
+    [15, 'Filipe Relvas', 27, 'POR', 'DC', 'L', 13, 'cbBallPlayer'],
+    [12, 'Lazaros Rota', 29, 'GRE', 'DR', 'R', 13, 'fbAttacking'],
+    [3, 'Stavros Pilios', 25, 'GRE', 'DL', 'L', 12.5, 'fbAttacking'],
+    [28, 'Ehsan Hajsafi', 36, 'IRN', 'DL,MC', 'L', 12, 'fbDefensive', {}, FLAG_LEAVE],
+    [4, 'Damian Szymański', 31, 'POL', 'DM,MC', 'R', 13, 'dmBallWinner'],
+    [6, 'Marko Grujić', 30, 'SRB', 'DM,MC', 'R', 13.5, 'dmAnchor', {}, FLAG_NEW],
+    [16, 'Kaan Kairinen', 27, 'FIN', 'MC,DM', 'R', 13.5, 'cmBoxToBox', {}, FLAG_NEW],
+    [37, 'Roberto Pereyra', 35, 'ARG', 'MC,AMC', 'R', 13.5, 'cmPlaymaker', {}, FLAG_NEW],
+    [10, 'Lovro Majer', 28, 'CRO', 'AMC,MC', 'L', 14, 'amCreator', { passing: 17 }, FLAG_NEW],
+    [8, 'Mijat Gaćinović', 31, 'SRB', 'AMC,AMR', 'R', 13.5, 'amCreator'],
+    [20, 'Petros Mantalos', 35, 'GRE', 'AMC', 'R', 12.5, 'amCreator', { leadership: 17 }],
+    [11, 'Oleksandr Zubkov', 30, 'UKR', 'AMR', 'R', 13.5, 'wingerClassic', {}, FLAG_NEW],
+    [17, 'Aboubakary Koita', 28, 'BEL', 'AMR,AML', 'R', 13.5, 'wingerInverted'],
+    [23, 'Niclas Eliasson', 30, 'SWE', 'AML', 'L', 13, 'wingerClassic'],
+    [7, 'Levi García', 29, 'TRI', 'ST,AML', 'R', 14, 'stPacey'],
+    [9, 'Zini', 24, 'ANG', 'ST', 'R', 13, 'stPoacher'],
+    [14, 'Frantzdy Pierrot', 31, 'HAI', 'ST', 'R', 12.5, 'stTarget'],
+  ],
+});
