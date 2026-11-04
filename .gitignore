@@ -10,3 +10,7 @@ apps/web/dev-dist/
 test-results/
 playwright-report/
 replays/
+
+# Personal club crests (not redistributed)
+apps/web/public/crests/*
+!apps/web/public/crests/README.md

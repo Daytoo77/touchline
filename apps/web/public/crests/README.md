@@ -1,0 +1,3 @@
+Put your own club images here, named after the club id: `real-madrid.png`, `liverpool.png`, ...
+(ids = file names in packages/data/src/clubs). Any square-ish PNG works. Missing ones fall back to the generated shirt.
+Image files in this folder are gitignored, so they are never committed or deployed with the repo.

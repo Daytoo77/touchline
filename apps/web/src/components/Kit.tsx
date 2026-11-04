@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { Kit } from '@touchline/shared';
 
 /** Tiny generated shirt (no crests, no logos). */
@@ -19,5 +20,25 @@ export function KitSwatch({ kit, size = 26 }: { kit: Kit; size?: number }) {
       </g>
       <path d="M7 2 L2 6 L4 12 L7 11 L7 28 L19 28 L19 11 L22 12 L24 6 L19 2 L16 4 Q13 6 10 4 Z" fill="none" stroke="rgba(0,0,0,.45)" strokeWidth="1" />
     </svg>
+  );
+}
+
+/**
+ * Club badge: shows your own image at `public/crests/<club-id>.png` if you added one (that folder is
+ * gitignored, so nothing is committed or published), otherwise the generated shirt.
+ */
+export function ClubBadge({ clubId, kit, size = 26 }: { clubId: string; kit: Kit; size?: number }) {
+  const [missing, setMissing] = useState(false);
+  if (missing) return <KitSwatch kit={kit} size={size} />;
+  return (
+    <img
+      className="swatch"
+      src={`${import.meta.env.BASE_URL}crests/${clubId}.png`}
+      width={size}
+      height={size * 1.15}
+      style={{ objectFit: 'contain' }}
+      alt=""
+      onError={() => setMissing(true)}
+    />
   );
 }

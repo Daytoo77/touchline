@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { autoSheet } from '@touchline/engine';
 import { CLUBS, getClub, starText, stars } from '../lib/clubs';
-import { KitSwatch } from '../components/Kit';
+import { ClubBadge } from '../components/Kit';
 import { useApp } from '../store';
 
 export function ClubPicker() {
@@ -48,7 +48,7 @@ export function ClubPicker() {
                 const flagged = c.players.filter((p) => p.flag).length;
                 return (
                   <button key={c.id} className={`club-row ${isTaken ? 'taken' : ''}`} onClick={() => choose(c.id)} disabled={isTaken && mode === 'online'}>
-                    <KitSwatch kit={c.kits.home} />
+                    <ClubBadge clubId={c.id} kit={c.kits.home} />
                     <div className="grow">
                       <div style={{ fontWeight: 700 }}>{c.name}</div>
                       <div className="muted small">

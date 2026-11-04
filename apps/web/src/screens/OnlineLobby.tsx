@@ -1,5 +1,5 @@
 import { getClub } from '../lib/clubs';
-import { KitSwatch } from '../components/Kit';
+import { ClubBadge } from '../components/Kit';
 import { useApp } from '../store';
 import { useMatch } from '../matchStore';
 
@@ -48,7 +48,7 @@ export function OnlineLobby() {
         const club = i === 0 ? myClub : theirClub;
         return (
           <div key={i} className="card row">
-            {club ? <KitSwatch kit={club.kits.home} /> : <span className="swatch" />}
+            {club ? <ClubBadge clubId={club.id} kit={club.kits.home} /> : <span className="swatch" />}
             <div className="grow">
               <div style={{ fontWeight: 700 }}>
                 {s.name ?? (i === 1 ? 'Waiting for opponent…' : 'You')} {i === 0 && <span className="pill">you</span>}

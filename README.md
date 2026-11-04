@@ -7,7 +7,7 @@ A 2D, tactics-only football management game for two people: each manager picks o
 - **Single device vs AI**: the engine runs in a Web Worker on the phone, so it works offline.
 - **Online rooms**: two phones join a 4-letter room on a Node + Socket.IO server that runs the match.
 
-> Club names only: no crests, logos or official marks. Player ratings are Touchline's own estimates from each player's level and role, not copied from any game or ratings database. Players whose 2026-27 status couldn't be confirmed carry a `flag` in the data and a **?** in the UI.
+> Club names only: the repo ships no crests, logos or official marks. For private use you can add your own images (see "Your own crests" below). Player ratings are Touchline's own estimates from each player's level and role, not copied from any game or ratings database. Players whose 2026-27 status couldn't be confirmed carry a `flag` in the data and a **?** in the UI.
 
 ## Quick start
 
@@ -98,6 +98,10 @@ All 36 clubs of the 2026-27 league phase, with 801 players, follow press reports
 - **Ratings are estimates.** Each player has a scouting line: level, one of 25 archetypes (sweeper keeper, ball-playing CB, regista, inside forward, poacher…), age and a few signature traits. A deterministic generator expands it into FM-style 1–20 attributes. Nothing is copied from FM, EA FC, Sofifa or any other ratings database.
 - **Flags.** 266 players carry a `flag` and show a **?** in the app. They are mostly reported summer arrivals, loans or departures that couldn't be checked against an official club squad list. Search the club files for `flag:` to review them.
 - **Partial squads.** Bodø/Glimt is based on the 2025 season. For Slovan Bratislava, LASK, Viking and Sabah, some shirt numbers, ages and exact positions are estimates. Each club's `notes` field says so.
+
+## Your own crests (optional, private)
+
+The repo does not include club crests (they are trademarked). If you play privately and want them, save your own images as `apps/web/public/crests/<club-id>.png` (for example `real-madrid.png`; the ids are the file names in `packages/data/src/clubs`). They appear in the club picker and the lobby, and clubs without an image keep the generated shirt. That folder is gitignored, so the images are never committed. If you deploy to Render, they won't be there unless you add them to your own deployment, so keep that in mind if the app is public.
 
 ## Editing player data
 
