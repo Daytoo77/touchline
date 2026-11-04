@@ -57,11 +57,17 @@ function copyNorm(e: Norm, b: Norm): void {
   e.throwing = b.throwing;
 }
 
+const FORM_KEYS = ['passing', 'firstTouch', 'technique', 'dribbling', 'finishing', 'tackling', 'marking', 'positioning', 'anticipation', 'decisions', 'composure', 'concentration', 'workRate', 'reflexes', 'handling'] as const;
+
 /** Recompute effective attributes from base + fatigue + morale + familiarity + team modifiers. */
 export function refreshEffective(m: Match, p: PlayerRt): void {
   const e = p.e;
   const b = p.base;
   copyNorm(e, b);
+  const form = m.teams[p.side].form;
+  if (form !== 0) {
+    for (const k of FORM_KEYS) e[k] = e[k] + form;
+  }
   const c = p.cond;
   const physMult = 0.7 + 0.3 * Math.sqrt(clamp(c, 0, 1));
   for (const k of PHYS) e[k] = b[k] * physMult;
@@ -123,8 +129,8 @@ export function computeTargets(m: Match): void {
         }
         urg = 0.6;
       } else if (has) {
-        const shift = clamp(ballU - 45, -18, 32) * 0.62 + tp.risk * 3;
-        u = fs.u + shift + rp.attU * (1 + 0.1 * t.instr.mentality);
+        const shift = clamp(ballU - 45, -18, 32) * 0.62 + tp.risk * 2;
+        u = fs.u + shift + rp.attU * (1 + 0.05 * t.instr.mentality);
         const wAtt = 1 + 0.1 * tp.width;
         v = 34 + (fs.v - 34) * wAtt;
         if (rp.attIn !== 0) {
@@ -153,7 +159,7 @@ export function computeTargets(m: Match): void {
         urg = p.runUntil > s.tick ? 1 : 0.55 + 0.25 * p.e.workRate;
       } else {
         const line = tp.line;
-        const lineU = clamp(ballU - 25 + line * 4, 13 + line, 36 + line * 5);
+        const lineU = clamp(ballU - 25 + line * 3, 13 + line, 36 + line * 4);
         const span = 0.74 - 0.03 * tp.press;
         u = lineU + (fs.u - 21) * span + rp.defU + (fs.u > 50 ? tp.press * 2 : 0);
         const wDef = ballU < 36 ? 0.64 : 0.8 + 0.04 * tp.width;
@@ -274,10 +280,11 @@ function applyPress(m: Match, carrierIdx: number): void {
   const t = m.teams[dside];
   const ballU = m.u(dside, c.x); // distance from the defending team's own goal
   const press = t.tp.press;
-  const zone = press <= -2 ? 30 : press <= -1 ? 45 : press < 1 ? 58 : press < 2 ? 74 : 110;
+  // How high up the pitch this team engages (distance from its own goal).
+  const zone = 58 + press * 13;
   let n = 0;
-  if (ballU < zone) n = 1 + (press >= 1 ? 1 : 0);
-  else if (ballU < zone + 15) n = 1;
+  if (ballU < zone) n = 1 + (press >= 1 && ballU > 70 ? 1 : 0);
+  else if (ballU < zone + 12) n = 1;
   if (ballU < 25) n = Math.max(n, 2);
   if (ballU < 18) n = 3;
   // Keeper comes off his line to close down a 1-v-1.

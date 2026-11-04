@@ -130,7 +130,9 @@ export class Match {
       winner: null,
       lastAttackEvent: -9999,
     };
+    const formRng = forkRng(this.seed, 'form');
     for (const t of this.teams) {
+      t.form = formRng.normal() * 0.02;
       t.strength = teamStrength(t);
       for (const p of t.players) refreshEffective(this, p);
     }
@@ -172,6 +174,7 @@ export class Match {
       dir: side === 0 ? 1 : -1,
       stats: emptyTeamStats(),
       strength: 0,
+      form: 0,
     };
     sheet.tactic.slots.forEach((slot, k) => {
       const def = byId.get(slot.playerId ?? '');

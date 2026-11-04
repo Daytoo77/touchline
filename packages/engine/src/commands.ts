@@ -19,9 +19,9 @@ import { HALF_L, PITCH_W } from './types';
 export function deriveTeamParams(t: TeamRt): TeamParams {
   const i = t.instr;
   const tp: TeamParams = {
-    risk: i.mentality / 3,
-    line: i.line + (i.mentality >= 2 ? 0.5 : i.mentality <= -2 ? -0.5 : 0),
-    press: i.pressing,
+    risk: i.mentality / 5,
+    line: 0.6 * i.line + (i.mentality >= 2 ? 0.3 : i.mentality <= -2 ? -0.3 : 0),
+    press: 0.7 * i.pressing,
     width: i.width,
     tempo: i.tempo,
     direct: i.directness,

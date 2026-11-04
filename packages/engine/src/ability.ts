@@ -22,7 +22,7 @@ export type Norm = Record<AttrKey, number>;
  * How strongly attribute differences act inside the engine. 1 = raw 1–20 scale mapped to 0..1; lower values
  * compress differences around a typical Champions League level (≈14), which keeps upsets possible.
  */
-export const ATTR_GAIN = 0.7;
+export const ATTR_GAIN = 0.6;
 const PIVOT = 13 / 19;
 
 export function normalise(p: Player): Norm {

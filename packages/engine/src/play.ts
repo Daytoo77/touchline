@@ -193,7 +193,7 @@ function resolveTackle(m: Match, d: PlayerRt, c: PlayerRt, goalSide: boolean): b
   // Defenders are far more careful inside their own box.
   const cu = m.u(c.side, c.x);
   const inBox = cu > 88.5 && Math.abs(m.v(c.side, c.y) - 34) < 20.2;
-  if (m.rng.chance(pFoul * (inBox ? 0.17 : 1))) {
+  if (m.rng.chance(pFoul * (inBox ? 0.06 : 1))) {
     commitFoul(m, d, c);
     return true;
   }
@@ -593,7 +593,7 @@ export function shotInfo(m: Match, sh: PlayerRt, header: boolean): ShotInfo {
   const a1 = datan2(34 - 3.66 - v, dx);
   const a2 = datan2(34 + 3.66 - v, dx);
   const theta = Math.abs(a2 - a1);
-  let logit = -1.05 - 0.1 * d + 1.6 * theta;
+  let logit = -0.95 - 0.1 * d + 1.6 * theta;
   // Defenders in the shooting lane and pressure.
   let lane = 0;
   let nearest = 99;
@@ -813,10 +813,10 @@ export function decide(m: Match, c: PlayerRt): void {
   }
 
   // Shot
-  const shotWindow = clamp(0.3 + 0.32 * (dNear - 1), 0.18, 1);
+  const shotWindow = clamp(0.16 + 0.21 * (dNear - 1), 0.08, 0.8);
   if (!isGk && uC > 66 && m.rng.chance(shotWindow * (tight ? 0.35 : 1))) {
     const info = shotInfo(m, c, false);
-    let U = 100 * info.xg * c.rp.shoot * (0.92 + 0.05 * t.instr.mentality) * (dNear < 2 ? 0.85 : 1) * (tight ? 0.3 : 1);
+    let U = 100 * info.xg * c.rp.shoot * (0.78 + 0.025 * t.instr.mentality) * (dNear < 2 ? 0.85 : 1) * (tight ? 0.3 : 1);
     if (info.d > 20) U *= 0.3 + 0.75 * c.e.longShots;
     OPTS.push({ kind: 'shoot', U, r: -1, x: c.x, y: c.y });
   }
@@ -833,7 +833,7 @@ export function decide(m: Match, c: PlayerRt): void {
       const aw = aerialScore(r) - (def.p ? aerialScore(def.p) * 0.9 : 0) + (def.d - 1.5) * 0.06;
       const pWin = sigmoid(3 * aw - 0.4);
       const dd = dist(ru, rv, PITCH_L, 34);
-      const xgH = sigmoid(-1.05 - 0.1 * dd + 0.9 - 1.0);
+      const xgH = sigmoid(-0.95 - 0.1 * dd + 0.9 - 1.0);
       const val = pWin * xgH;
       if (val > best) best = val;
     }

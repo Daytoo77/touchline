@@ -25,6 +25,7 @@
     "data:check": "tsx tools/check-data.ts",
     "squads:expand": "tsx tools/expand-squad.ts",
     "calibrate": "tsx tools/calibrate.ts",
+    "balance": "tsx tools/balance.ts",
     "replay": "tsx tools/replay.ts"
   },
   "devDependencies": {

@@ -111,6 +111,8 @@ export interface TeamRt {
   dir: 1 | -1;
   stats: TeamStats;
   strength: number;
+  /** Match-day form: small seeded offset on every effective attribute (an off day, or a great one). */
+  form: number;
 }
 
 export type FlightKind = 'pass' | 'through' | 'long' | 'cross' | 'shot' | 'clear' | 'header' | 'kick' | 'throw';
