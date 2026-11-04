@@ -1,0 +1,33 @@
+import { FLAG_LEAVE, FLAG_NEW, kit, scout } from '../src/scout';
+
+export default scout({
+  id: 'manchester-united', name: 'Manchester United', shortName: 'Man United', abbr: 'MUN', country: 'ENG', pot: 2, prefix: 'mun',
+  kits: { home: kit('#da291c', '#111111', 'plain', '#111111', '#ffffff'), away: kit('#f5f5f5', '#da291c', 'plain', '#f5f5f5', '#da291c'), gk: kit('#16a34a', '#111111', 'plain', '#111111', '#ffffff') },
+  formation: '4-2-3-1', instructions: { mentality: 1, pressing: 1, tempo: 1 },
+  players: [
+    [31, 'Senne Lammens', 24, 'BEL', 'GK', 'R', 14.5, 'gk'],
+    [1, 'Karl Darlow', 36, 'WAL', 'GK', 'R', 11.5, 'gk', {}, FLAG_NEW],
+    [22, 'Radek Vítek', 23, 'CZE', 'GK', 'L', 12, 'gk', {}, FLAG_LEAVE],
+    [4, 'Matthijs de Ligt', 27, 'NED', 'DC', 'R', 15, 'cbStopper'],
+    [6, 'Lisandro Martínez', 28, 'ARG', 'DC,DL', 'L', 15, 'cbBallPlayer', { aggression: 18 }],
+    [5, 'Harry Maguire', 33, 'ENG', 'DC', 'R', 14, 'cbStopper', { heading: 18 }, FLAG_LEAVE],
+    [15, 'Leny Yoro', 20, 'FRA', 'DC', 'R', 14.5, 'cbAthletic'],
+    [26, 'Ayden Heaven', 19, 'ENG', 'DC,DL', 'L', 13.5, 'cbAthletic'],
+    [3, 'Noussair Mazraoui', 28, 'MAR', 'DR,DL', 'R', 14, 'fbInverted'],
+    [2, 'Diogo Dalot', 27, 'POR', 'DR,DL', 'R', 14, 'fbAttacking'],
+    [13, 'Patrick Dorgu', 21, 'DEN', 'DL,WBL', 'L', 14, 'fbAttacking'],
+    [23, 'Luke Shaw', 31, 'ENG', 'DL,DC', 'L', 13.5, 'fbInverted', {}, FLAG_LEAVE],
+    [24, 'Carlos Baleba', 22, 'CMR', 'DM,MC', 'R', 15.5, 'dmBallWinner', {}, FLAG_NEW],
+    [18, 'Andrey Santos', 22, 'BRA', 'MC,DM', 'R', 15, 'cmBoxToBox', {}, FLAG_NEW],
+    [14, 'Youri Tielemans', 29, 'BEL', 'MC', 'R', 15, 'cmPlaymaker', { longShots: 17 }, FLAG_NEW],
+    [25, 'Manuel Ugarte', 25, 'URU', 'DM', 'R', 14.5, 'dmBallWinner'],
+    [37, 'Kobbie Mainoo', 21, 'ENG', 'MC,DM', 'R', 15, 'cmPlaymaker'],
+    [8, 'Bruno Fernandes', 32, 'POR', 'AMC,MC', 'R', 16.5, 'amCreator', { vision: 19, penalties: 18, leadership: 18 }],
+    [7, 'Mason Mount', 27, 'ENG', 'AMC,MC', 'R', 14, 'amShadow', {}, FLAG_LEAVE],
+    [19, 'Bryan Mbeumo', 27, 'CMR', 'AMR,ST', 'L', 16, 'wingerInverted', { finishing: 17 }],
+    [10, 'Matheus Cunha', 27, 'BRA', 'AMC,AML,ST', 'R', 16, 'amShadow', { dribbling: 17 }],
+    [16, 'Amad Diallo', 24, 'CIV', 'AMR,WBR', 'L', 15, 'wingerInverted', {}, '', 'Amad'],
+    [30, 'Benjamin Šeško', 23, 'SVN', 'ST', 'R', 15.5, 'stComplete', { jumping: 18, pace: 17 }],
+    [11, 'Joshua Zirkzee', 25, 'NED', 'ST', 'L', 13.5, 'stFalse9', {}, FLAG_LEAVE],
+  ],
+});

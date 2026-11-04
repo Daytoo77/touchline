@@ -1,0 +1,33 @@
+import { FLAG_LEAVE, FLAG_NEW, kit, scout } from '../src/scout';
+
+export default scout({
+  id: 'real-betis', name: 'Real Betis', shortName: 'Betis', abbr: 'BET', country: 'ESP', pot: 2, prefix: 'bet',
+  kits: { home: kit('#0bb363', '#ffffff', 'stripes', '#ffffff', '#111111'), away: kit('#1f2937', '#0bb363', 'plain', '#1f2937', '#ffffff'), gk: kit('#f97316', '#111111', 'plain', '#111111', '#111111') },
+  formation: '4-2-3-1', instructions: { mentality: 1, tempo: 0, directness: -1 },
+  players: [
+    [1, 'Álvaro Vallés', 29, 'ESP', 'GK', 'L', 14, 'gk'],
+    [25, 'Pau López', 31, 'ESP', 'GK', 'L', 13, 'gk', {}, FLAG_NEW],
+    [13, 'Adrián', 39, 'ESP', 'GK', 'R', 11, 'gk', {}, FLAG_LEAVE],
+    [5, 'Marc Bartra', 35, 'ESP', 'DC', 'R', 13, 'cbBallPlayer', {}, FLAG_LEAVE],
+    [3, 'Diego Llorente', 33, 'ESP', 'DC', 'R', 13.5, 'cbBallPlayer'],
+    [4, 'Natan', 25, 'BRA', 'DC', 'L', 14, 'cbAthletic'],
+    [16, 'Valentín Gómez', 23, 'ARG', 'DC,DL', 'L', 14, 'cbStopper'],
+    [2, 'Héctor Bellerín', 31, 'ESP', 'DR', 'R', 13.5, 'fbAttacking'],
+    [24, 'Aitor Ruibal', 30, 'ESP', 'DR,MR', 'R', 13, 'wideWorker'],
+    [23, 'Junior Firpo', 30, 'DOM', 'DL', 'L', 13, 'fbAttacking', {}, FLAG_LEAVE],
+    [15, 'Fran García', 27, 'ESP', 'DL', 'L', 13.5, 'fbAttacking', { pace: 17 }, FLAG_NEW],
+    [21, 'Marc Roca', 29, 'ESP', 'DM,MC', 'R', 14.5, 'dmPlaymaker'],
+    [6, 'Facundo Bernal', 22, 'URU', 'DM', 'R', 13, 'dmBallWinner', {}, FLAG_NEW],
+    [18, 'Nelson Deossa', 26, 'COL', 'MC', 'R', 13.5, 'cmBoxToBox'],
+    [8, 'Pablo Fornals', 30, 'ESP', 'MC,AMC', 'R', 14.5, 'cmPlaymaker'],
+    [14, 'Dani Ceballos', 30, 'ESP', 'MC', 'R', 14, 'cmPlaymaker', {}, FLAG_NEW],
+    [20, 'Giovani Lo Celso', 30, 'ARG', 'AMC,MC', 'L', 14.5, 'amCreator', { freeKicks: 16 }],
+    [22, 'Isco', 34, 'ESP', 'AMC,MC', 'R', 15, 'amCreator', { technique: 19, vision: 18 }],
+    [7, 'Antony', 26, 'BRA', 'AMR', 'L', 15, 'wingerInverted', { dribbling: 18 }],
+    [10, 'Abde Ezzalzouli', 24, 'MAR', 'AML', 'R', 14.5, 'wingerClassic', { pace: 18 }, '', 'Abde'],
+    [17, 'Rodrigo Riquelme', 26, 'ESP', 'AML,ML', 'L', 13.5, 'wingerClassic'],
+    [19, 'Cucho Hernández', 27, 'COL', 'ST', 'R', 14.5, 'stComplete', {}, '', 'Cucho'],
+    [9, 'Troy Parrott', 24, 'IRL', 'ST', 'R', 14, 'stPoacher', {}, FLAG_NEW],
+    [11, 'Chimy Ávila', 32, 'ARG', 'ST', 'R', 12.5, 'stPresser', {}, FLAG_NEW],
+  ],
+});

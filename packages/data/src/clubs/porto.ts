@@ -1,0 +1,163 @@
+// FC Porto: 2026-27 squad. Ratings are Touchline's own estimates from each player's level and role
+// (not taken from any game or ratings database). Generated from packages/data/scouting/porto.ts;
+// this file is now the source of truth: edit any number by hand (1-20), then run `npm run data:check`.
+import { defineClub } from '../define';
+
+export default defineClub({
+  id: 'porto',
+  name: "FC Porto",
+  shortName: "Porto",
+  abbr: 'POR',
+  country: 'POR',
+  pot: 2,
+  kits: {
+    home: {"shirt":"#1f4fa0","trim":"#ffffff","pattern":"stripes","shorts":"#1f4fa0","number":"#ffffff"},
+    away: {"shirt":"#f97316","trim":"#111111","pattern":"plain","shorts":"#111111","number":"#111111"},
+    gk: {"shirt":"#334155","trim":"#111111","pattern":"plain","shorts":"#334155","number":"#ffffff"},
+  },
+  defaultTactic: { formation: '4-3-3', instructions: {"mentality":1,"pressing":1,"line":1,"width":0,"tempo":1,"directness":0,"timeWasting":0} },
+  dataAsOf: '2026-11-03',
+  players: [
+    {
+      id: 'fcp-diogo-costa', name: "Diogo Costa", number: 99, age: 26, nationality: 'POR', positions: ['GK'], foot: 'R',
+      technical: { corners: 4, crossing: 5, dribbling: 6, finishing: 6, firstTouch: 19, freeKicks: 6, heading: 4, longShots: 5, marking: 5, passing: 15, penalties: 6, tackling: 6, technique: 9 },
+      mental: { aggression: 10, anticipation: 18, bravery: 17, composure: 19, concentration: 20, decisions: 17, determination: 17, flair: 4, leadership: 11, offTheBall: 6, positioning: 20, teamwork: 15, vision: 13, workRate: 10 },
+      physical: { acceleration: 10, agility: 19, balance: 15, jumping: 17, naturalFitness: 17, pace: 10, stamina: 11, strength: 16 },
+      goalkeeping: { aerialReach: 18, commandOfArea: 19, communication: 17, handling: 20, kicking: 16, oneOnOnes: 17, reflexes: 18, rushingOut: 18, throwing: 15 },
+    },
+    {
+      id: 'fcp-claudio-ramos', name: "Cláudio Ramos", number: 14, age: 35, nationality: 'POR', positions: ['GK'], foot: 'R',
+      technical: { corners: 2, crossing: 2, dribbling: 1, finishing: 1, firstTouch: 10, freeKicks: 1, heading: 2, longShots: 1, marking: 1, passing: 6, penalties: 1, tackling: 1, technique: 7 },
+      mental: { aggression: 7, anticipation: 12, bravery: 12, composure: 12, concentration: 13, decisions: 13, determination: 12, flair: 2, leadership: 9, offTheBall: 1, positioning: 14, teamwork: 11, vision: 7, workRate: 5 },
+      physical: { acceleration: 4, agility: 11, balance: 10, jumping: 12, naturalFitness: 8, pace: 2, stamina: 2, strength: 10 },
+      goalkeeping: { aerialReach: 11, commandOfArea: 11, communication: 12, handling: 14, kicking: 10, oneOnOnes: 13, reflexes: 15, rushingOut: 9, throwing: 11 },
+    },
+    {
+      id: 'fcp-jan-bednarek', name: "Jan Bednarek", number: 5, age: 30, nationality: 'POL', positions: ['DC'], foot: 'R',
+      technical: { corners: 9, crossing: 9, dribbling: 9, finishing: 4, firstTouch: 12, freeKicks: 9, heading: 18, longShots: 8, marking: 16, passing: 10, penalties: 9, tackling: 16, technique: 13 },
+      mental: { aggression: 17, anticipation: 14, bravery: 14, composure: 12, concentration: 15, decisions: 14, determination: 14, flair: 9, leadership: 12, offTheBall: 8, positioning: 17, teamwork: 13, vision: 9, workRate: 13 },
+      physical: { acceleration: 13, agility: 12, balance: 14, jumping: 18, naturalFitness: 15, pace: 12, stamina: 13, strength: 17 },
+    },
+    {
+      id: 'fcp-jakub-kiwior', name: "Jakub Kiwior", number: 4, age: 26, nationality: 'POL', positions: ['DC', 'DL'], foot: 'L',
+      technical: { corners: 8, crossing: 9, dribbling: 10, finishing: 5, firstTouch: 17, freeKicks: 10, heading: 15, longShots: 9, marking: 17, passing: 17, penalties: 10, tackling: 18, technique: 15 },
+      mental: { aggression: 15, anticipation: 16, bravery: 15, composure: 17, concentration: 16, decisions: 16, determination: 15, flair: 8, leadership: 10, offTheBall: 10, positioning: 18, teamwork: 13, vision: 13, workRate: 13 },
+      physical: { acceleration: 13, agility: 13, balance: 13, jumping: 17, naturalFitness: 15, pace: 13, stamina: 14, strength: 18 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'fcp-nehuen-perez', name: "Nehuén Pérez", number: 24, age: 26, nationality: 'ARG', positions: ['DC'], foot: 'R',
+      technical: { corners: 8, crossing: 8, dribbling: 8, finishing: 3, firstTouch: 12, freeKicks: 8, heading: 18, longShots: 7, marking: 16, passing: 10, penalties: 8, tackling: 16, technique: 13 },
+      mental: { aggression: 17, anticipation: 14, bravery: 14, composure: 12, concentration: 15, decisions: 14, determination: 14, flair: 8, leadership: 9, offTheBall: 7, positioning: 17, teamwork: 13, vision: 8, workRate: 13 },
+      physical: { acceleration: 13, agility: 12, balance: 14, jumping: 18, naturalFitness: 15, pace: 12, stamina: 13, strength: 17 },
+    },
+    {
+      id: 'fcp-alberto-costa', name: "Alberto Costa", shortName: "A. Costa", number: 20, age: 22, nationality: 'POR', positions: ['DR'], foot: 'R',
+      technical: { corners: 8, crossing: 18, dribbling: 16, finishing: 8, firstTouch: 11, freeKicks: 8, heading: 12, longShots: 7, marking: 11, passing: 13, penalties: 8, tackling: 13, technique: 13 },
+      mental: { aggression: 12, anticipation: 13, bravery: 11, composure: 11, concentration: 14, decisions: 10, determination: 13, flair: 8, leadership: 7, offTheBall: 14, positioning: 12, teamwork: 14, vision: 8, workRate: 16 },
+      physical: { acceleration: 16, agility: 13, balance: 13, jumping: 13, naturalFitness: 14, pace: 16, stamina: 16, strength: 11 },
+    },
+    {
+      id: 'fcp-martim-fernandes', name: "Martim Fernandes", number: 52, age: 20, nationality: 'POR', positions: ['DR', 'DL'], foot: 'R',
+      technical: { corners: 7, crossing: 18, dribbling: 17, finishing: 9, firstTouch: 13, freeKicks: 9, heading: 11, longShots: 8, marking: 12, passing: 14, penalties: 9, tackling: 15, technique: 12 },
+      mental: { aggression: 12, anticipation: 15, bravery: 12, composure: 12, concentration: 15, decisions: 11, determination: 14, flair: 7, leadership: 7, offTheBall: 16, positioning: 13, teamwork: 14, vision: 8, workRate: 16 },
+      physical: { acceleration: 16, agility: 14, balance: 12, jumping: 12, naturalFitness: 14, pace: 16, stamina: 17, strength: 13 },
+      flag: "May have left (or been loaned out) in the summer-2026 window; not confirmed.",
+    },
+    {
+      id: 'fcp-francisco-moura', name: "Francisco Moura", number: 74, age: 26, nationality: 'POR', positions: ['DL', 'AML'], foot: 'L',
+      technical: { corners: 8, crossing: 17, dribbling: 16, finishing: 8, firstTouch: 12, freeKicks: 8, heading: 12, longShots: 9, marking: 13, passing: 15, penalties: 8, tackling: 14, technique: 13 },
+      mental: { aggression: 11, anticipation: 14, bravery: 13, composure: 12, concentration: 14, decisions: 13, determination: 15, flair: 8, leadership: 11, offTheBall: 15, positioning: 12, teamwork: 13, vision: 7, workRate: 17 },
+      physical: { acceleration: 15, agility: 15, balance: 11, jumping: 11, naturalFitness: 15, pace: 17, stamina: 16, strength: 12 },
+    },
+    {
+      id: 'fcp-zaidu-sanusi', name: "Zaidu Sanusi", shortName: "Zaidu", number: 12, age: 29, nationality: 'NGA', positions: ['DL'], foot: 'L',
+      technical: { corners: 7, crossing: 13, dribbling: 12, finishing: 7, firstTouch: 12, freeKicks: 7, heading: 12, longShots: 8, marking: 18, passing: 15, penalties: 7, tackling: 18, technique: 12 },
+      mental: { aggression: 11, anticipation: 14, bravery: 13, composure: 12, concentration: 14, decisions: 13, determination: 15, flair: 7, leadership: 12, offTheBall: 10, positioning: 17, teamwork: 13, vision: 6, workRate: 17 },
+      physical: { acceleration: 14, agility: 14, balance: 11, jumping: 11, naturalFitness: 14, pace: 16, stamina: 15, strength: 12 },
+      flag: "May have left (or been loaned out) in the summer-2026 window; not confirmed.",
+    },
+    {
+      id: 'fcp-alan-varela', name: "Alan Varela", number: 22, age: 25, nationality: 'ARG', positions: ['DM'], foot: 'R',
+      technical: { corners: 9, crossing: 9, dribbling: 9, finishing: 9, firstTouch: 16, freeKicks: 9, heading: 13, longShots: 12, marking: 11, passing: 19, penalties: 9, tackling: 13, technique: 16 },
+      mental: { aggression: 13, anticipation: 16, bravery: 12, composure: 17, concentration: 15, decisions: 16, determination: 14, flair: 9, leadership: 10, offTheBall: 8, positioning: 17, teamwork: 17, vision: 17, workRate: 15 },
+      physical: { acceleration: 13, agility: 12, balance: 14, jumping: 14, naturalFitness: 15, pace: 13, stamina: 15, strength: 12 },
+    },
+    {
+      id: 'fcp-stephen-eustaquio', name: "Stephen Eustáquio", number: 6, age: 29, nationality: 'CAN', positions: ['DM', 'MC'], foot: 'R',
+      technical: { corners: 8, crossing: 8, dribbling: 8, finishing: 8, firstTouch: 16, freeKicks: 8, heading: 13, longShots: 12, marking: 11, passing: 19, penalties: 8, tackling: 13, technique: 16 },
+      mental: { aggression: 13, anticipation: 16, bravery: 12, composure: 17, concentration: 15, decisions: 16, determination: 14, flair: 8, leadership: 11, offTheBall: 7, positioning: 17, teamwork: 17, vision: 17, workRate: 15 },
+      physical: { acceleration: 12, agility: 11, balance: 14, jumping: 14, naturalFitness: 14, pace: 12, stamina: 14, strength: 12 },
+      flag: "May have left (or been loaned out) in the summer-2026 window; not confirmed.",
+    },
+    {
+      id: 'fcp-victor-froholdt', name: "Victor Froholdt", number: 8, age: 20, nationality: 'DEN', positions: ['MC'], foot: 'R',
+      technical: { corners: 13, crossing: 13, dribbling: 15, finishing: 13, firstTouch: 16, freeKicks: 13, heading: 9, longShots: 14, marking: 12, passing: 16, penalties: 9, tackling: 15, technique: 17 },
+      mental: { aggression: 13, anticipation: 14, bravery: 12, composure: 14, concentration: 13, decisions: 15, determination: 14, flair: 13, leadership: 8, offTheBall: 16, positioning: 15, teamwork: 17, vision: 14, workRate: 20 },
+      physical: { acceleration: 13, agility: 12, balance: 14, jumping: 10, naturalFitness: 15, pace: 13, stamina: 20, strength: 12 },
+    },
+    {
+      id: 'fcp-gabri-veiga', name: "Gabri Veiga", number: 10, age: 24, nationality: 'ESP', positions: ['MC', 'AMC'], foot: 'R',
+      technical: { corners: 14, crossing: 14, dribbling: 19, finishing: 14, firstTouch: 17, freeKicks: 14, heading: 9, longShots: 17, marking: 13, passing: 17, penalties: 9, tackling: 13, technique: 20 },
+      mental: { aggression: 14, anticipation: 15, bravery: 13, composure: 16, concentration: 14, decisions: 17, determination: 15, flair: 16, leadership: 10, offTheBall: 18, positioning: 14, teamwork: 18, vision: 16, workRate: 18 },
+      physical: { acceleration: 14, agility: 13, balance: 15, jumping: 10, naturalFitness: 16, pace: 14, stamina: 18, strength: 13 },
+    },
+    {
+      id: 'fcp-seko-fofana', name: "Seko Fofana", number: 16, age: 31, nationality: 'CIV', positions: ['MC'], foot: 'R',
+      technical: { corners: 12, crossing: 12, dribbling: 14, finishing: 12, firstTouch: 15, freeKicks: 12, heading: 8, longShots: 13, marking: 11, passing: 15, penalties: 8, tackling: 14, technique: 16 },
+      mental: { aggression: 12, anticipation: 13, bravery: 11, composure: 14, concentration: 12, decisions: 16, determination: 13, flair: 12, leadership: 12, offTheBall: 15, positioning: 15, teamwork: 16, vision: 13, workRate: 19 },
+      physical: { acceleration: 11, agility: 10, balance: 13, jumping: 9, naturalFitness: 13, pace: 11, stamina: 18, strength: 11 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'fcp-hwang-in-beom', name: "Hwang In-beom", shortName: "Hwang", number: 13, age: 29, nationality: 'KOR', positions: ['MC', 'DM'], foot: 'R',
+      technical: { corners: 13, crossing: 12, dribbling: 15, finishing: 8, firstTouch: 17, freeKicks: 13, heading: 8, longShots: 16, marking: 14, passing: 20, penalties: 8, tackling: 13, technique: 19 },
+      mental: { aggression: 12, anticipation: 15, bravery: 14, composure: 17, concentration: 13, decisions: 20, determination: 16, flair: 13, leadership: 13, offTheBall: 15, positioning: 15, teamwork: 16, vision: 18, workRate: 17 },
+      physical: { acceleration: 11, agility: 13, balance: 12, jumping: 7, naturalFitness: 15, pace: 13, stamina: 15, strength: 13 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'fcp-rodrigo-mora', name: "Rodrigo Mora", number: 86, age: 19, nationality: 'POR', positions: ['AMC', 'AMR'], foot: 'L',
+      technical: { corners: 13, crossing: 13, dribbling: 17, finishing: 15, firstTouch: 16, freeKicks: 13, heading: 9, longShots: 14, marking: 8, passing: 18, penalties: 13, tackling: 8, technique: 17 },
+      mental: { aggression: 9, anticipation: 13, bravery: 8, composure: 13, concentration: 12, decisions: 13, determination: 12, flair: 18, leadership: 7, offTheBall: 14, positioning: 8, teamwork: 13, vision: 19, workRate: 13 },
+      physical: { acceleration: 13, agility: 14, balance: 16, jumping: 10, naturalFitness: 15, pace: 13, stamina: 13, strength: 7 },
+    },
+    {
+      id: 'fcp-pepe', name: "Pepê", number: 11, age: 29, nationality: 'BRA', positions: ['AMR', 'AML'], foot: 'R',
+      technical: { corners: 13, crossing: 17, dribbling: 15, finishing: 15, firstTouch: 14, freeKicks: 13, heading: 8, longShots: 12, marking: 12, passing: 14, penalties: 13, tackling: 13, technique: 17 },
+      mental: { aggression: 8, anticipation: 12, bravery: 7, composure: 13, concentration: 13, decisions: 12, determination: 12, flair: 13, leadership: 11, offTheBall: 14, positioning: 13, teamwork: 16, vision: 13, workRate: 19 },
+      physical: { acceleration: 16, agility: 15, balance: 16, jumping: 9, naturalFitness: 14, pace: 16, stamina: 18, strength: 7 },
+    },
+    {
+      id: 'fcp-borja-sainz', name: "Borja Sainz", number: 17, age: 25, nationality: 'ESP', positions: ['AML'], foot: 'L',
+      technical: { corners: 14, crossing: 15, dribbling: 18, finishing: 17, firstTouch: 15, freeKicks: 12, heading: 9, longShots: 15, marking: 8, passing: 15, penalties: 12, tackling: 8, technique: 18 },
+      mental: { aggression: 9, anticipation: 13, bravery: 8, composure: 13, concentration: 12, decisions: 13, determination: 13, flair: 18, leadership: 7, offTheBall: 15, positioning: 7, teamwork: 14, vision: 14, workRate: 14 },
+      physical: { acceleration: 18, agility: 17, balance: 15, jumping: 8, naturalFitness: 14, pace: 16, stamina: 14, strength: 8 },
+    },
+    {
+      id: 'fcp-william-gomes', name: "William Gomes", number: 7, age: 20, nationality: 'BRA', positions: ['AMR', 'AML'], foot: 'L',
+      technical: { corners: 12, crossing: 12, dribbling: 18, finishing: 17, firstTouch: 14, freeKicks: 12, heading: 8, longShots: 15, marking: 9, passing: 15, penalties: 12, tackling: 8, technique: 16 },
+      mental: { aggression: 7, anticipation: 12, bravery: 9, composure: 12, concentration: 12, decisions: 12, determination: 13, flair: 16, leadership: 9, offTheBall: 14, positioning: 8, teamwork: 11, vision: 11, workRate: 15 },
+      physical: { acceleration: 15, agility: 17, balance: 13, jumping: 7, naturalFitness: 15, pace: 17, stamina: 14, strength: 8 },
+    },
+    {
+      id: 'fcp-samu-aghehowa', name: "Samu Aghehowa", shortName: "Samu", number: 9, age: 22, nationality: 'ESP', positions: ['ST'], foot: 'R',
+      technical: { corners: 8, crossing: 9, dribbling: 14, finishing: 19, firstTouch: 19, freeKicks: 10, heading: 19, longShots: 14, marking: 9, passing: 14, penalties: 17, tackling: 10, technique: 15 },
+      mental: { aggression: 9, anticipation: 19, bravery: 16, composure: 18, concentration: 15, decisions: 13, determination: 16, flair: 13, leadership: 8, offTheBall: 19, positioning: 10, teamwork: 14, vision: 14, workRate: 14 },
+      physical: { acceleration: 13, agility: 13, balance: 16, jumping: 19, naturalFitness: 16, pace: 13, stamina: 15, strength: 18 },
+    },
+    {
+      id: 'fcp-andre-silva', name: "André Silva", number: 19, age: 30, nationality: 'POR', positions: ['ST'], foot: 'R',
+      technical: { corners: 9, crossing: 9, dribbling: 13, finishing: 17, firstTouch: 16, freeKicks: 7, heading: 15, longShots: 12, marking: 8, passing: 9, penalties: 13, tackling: 8, technique: 15 },
+      mental: { aggression: 9, anticipation: 18, bravery: 12, composure: 16, concentration: 11, decisions: 12, determination: 14, flair: 13, leadership: 9, offTheBall: 18, positioning: 7, teamwork: 13, vision: 10, workRate: 9 },
+      physical: { acceleration: 15, agility: 14, balance: 14, jumping: 14, naturalFitness: 13, pace: 13, stamina: 9, strength: 14 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'fcp-deniz-gul', name: "Deniz Gül", number: 27, age: 22, nationality: 'SWE', positions: ['ST'], foot: 'R',
+      technical: { corners: 7, crossing: 6, dribbling: 10, finishing: 15, firstTouch: 15, freeKicks: 7, heading: 17, longShots: 12, marking: 8, passing: 12, penalties: 13, tackling: 7, technique: 13 },
+      mental: { aggression: 6, anticipation: 15, bravery: 14, composure: 14, concentration: 11, decisions: 11, determination: 14, flair: 11, leadership: 8, offTheBall: 15, positioning: 7, teamwork: 10, vision: 10, workRate: 12 },
+      physical: { acceleration: 9, agility: 11, balance: 12, jumping: 15, naturalFitness: 14, pace: 11, stamina: 11, strength: 17 },
+    },
+  ],
+});

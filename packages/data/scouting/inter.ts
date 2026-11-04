@@ -5,7 +5,6 @@ export default scout({
   kits: { home: kit('#0068a8', '#0b0b0b', 'stripes', '#0b0b0b', '#ffffff'), away: kit('#f5f5f5', '#0068a8', 'plain', '#f5f5f5', '#0b0b0b'), gk: kit('#f59e0b', '#111111', 'plain', '#111111', '#111111') },
   formation: '3-5-2', instructions: { mentality: 0, pressing: 0, line: 0, tempo: 0 },
   players: [
-    [1, 'Yann Sommer', 37, 'SUI', 'GK', 'R', 15.5, 'gk', {}, FLAG_LEAVE],
     [12, 'Ivan Provedel', 32, 'ITA', 'GK', 'R', 14.5, 'gkSweeper', {}, FLAG_NEW],
     [13, 'Josep Martínez', 28, 'ESP', 'GK', 'L', 14, 'gkSweeper'],
     [95, 'Alessandro Bastoni', 27, 'ITA', 'DC,DL', 'L', 16.5, 'cbBallPlayer', { passing: 17 }, FLAG_LEAVE],

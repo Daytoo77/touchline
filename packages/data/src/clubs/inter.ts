@@ -19,14 +19,6 @@ export default defineClub({
   dataAsOf: '2026-11-03',
   players: [
     {
-      id: 'int-yann-sommer', name: "Yann Sommer", number: 1, age: 37, nationality: 'SUI', positions: ['GK'], foot: 'R',
-      technical: { corners: 5, crossing: 5, dribbling: 5, finishing: 5, firstTouch: 13, freeKicks: 5, heading: 5, longShots: 4, marking: 4, passing: 9, penalties: 5, tackling: 4, technique: 10 },
-      mental: { aggression: 10, anticipation: 15, bravery: 15, composure: 17, concentration: 18, decisions: 16, determination: 15, flair: 5, leadership: 15, offTheBall: 4, positioning: 19, teamwork: 14, vision: 10, workRate: 10 },
-      physical: { acceleration: 7, agility: 14, balance: 15, jumping: 17, naturalFitness: 13, pace: 7, stamina: 7, strength: 13 },
-      goalkeeping: { aerialReach: 16, commandOfArea: 16, communication: 17, handling: 17, kicking: 13, oneOnOnes: 18, reflexes: 20, rushingOut: 14, throwing: 14 },
-      flag: "May have left (or been loaned out) in the summer-2026 window; not confirmed.",
-    },
-    {
       id: 'int-ivan-provedel', name: "Ivan Provedel", number: 12, age: 32, nationality: 'ITA', positions: ['GK'], foot: 'R',
       technical: { corners: 5, crossing: 5, dribbling: 3, finishing: 3, firstTouch: 16, freeKicks: 3, heading: 5, longShots: 4, marking: 4, passing: 14, penalties: 3, tackling: 4, technique: 10 },
       mental: { aggression: 10, anticipation: 15, bravery: 15, composure: 15, concentration: 16, decisions: 16, determination: 15, flair: 5, leadership: 11, offTheBall: 4, positioning: 17, teamwork: 14, vision: 13, workRate: 8 },

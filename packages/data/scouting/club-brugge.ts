@@ -1,0 +1,30 @@
+import { FLAG_LEAVE, FLAG_NEW, kit, scout } from '../src/scout';
+
+export default scout({
+  id: 'club-brugge', name: 'Club Brugge', shortName: 'Club Brugge', abbr: 'CLU', country: 'BEL', pot: 2, prefix: 'clu',
+  kits: { home: kit('#0f5fa8', '#111111', 'stripes', '#111111', '#ffffff'), away: kit('#f5f5f5', '#0f5fa8', 'plain', '#f5f5f5', '#0f5fa8'), gk: kit('#f59e0b', '#111111', 'plain', '#111111', '#111111') },
+  formation: '4-2-3-1', instructions: { mentality: 1, pressing: 1, tempo: 1 },
+  players: [
+    [1, 'Yann Sommer', 37, 'SUI', 'GK', 'R', 14.5, 'gk', {}, FLAG_NEW],
+    [29, 'Nordin Jackers', 29, 'BEL', 'GK', 'R', 13, 'gk'],
+    [22, 'Simon Mignolet', 38, 'BEL', 'GK', 'R', 12.5, 'gk', {}, FLAG_LEAVE],
+    [44, 'Brandon Mechele', 33, 'BEL', 'DC', 'R', 13.5, 'cbStopper', { leadership: 16 }],
+    [4, 'Joel Ordóñez', 22, 'ECU', 'DC', 'L', 14, 'cbAthletic'],
+    [5, 'Zaid Romero', 26, 'ARG', 'DC', 'R', 13, 'cbStopper'],
+    [58, 'Jorne Spileers', 21, 'BEL', 'DC,DR', 'R', 12.5, 'cbBallPlayer'],
+    [3, 'Lee Han-beom', 24, 'KOR', 'DC', 'R', 12.5, 'cbStopper', {}, FLAG_NEW, 'Lee'],
+    [64, 'Kyriani Sabbe', 21, 'BEL', 'DR', 'R', 13, 'fbAttacking'],
+    [2, 'Hugo Siquet', 24, 'BEL', 'DR,WBR', 'R', 12.5, 'fbAttacking', {}, FLAG_NEW],
+    [65, 'Joaquin Seys', 21, 'BEL', 'DL', 'L', 13, 'fbAttacking'],
+    [14, 'Bjorn Meijer', 23, 'NED', 'DL', 'L', 13, 'fbAttacking'],
+    [6, 'Freddie Potts', 22, 'ENG', 'DM,MC', 'R', 13, 'dmBallWinner', {}, FLAG_NEW],
+    [10, 'Hugo Vetlesen', 26, 'NOR', 'MC,AMC', 'R', 13.5, 'cmBoxToBox'],
+    [20, 'Hans Vanaken', 33, 'BEL', 'AMC,MC', 'R', 14.5, 'amCreator', { leadership: 17, passing: 17 }],
+    [18, 'Mamadou Diakhon', 20, 'SEN', 'AMR,AML', 'R', 12.5, 'wingerClassic'],
+    [9, 'Carlos Forbs', 22, 'POR', 'AML,AMR', 'R', 13.5, 'wingerClassic', { pace: 18 }],
+    [21, 'Nicolò Tresoldi', 22, 'GER', 'ST', 'R', 13, 'stPoacher'],
+    [19, 'Gustaf Nilsson', 29, 'SWE', 'ST', 'R', 12.5, 'stTarget'],
+    [17, 'Romeo Vermant', 22, 'BEL', 'ST', 'R', 12.5, 'stPresser'],
+    [11, 'Andrej Vasović', 20, 'SUI', 'ST,AML', 'R', 11.5, 'stPacey', {}, FLAG_NEW],
+  ],
+});

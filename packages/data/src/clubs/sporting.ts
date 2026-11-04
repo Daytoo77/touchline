@@ -1,0 +1,158 @@
+// Sporting CP: 2026-27 squad. Ratings are Touchline's own estimates from each player's level and role
+// (not taken from any game or ratings database). Generated from packages/data/scouting/sporting.ts;
+// this file is now the source of truth: edit any number by hand (1-20), then run `npm run data:check`.
+import { defineClub } from '../define';
+
+export default defineClub({
+  id: 'sporting',
+  name: "Sporting CP",
+  shortName: "Sporting",
+  abbr: 'SCP',
+  country: 'POR',
+  pot: 2,
+  kits: {
+    home: {"shirt":"#008057","trim":"#ffffff","pattern":"hoops","shorts":"#111111","number":"#ffffff"},
+    away: {"shirt":"#1f1f1f","trim":"#008057","pattern":"plain","shorts":"#1f1f1f","number":"#ffffff"},
+    gk: {"shirt":"#f97316","trim":"#111111","pattern":"plain","shorts":"#111111","number":"#111111"},
+  },
+  defaultTactic: { formation: '4-2-3-1', instructions: {"mentality":1,"pressing":1,"line":0,"width":0,"tempo":1,"directness":0,"timeWasting":0} },
+  dataAsOf: '2026-11-03',
+  players: [
+    {
+      id: 'scp-rui-silva', name: "Rui Silva", number: 1, age: 32, nationality: 'POR', positions: ['GK'], foot: 'R',
+      technical: { corners: 3, crossing: 4, dribbling: 5, finishing: 5, firstTouch: 14, freeKicks: 5, heading: 3, longShots: 4, marking: 4, passing: 9, penalties: 5, tackling: 5, technique: 8 },
+      mental: { aggression: 9, anticipation: 16, bravery: 15, composure: 16, concentration: 18, decisions: 16, determination: 15, flair: 3, leadership: 13, offTheBall: 5, positioning: 19, teamwork: 13, vision: 9, workRate: 9 },
+      physical: { acceleration: 7, agility: 16, balance: 13, jumping: 15, naturalFitness: 14, pace: 7, stamina: 8, strength: 14 },
+      goalkeeping: { aerialReach: 16, commandOfArea: 16, communication: 15, handling: 18, kicking: 11, oneOnOnes: 16, reflexes: 17, rushingOut: 11, throwing: 13 },
+    },
+    {
+      id: 'scp-joao-virginia', name: "João Virgínia", number: 12, age: 26, nationality: 'POR', positions: ['GK'], foot: 'R',
+      technical: { corners: 2, crossing: 2, dribbling: 2, finishing: 2, firstTouch: 10, freeKicks: 2, heading: 2, longShots: 1, marking: 1, passing: 6, penalties: 2, tackling: 1, technique: 7 },
+      mental: { aggression: 7, anticipation: 12, bravery: 12, composure: 13, concentration: 15, decisions: 12, determination: 12, flair: 2, leadership: 8, offTheBall: 1, positioning: 15, teamwork: 11, vision: 7, workRate: 7 },
+      physical: { acceleration: 7, agility: 14, balance: 12, jumping: 14, naturalFitness: 13, pace: 7, stamina: 7, strength: 10 },
+      goalkeeping: { aerialReach: 13, commandOfArea: 13, communication: 14, handling: 14, kicking: 10, oneOnOnes: 15, reflexes: 17, rushingOut: 11, throwing: 11 },
+    },
+    {
+      id: 'scp-diego-callai', name: "Diego Callai", number: 41, age: 21, nationality: 'BRA', positions: ['GK'], foot: 'R',
+      technical: { corners: 1, crossing: 1, dribbling: 1, finishing: 1, firstTouch: 9, freeKicks: 1, heading: 1, longShots: 1, marking: 1, passing: 4, penalties: 1, tackling: 1, technique: 5 },
+      mental: { aggression: 5, anticipation: 11, bravery: 11, composure: 11, concentration: 14, decisions: 10, determination: 11, flair: 1, leadership: 4, offTheBall: 1, positioning: 14, teamwork: 10, vision: 5, workRate: 5 },
+      physical: { acceleration: 5, agility: 13, balance: 11, jumping: 13, naturalFitness: 12, pace: 5, stamina: 5, strength: 9 },
+      goalkeeping: { aerialReach: 12, commandOfArea: 12, communication: 13, handling: 13, kicking: 9, oneOnOnes: 14, reflexes: 16, rushingOut: 10, throwing: 10 },
+    },
+    {
+      id: 'scp-ousmane-diomande', name: "Ousmane Diomande", number: 26, age: 22, nationality: 'CIV', positions: ['DC'], foot: 'R',
+      technical: { corners: 9, crossing: 8, dribbling: 9, finishing: 4, firstTouch: 14, freeKicks: 9, heading: 17, longShots: 10, marking: 19, passing: 15, penalties: 9, tackling: 18, technique: 14 },
+      mental: { aggression: 15, anticipation: 17, bravery: 17, composure: 13, concentration: 16, decisions: 16, determination: 17, flair: 9, leadership: 10, offTheBall: 9, positioning: 18, teamwork: 13, vision: 8, workRate: 15 },
+      physical: { acceleration: 17, agility: 17, balance: 13, jumping: 17, naturalFitness: 17, pace: 19, stamina: 14, strength: 18 },
+      flag: "May have left (or been loaned out) in the summer-2026 window; not confirmed.",
+    },
+    {
+      id: 'scp-goncalo-inacio', name: "Gonçalo Inácio", number: 25, age: 25, nationality: 'POR', positions: ['DC', 'DL'], foot: 'L',
+      technical: { corners: 11, crossing: 11, dribbling: 9, finishing: 4, firstTouch: 17, freeKicks: 9, heading: 18, longShots: 10, marking: 18, passing: 18, penalties: 9, tackling: 18, technique: 18 },
+      mental: { aggression: 17, anticipation: 16, bravery: 16, composure: 16, concentration: 15, decisions: 17, determination: 16, flair: 11, leadership: 9, offTheBall: 10, positioning: 17, teamwork: 15, vision: 15, workRate: 13 },
+      physical: { acceleration: 15, agility: 14, balance: 14, jumping: 18, naturalFitness: 15, pace: 13, stamina: 13, strength: 18 },
+    },
+    {
+      id: 'scp-zeno-debast', name: "Zeno Debast", number: 6, age: 22, nationality: 'BEL', positions: ['DC', 'DM'], foot: 'R',
+      technical: { corners: 8, crossing: 9, dribbling: 10, finishing: 5, firstTouch: 17, freeKicks: 10, heading: 15, longShots: 9, marking: 17, passing: 17, penalties: 10, tackling: 18, technique: 15 },
+      mental: { aggression: 15, anticipation: 16, bravery: 15, composure: 16, concentration: 16, decisions: 15, determination: 15, flair: 8, leadership: 8, offTheBall: 10, positioning: 18, teamwork: 13, vision: 13, workRate: 13 },
+      physical: { acceleration: 13, agility: 13, balance: 13, jumping: 17, naturalFitness: 15, pace: 13, stamina: 14, strength: 18 },
+    },
+    {
+      id: 'scp-eduardo-quaresma', name: "Eduardo Quaresma", number: 72, age: 24, nationality: 'POR', positions: ['DC', 'DR'], foot: 'R',
+      technical: { corners: 8, crossing: 7, dribbling: 8, finishing: 3, firstTouch: 13, freeKicks: 8, heading: 16, longShots: 9, marking: 18, passing: 14, penalties: 8, tackling: 17, technique: 13 },
+      mental: { aggression: 14, anticipation: 16, bravery: 16, composure: 13, concentration: 15, decisions: 16, determination: 16, flair: 8, leadership: 11, offTheBall: 8, positioning: 17, teamwork: 12, vision: 7, workRate: 14 },
+      physical: { acceleration: 16, agility: 16, balance: 12, jumping: 16, naturalFitness: 16, pace: 18, stamina: 13, strength: 17 },
+    },
+    {
+      id: 'scp-ivan-fresneda', name: "Iván Fresneda", number: 22, age: 21, nationality: 'ESP', positions: ['DR'], foot: 'R',
+      technical: { corners: 8, crossing: 18, dribbling: 16, finishing: 8, firstTouch: 11, freeKicks: 8, heading: 12, longShots: 7, marking: 11, passing: 13, penalties: 8, tackling: 13, technique: 13 },
+      mental: { aggression: 12, anticipation: 13, bravery: 11, composure: 11, concentration: 14, decisions: 10, determination: 13, flair: 8, leadership: 7, offTheBall: 14, positioning: 12, teamwork: 14, vision: 8, workRate: 16 },
+      physical: { acceleration: 16, agility: 13, balance: 13, jumping: 13, naturalFitness: 14, pace: 16, stamina: 16, strength: 11 },
+    },
+    {
+      id: 'scp-georgios-vagiannidis', name: "Georgios Vagiannidis", number: 13, age: 25, nationality: 'GRE', positions: ['DR', 'DL'], foot: 'R',
+      technical: { corners: 9, crossing: 15, dribbling: 11, finishing: 7, firstTouch: 12, freeKicks: 7, heading: 13, longShots: 8, marking: 17, passing: 14, penalties: 7, tackling: 18, technique: 13 },
+      mental: { aggression: 13, anticipation: 14, bravery: 12, composure: 11, concentration: 13, decisions: 12, determination: 14, flair: 9, leadership: 7, offTheBall: 10, positioning: 16, teamwork: 15, vision: 9, workRate: 15 },
+      physical: { acceleration: 17, agility: 14, balance: 12, jumping: 12, naturalFitness: 13, pace: 15, stamina: 15, strength: 12 },
+    },
+    {
+      id: 'scp-maxi-araujo', name: "Maxi Araújo", number: 20, age: 26, nationality: 'URU', positions: ['DL', 'AML'], foot: 'L',
+      technical: { corners: 9, crossing: 18, dribbling: 17, finishing: 9, firstTouch: 13, freeKicks: 9, heading: 13, longShots: 10, marking: 14, passing: 16, penalties: 9, tackling: 15, technique: 14 },
+      mental: { aggression: 12, anticipation: 15, bravery: 14, composure: 13, concentration: 15, decisions: 14, determination: 16, flair: 9, leadership: 12, offTheBall: 16, positioning: 13, teamwork: 14, vision: 8, workRate: 18 },
+      physical: { acceleration: 16, agility: 16, balance: 12, jumping: 12, naturalFitness: 16, pace: 18, stamina: 17, strength: 13 },
+    },
+    {
+      id: 'scp-sergi-altimira', name: "Sergi Altimira", number: 42, age: 25, nationality: 'ESP', positions: ['DM', 'MC'], foot: 'R',
+      technical: { corners: 7, crossing: 8, dribbling: 7, finishing: 9, firstTouch: 16, freeKicks: 9, heading: 12, longShots: 13, marking: 17, passing: 15, penalties: 9, tackling: 19, technique: 12 },
+      mental: { aggression: 13, anticipation: 18, bravery: 13, composure: 16, concentration: 16, decisions: 17, determination: 15, flair: 7, leadership: 9, offTheBall: 9, positioning: 20, teamwork: 17, vision: 10, workRate: 15 },
+      physical: { acceleration: 13, agility: 13, balance: 13, jumping: 13, naturalFitness: 15, pace: 13, stamina: 16, strength: 18 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'scp-issa-doumbia', name: "Issa Doumbia", number: 5, age: 23, nationality: 'MLI', positions: ['MC', 'DM'], foot: 'R',
+      technical: { corners: 12, crossing: 13, dribbling: 16, finishing: 13, firstTouch: 18, freeKicks: 14, heading: 7, longShots: 15, marking: 13, passing: 17, penalties: 9, tackling: 17, technique: 16 },
+      mental: { aggression: 13, anticipation: 16, bravery: 13, composure: 16, concentration: 14, decisions: 17, determination: 15, flair: 12, leadership: 9, offTheBall: 18, positioning: 16, teamwork: 17, vision: 14, workRate: 20 },
+      physical: { acceleration: 13, agility: 13, balance: 13, jumping: 8, naturalFitness: 15, pace: 13, stamina: 20, strength: 14 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'scp-silas-andersen', name: "Silas Andersen", number: 16, age: 22, nationality: 'DEN', positions: ['MC'], foot: 'R',
+      technical: { corners: 13, crossing: 13, dribbling: 13, finishing: 11, firstTouch: 16, freeKicks: 11, heading: 9, longShots: 14, marking: 12, passing: 16, penalties: 7, tackling: 15, technique: 17 },
+      mental: { aggression: 13, anticipation: 14, bravery: 12, composure: 12, concentration: 11, decisions: 15, determination: 14, flair: 13, leadership: 5, offTheBall: 16, positioning: 13, teamwork: 17, vision: 14, workRate: 18 },
+      physical: { acceleration: 13, agility: 12, balance: 12, jumping: 8, naturalFitness: 13, pace: 11, stamina: 18, strength: 12 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'scp-giorgi-kochorashvili', name: "Giorgi Kochorashvili", number: 14, age: 27, nationality: 'GEO', positions: ['MC', 'DM'], foot: 'R',
+      technical: { corners: 8, crossing: 7, dribbling: 8, finishing: 8, firstTouch: 15, freeKicks: 8, heading: 13, longShots: 14, marking: 16, passing: 18, penalties: 8, tackling: 20, technique: 11 },
+      mental: { aggression: 16, anticipation: 17, bravery: 16, composure: 14, concentration: 15, decisions: 18, determination: 16, flair: 8, leadership: 11, offTheBall: 8, positioning: 17, teamwork: 16, vision: 9, workRate: 19 },
+      physical: { acceleration: 12, agility: 14, balance: 12, jumping: 12, naturalFitness: 16, pace: 14, stamina: 17, strength: 15 },
+    },
+    {
+      id: 'scp-daniel-braganca', name: "Daniel Bragança", number: 23, age: 27, nationality: 'POR', positions: ['MC', 'DM'], foot: 'L',
+      technical: { corners: 13, crossing: 13, dribbling: 15, finishing: 8, firstTouch: 16, freeKicks: 13, heading: 8, longShots: 14, marking: 12, passing: 19, penalties: 8, tackling: 12, technique: 19 },
+      mental: { aggression: 13, anticipation: 14, bravery: 12, composure: 17, concentration: 13, decisions: 18, determination: 14, flair: 13, leadership: 9, offTheBall: 14, positioning: 15, teamwork: 17, vision: 19, workRate: 16 },
+      physical: { acceleration: 13, agility: 12, balance: 14, jumping: 9, naturalFitness: 15, pace: 13, stamina: 16, strength: 12 },
+      flag: "May have left (or been loaned out) in the summer-2026 window; not confirmed.",
+    },
+    {
+      id: 'scp-joao-simoes', name: "João Simões", number: 52, age: 19, nationality: 'POR', positions: ['MC'], foot: 'R',
+      technical: { corners: 12, crossing: 11, dribbling: 14, finishing: 12, firstTouch: 16, freeKicks: 12, heading: 8, longShots: 15, marking: 13, passing: 17, penalties: 8, tackling: 15, technique: 16 },
+      mental: { aggression: 11, anticipation: 13, bravery: 13, composure: 12, concentration: 11, decisions: 15, determination: 15, flair: 12, leadership: 8, offTheBall: 16, positioning: 13, teamwork: 15, vision: 12, workRate: 20 },
+      physical: { acceleration: 11, agility: 13, balance: 11, jumping: 7, naturalFitness: 15, pace: 13, stamina: 19, strength: 11 },
+    },
+    {
+      id: 'scp-pedro-goncalves', name: "Pedro Gonçalves", shortName: "Pote", number: 8, age: 28, nationality: 'POR', positions: ['AMC', 'AML'], foot: 'R',
+      technical: { corners: 14, crossing: 14, dribbling: 18, finishing: 19, firstTouch: 17, freeKicks: 14, heading: 10, longShots: 15, marking: 9, passing: 15, penalties: 14, tackling: 9, technique: 18 },
+      mental: { aggression: 10, anticipation: 17, bravery: 9, composure: 18, concentration: 14, decisions: 15, determination: 13, flair: 18, leadership: 11, offTheBall: 18, positioning: 10, teamwork: 14, vision: 16, workRate: 14 },
+      physical: { acceleration: 14, agility: 15, balance: 17, jumping: 11, naturalFitness: 16, pace: 14, stamina: 14, strength: 9 },
+      flag: "May have left (or been loaned out) in the summer-2026 window; not confirmed.",
+    },
+    {
+      id: 'scp-geny-catamo', name: "Geny Catamo", number: 10, age: 25, nationality: 'MOZ', positions: ['AMR', 'DR'], foot: 'L',
+      technical: { corners: 14, crossing: 15, dribbling: 18, finishing: 17, firstTouch: 15, freeKicks: 12, heading: 9, longShots: 15, marking: 8, passing: 15, penalties: 12, tackling: 8, technique: 18 },
+      mental: { aggression: 9, anticipation: 13, bravery: 8, composure: 13, concentration: 12, decisions: 13, determination: 13, flair: 18, leadership: 7, offTheBall: 15, positioning: 7, teamwork: 14, vision: 14, workRate: 14 },
+      physical: { acceleration: 18, agility: 17, balance: 15, jumping: 8, naturalFitness: 14, pace: 16, stamina: 14, strength: 8 },
+    },
+    {
+      id: 'scp-nestory-irankunda', name: "Nestory Irankunda", number: 11, age: 20, nationality: 'AUS', positions: ['AMR', 'AML'], foot: 'L',
+      technical: { corners: 12, crossing: 12, dribbling: 18, finishing: 17, firstTouch: 14, freeKicks: 12, heading: 8, longShots: 15, marking: 9, passing: 15, penalties: 12, tackling: 8, technique: 16 },
+      mental: { aggression: 7, anticipation: 12, bravery: 9, composure: 12, concentration: 12, decisions: 12, determination: 13, flair: 16, leadership: 9, offTheBall: 14, positioning: 8, teamwork: 11, vision: 11, workRate: 15 },
+      physical: { acceleration: 15, agility: 17, balance: 13, jumping: 7, naturalFitness: 15, pace: 17, stamina: 14, strength: 8 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'scp-luis-suarez', name: "Luis Suárez", number: 97, age: 29, nationality: 'COL', positions: ['ST'], foot: 'R',
+      technical: { corners: 10, crossing: 9, dribbling: 16, finishing: 18, firstTouch: 18, freeKicks: 10, heading: 17, longShots: 15, marking: 11, passing: 17, penalties: 16, tackling: 10, technique: 18 },
+      mental: { aggression: 9, anticipation: 18, bravery: 15, composure: 18, concentration: 14, decisions: 17, determination: 17, flair: 14, leadership: 15, offTheBall: 18, positioning: 10, teamwork: 13, vision: 15, workRate: 15 },
+      physical: { acceleration: 15, agility: 17, balance: 15, jumping: 15, naturalFitness: 17, pace: 17, stamina: 14, strength: 18 },
+    },
+    {
+      id: 'scp-fotis-ioannidis', name: "Fotis Ioannidis", number: 89, age: 26, nationality: 'GRE', positions: ['ST'], foot: 'R',
+      technical: { corners: 8, crossing: 7, dribbling: 12, finishing: 17, firstTouch: 17, freeKicks: 8, heading: 19, longShots: 14, marking: 9, passing: 14, penalties: 15, tackling: 8, technique: 15 },
+      mental: { aggression: 7, anticipation: 17, bravery: 16, composure: 17, concentration: 13, decisions: 14, determination: 16, flair: 13, leadership: 11, offTheBall: 17, positioning: 8, teamwork: 12, vision: 12, workRate: 14 },
+      physical: { acceleration: 11, agility: 13, balance: 14, jumping: 17, naturalFitness: 16, pace: 13, stamina: 13, strength: 19 },
+    },
+  ],
+});

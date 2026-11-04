@@ -1,0 +1,168 @@
+// Roma: 2026-27 squad. Ratings are Touchline's own estimates from each player's level and role
+// (not taken from any game or ratings database). Generated from packages/data/scouting/roma.ts;
+// this file is now the source of truth: edit any number by hand (1-20), then run `npm run data:check`.
+import { defineClub } from '../define';
+
+export default defineClub({
+  id: 'roma',
+  name: "Roma",
+  shortName: "Roma",
+  abbr: 'ROM',
+  country: 'ITA',
+  pot: 2,
+  kits: {
+    home: {"shirt":"#8e1f2f","trim":"#f0bc42","pattern":"plain","shorts":"#ffffff","number":"#f0bc42"},
+    away: {"shirt":"#f5f5f5","trim":"#8e1f2f","pattern":"plain","shorts":"#f5f5f5","number":"#8e1f2f"},
+    gk: {"shirt":"#16a34a","trim":"#111111","pattern":"plain","shorts":"#111111","number":"#ffffff"},
+  },
+  defaultTactic: { formation: '3-4-2-1', instructions: {"mentality":1,"pressing":2,"line":1,"width":0,"tempo":1,"directness":0,"timeWasting":0} },
+  dataAsOf: '2026-11-03',
+  players: [
+    {
+      id: 'rom-mile-svilar', name: "Mile Svilar", number: 99, age: 26, nationality: 'SRB', positions: ['GK'], foot: 'R',
+      technical: { corners: 6, crossing: 6, dribbling: 4, finishing: 4, firstTouch: 15, freeKicks: 4, heading: 6, longShots: 5, marking: 5, passing: 10, penalties: 4, tackling: 5, technique: 11 },
+      mental: { aggression: 11, anticipation: 17, bravery: 17, composure: 16, concentration: 18, decisions: 17, determination: 17, flair: 6, leadership: 9, offTheBall: 5, positioning: 18, teamwork: 16, vision: 11, workRate: 9 },
+      physical: { acceleration: 11, agility: 19, balance: 15, jumping: 17, naturalFitness: 16, pace: 9, stamina: 9, strength: 15 },
+      goalkeeping: { aerialReach: 16, commandOfArea: 16, communication: 17, handling: 19, kicking: 15, oneOnOnes: 18, reflexes: 19, rushingOut: 14, throwing: 16 },
+    },
+    {
+      id: 'rom-pierluigi-gollini', name: "Pierluigi Gollini", number: 95, age: 31, nationality: 'ITA', positions: ['GK'], foot: 'R',
+      technical: { corners: 2, crossing: 2, dribbling: 1, finishing: 1, firstTouch: 11, freeKicks: 1, heading: 2, longShots: 1, marking: 1, passing: 6, penalties: 1, tackling: 1, technique: 7 },
+      mental: { aggression: 7, anticipation: 13, bravery: 13, composure: 12, concentration: 14, decisions: 14, determination: 13, flair: 2, leadership: 8, offTheBall: 1, positioning: 15, teamwork: 12, vision: 7, workRate: 5 },
+      physical: { acceleration: 6, agility: 13, balance: 11, jumping: 13, naturalFitness: 10, pace: 4, stamina: 4, strength: 11 },
+      goalkeeping: { aerialReach: 12, commandOfArea: 12, communication: 13, handling: 15, kicking: 11, oneOnOnes: 14, reflexes: 16, rushingOut: 10, throwing: 12 },
+    },
+    {
+      id: 'rom-gianluca-mancini', name: "Gianluca Mancini", number: 23, age: 30, nationality: 'ITA', positions: ['DC'], foot: 'R',
+      technical: { corners: 8, crossing: 9, dribbling: 10, finishing: 5, firstTouch: 15, freeKicks: 10, heading: 18, longShots: 9, marking: 18, passing: 12, penalties: 10, tackling: 19, technique: 13 },
+      mental: { aggression: 18, anticipation: 17, bravery: 16, composure: 14, concentration: 17, decisions: 16, determination: 16, flair: 8, leadership: 12, offTheBall: 10, positioning: 19, teamwork: 14, vision: 9, workRate: 14 },
+      physical: { acceleration: 13, agility: 13, balance: 14, jumping: 18, naturalFitness: 15, pace: 12, stamina: 14, strength: 20 },
+    },
+    {
+      id: 'rom-evan-ndicka', name: "Evan Ndicka", number: 5, age: 27, nationality: 'CIV', positions: ['DC'], foot: 'L',
+      technical: { corners: 9, crossing: 9, dribbling: 9, finishing: 4, firstTouch: 13, freeKicks: 9, heading: 17, longShots: 8, marking: 17, passing: 13, penalties: 9, tackling: 17, technique: 14 },
+      mental: { aggression: 16, anticipation: 16, bravery: 15, composure: 14, concentration: 16, decisions: 15, determination: 15, flair: 9, leadership: 10, offTheBall: 8, positioning: 18, teamwork: 14, vision: 9, workRate: 14 },
+      physical: { acceleration: 18, agility: 15, balance: 15, jumping: 19, naturalFitness: 16, pace: 18, stamina: 14, strength: 17 },
+    },
+    {
+      id: 'rom-mario-hermoso', name: "Mario Hermoso", number: 22, age: 31, nationality: 'ESP', positions: ['DC', 'DL'], foot: 'L',
+      technical: { corners: 7, crossing: 8, dribbling: 9, finishing: 4, firstTouch: 17, freeKicks: 9, heading: 15, longShots: 8, marking: 17, passing: 17, penalties: 9, tackling: 18, technique: 15 },
+      mental: { aggression: 15, anticipation: 16, bravery: 15, composure: 17, concentration: 16, decisions: 17, determination: 15, flair: 7, leadership: 12, offTheBall: 9, positioning: 19, teamwork: 13, vision: 12, workRate: 13 },
+      physical: { acceleration: 11, agility: 11, balance: 13, jumping: 17, naturalFitness: 13, pace: 11, stamina: 12, strength: 18 },
+      flag: "May have left (or been loaned out) in the summer-2026 window; not confirmed.",
+    },
+    {
+      id: 'rom-daniele-ghilardi', name: "Daniele Ghilardi", number: 87, age: 23, nationality: 'ITA', positions: ['DC'], foot: 'R',
+      technical: { corners: 9, crossing: 9, dribbling: 7, finishing: 2, firstTouch: 13, freeKicks: 7, heading: 19, longShots: 8, marking: 17, passing: 11, penalties: 7, tackling: 17, technique: 14 },
+      mental: { aggression: 18, anticipation: 15, bravery: 15, composure: 11, concentration: 14, decisions: 15, determination: 15, flair: 9, leadership: 7, offTheBall: 8, positioning: 16, teamwork: 14, vision: 9, workRate: 12 },
+      physical: { acceleration: 14, agility: 13, balance: 13, jumping: 17, naturalFitness: 14, pace: 11, stamina: 12, strength: 18 },
+    },
+    {
+      id: 'rom-jan-ziolkowski', name: "Jan Ziółkowski", number: 24, age: 21, nationality: 'POL', positions: ['DC'], foot: 'R',
+      technical: { corners: 7, crossing: 6, dribbling: 7, finishing: 2, firstTouch: 12, freeKicks: 7, heading: 17, longShots: 8, marking: 17, passing: 11, penalties: 7, tackling: 16, technique: 12 },
+      mental: { aggression: 15, anticipation: 14, bravery: 15, composure: 10, concentration: 14, decisions: 14, determination: 15, flair: 7, leadership: 8, offTheBall: 7, positioning: 16, teamwork: 11, vision: 6, workRate: 13 },
+      physical: { acceleration: 11, agility: 13, balance: 11, jumping: 15, naturalFitness: 15, pace: 12, stamina: 12, strength: 17 },
+    },
+    {
+      id: 'rom-zeki-celik', name: "Zeki Çelik", number: 19, age: 29, nationality: 'TUR', positions: ['DR', 'DC', 'WBR'], foot: 'R',
+      technical: { corners: 7, crossing: 14, dribbling: 13, finishing: 9, firstTouch: 13, freeKicks: 9, heading: 11, longShots: 8, marking: 17, passing: 14, penalties: 9, tackling: 19, technique: 11 },
+      mental: { aggression: 12, anticipation: 15, bravery: 12, composure: 13, concentration: 15, decisions: 12, determination: 14, flair: 7, leadership: 11, offTheBall: 11, positioning: 18, teamwork: 14, vision: 8, workRate: 16 },
+      physical: { acceleration: 16, agility: 14, balance: 12, jumping: 12, naturalFitness: 14, pace: 16, stamina: 17, strength: 13 },
+    },
+    {
+      id: 'rom-angelino', name: "Angeliño", number: 3, age: 29, nationality: 'ESP', positions: ['WBL', 'DL'], foot: 'L',
+      technical: { corners: 10, crossing: 20, dribbling: 16, finishing: 8, firstTouch: 13, freeKicks: 8, heading: 14, longShots: 9, marking: 13, passing: 15, penalties: 8, tackling: 15, technique: 15 },
+      mental: { aggression: 14, anticipation: 15, bravery: 13, composure: 12, concentration: 14, decisions: 13, determination: 15, flair: 10, leadership: 10, offTheBall: 16, positioning: 12, teamwork: 16, vision: 10, workRate: 16 },
+      physical: { acceleration: 18, agility: 15, balance: 13, jumping: 13, naturalFitness: 14, pace: 16, stamina: 16, strength: 13 },
+    },
+    {
+      id: 'rom-wesley', name: "Wesley", number: 43, age: 22, nationality: 'BRA', positions: ['WBR', 'DR'], foot: 'R',
+      technical: { corners: 9, crossing: 19, dribbling: 17, finishing: 9, firstTouch: 12, freeKicks: 9, heading: 13, longShots: 8, marking: 12, passing: 14, penalties: 9, tackling: 14, technique: 14 },
+      mental: { aggression: 13, anticipation: 14, bravery: 12, composure: 12, concentration: 15, decisions: 11, determination: 14, flair: 9, leadership: 8, offTheBall: 15, positioning: 13, teamwork: 15, vision: 9, workRate: 17 },
+      physical: { acceleration: 17, agility: 14, balance: 14, jumping: 14, naturalFitness: 15, pace: 18, stamina: 17, strength: 12 },
+    },
+    {
+      id: 'rom-devyne-rensch', name: "Devyne Rensch", number: 2, age: 23, nationality: 'NED', positions: ['WBR', 'DR'], foot: 'R',
+      technical: { corners: 9, crossing: 19, dribbling: 15, finishing: 7, firstTouch: 12, freeKicks: 7, heading: 13, longShots: 8, marking: 12, passing: 14, penalties: 7, tackling: 14, technique: 14 },
+      mental: { aggression: 13, anticipation: 14, bravery: 12, composure: 11, concentration: 13, decisions: 12, determination: 14, flair: 9, leadership: 7, offTheBall: 15, positioning: 11, teamwork: 15, vision: 9, workRate: 15 },
+      physical: { acceleration: 17, agility: 14, balance: 12, jumping: 12, naturalFitness: 13, pace: 15, stamina: 15, strength: 12 },
+    },
+    {
+      id: 'rom-bryan-cristante', name: "Bryan Cristante", number: 4, age: 31, nationality: 'ITA', positions: ['MC', 'DM', 'DC'], foot: 'R',
+      technical: { corners: 9, crossing: 8, dribbling: 7, finishing: 9, firstTouch: 15, freeKicks: 9, heading: 13, longShots: 14, marking: 18, passing: 16, penalties: 9, tackling: 18, technique: 13 },
+      mental: { aggression: 12, anticipation: 17, bravery: 14, composure: 15, concentration: 15, decisions: 19, determination: 16, flair: 9, leadership: 15, offTheBall: 9, positioning: 20, teamwork: 16, vision: 9, workRate: 16 },
+      physical: { acceleration: 11, agility: 13, balance: 12, jumping: 12, naturalFitness: 15, pace: 13, stamina: 14, strength: 17 },
+    },
+    {
+      id: 'rom-manu-kone', name: "Manu Koné", number: 17, age: 25, nationality: 'FRA', positions: ['MC', 'DM'], foot: 'R',
+      technical: { corners: 14, crossing: 14, dribbling: 16, finishing: 14, firstTouch: 17, freeKicks: 14, heading: 10, longShots: 15, marking: 13, passing: 17, penalties: 10, tackling: 16, technique: 18 },
+      mental: { aggression: 14, anticipation: 15, bravery: 13, composure: 16, concentration: 14, decisions: 17, determination: 15, flair: 14, leadership: 11, offTheBall: 17, positioning: 16, teamwork: 18, vision: 15, workRate: 20 },
+      physical: { acceleration: 14, agility: 13, balance: 15, jumping: 11, naturalFitness: 16, pace: 14, stamina: 20, strength: 13 },
+    },
+    {
+      id: 'rom-neil-el-aynaoui', name: "Neil El Aynaoui", number: 8, age: 25, nationality: 'MAR', positions: ['DM', 'MC'], foot: 'R',
+      technical: { corners: 9, crossing: 9, dribbling: 9, finishing: 9, firstTouch: 14, freeKicks: 9, heading: 13, longShots: 12, marking: 14, passing: 16, penalties: 9, tackling: 19, technique: 11 },
+      mental: { aggression: 17, anticipation: 16, bravery: 14, composure: 14, concentration: 15, decisions: 16, determination: 14, flair: 9, leadership: 10, offTheBall: 8, positioning: 17, teamwork: 17, vision: 10, workRate: 18 },
+      physical: { acceleration: 13, agility: 12, balance: 14, jumping: 14, naturalFitness: 15, pace: 13, stamina: 17, strength: 14 },
+    },
+    {
+      id: 'rom-niccolo-pisilli', name: "Niccolò Pisilli", number: 61, age: 22, nationality: 'ITA', positions: ['MC'], foot: 'R',
+      technical: { corners: 12, crossing: 11, dribbling: 14, finishing: 12, firstTouch: 16, freeKicks: 12, heading: 8, longShots: 15, marking: 13, passing: 17, penalties: 8, tackling: 15, technique: 16 },
+      mental: { aggression: 11, anticipation: 14, bravery: 13, composure: 13, concentration: 12, decisions: 16, determination: 15, flair: 12, leadership: 9, offTheBall: 16, positioning: 14, teamwork: 15, vision: 12, workRate: 20 },
+      physical: { acceleration: 11, agility: 13, balance: 11, jumping: 7, naturalFitness: 15, pace: 13, stamina: 19, strength: 12 },
+    },
+    {
+      id: 'rom-lorenzo-pellegrini', name: "Lorenzo Pellegrini", number: 7, age: 30, nationality: 'ITA', positions: ['AMC', 'MC'], foot: 'R',
+      technical: { corners: 17, crossing: 14, dribbling: 16, finishing: 14, firstTouch: 17, freeKicks: 12, heading: 10, longShots: 15, marking: 9, passing: 19, penalties: 12, tackling: 9, technique: 18 },
+      mental: { aggression: 10, anticipation: 15, bravery: 9, composure: 14, concentration: 12, decisions: 16, determination: 13, flair: 20, leadership: 10, offTheBall: 15, positioning: 8, teamwork: 14, vision: 20, workRate: 12 },
+      physical: { acceleration: 14, agility: 15, balance: 15, jumping: 9, naturalFitness: 14, pace: 12, stamina: 12, strength: 9 },
+      flag: "May have left (or been loaned out) in the summer-2026 window; not confirmed.",
+    },
+    {
+      id: 'rom-matias-soule', name: "Matías Soulé", number: 18, age: 23, nationality: 'ARG', positions: ['AMR', 'AMC'], foot: 'L',
+      technical: { corners: 14, crossing: 14, dribbling: 20, finishing: 19, firstTouch: 16, freeKicks: 14, heading: 9, longShots: 17, marking: 10, passing: 17, penalties: 14, tackling: 9, technique: 18 },
+      mental: { aggression: 8, anticipation: 14, bravery: 10, composure: 15, concentration: 14, decisions: 15, determination: 15, flair: 18, leadership: 12, offTheBall: 16, positioning: 9, teamwork: 13, vision: 13, workRate: 17 },
+      physical: { acceleration: 17, agility: 19, balance: 15, jumping: 8, naturalFitness: 17, pace: 19, stamina: 16, strength: 9 },
+    },
+    {
+      id: 'rom-paulo-dybala', name: "Paulo Dybala", number: 21, age: 32, nationality: 'ARG', positions: ['AMC', 'ST', 'AMR'], foot: 'L',
+      technical: { corners: 15, crossing: 15, dribbling: 17, finishing: 16, firstTouch: 18, freeKicks: 18, heading: 11, longShots: 16, marking: 10, passing: 20, penalties: 13, tackling: 10, technique: 19 },
+      mental: { aggression: 11, anticipation: 16, bravery: 10, composure: 15, concentration: 13, decisions: 18, determination: 14, flair: 20, leadership: 12, offTheBall: 16, positioning: 10, teamwork: 15, vision: 20, workRate: 13 },
+      physical: { acceleration: 14, agility: 15, balance: 16, jumping: 10, naturalFitness: 14, pace: 12, stamina: 12, strength: 10 },
+      flag: "May have left (or been loaned out) in the summer-2026 window; not confirmed.",
+    },
+    {
+      id: 'rom-tommaso-baldanzi', name: "Tommaso Baldanzi", number: 35, age: 23, nationality: 'ITA', positions: ['AMC'], foot: 'L',
+      technical: { corners: 11, crossing: 12, dribbling: 17, finishing: 15, firstTouch: 17, freeKicks: 13, heading: 7, longShots: 14, marking: 8, passing: 18, penalties: 13, tackling: 9, technique: 15 },
+      mental: { aggression: 8, anticipation: 15, bravery: 8, composure: 15, concentration: 13, decisions: 15, determination: 12, flair: 17, leadership: 9, offTheBall: 15, positioning: 9, teamwork: 12, vision: 18, workRate: 12 },
+      physical: { acceleration: 12, agility: 14, balance: 14, jumping: 8, naturalFitness: 14, pace: 12, stamina: 13, strength: 9 },
+    },
+    {
+      id: 'rom-stephan-el-shaarawy', name: "Stephan El Shaarawy", number: 92, age: 34, nationality: 'ITA', positions: ['AML', 'WBL'], foot: 'R',
+      technical: { corners: 11, crossing: 13, dribbling: 19, finishing: 18, firstTouch: 15, freeKicks: 13, heading: 7, longShots: 14, marking: 8, passing: 14, penalties: 13, tackling: 9, technique: 15 },
+      mental: { aggression: 8, anticipation: 13, bravery: 8, composure: 15, concentration: 13, decisions: 13, determination: 12, flair: 15, leadership: 13, offTheBall: 15, positioning: 10, teamwork: 12, vision: 12, workRate: 14 },
+      physical: { acceleration: 13, agility: 13, balance: 14, jumping: 8, naturalFitness: 11, pace: 13, stamina: 12, strength: 9 },
+      flag: "May have left (or been loaned out) in the summer-2026 window; not confirmed.",
+    },
+    {
+      id: 'rom-artem-dovbyk', name: "Artem Dovbyk", number: 11, age: 29, nationality: 'UKR', positions: ['ST'], foot: 'L',
+      technical: { corners: 10, crossing: 10, dribbling: 11, finishing: 16, firstTouch: 17, freeKicks: 8, heading: 20, longShots: 13, marking: 9, passing: 13, penalties: 14, tackling: 9, technique: 16 },
+      mental: { aggression: 10, anticipation: 17, bravery: 15, composure: 16, concentration: 12, decisions: 13, determination: 15, flair: 14, leadership: 10, offTheBall: 17, positioning: 8, teamwork: 14, vision: 14, workRate: 12 },
+      physical: { acceleration: 13, agility: 12, balance: 15, jumping: 18, naturalFitness: 14, pace: 11, stamina: 12, strength: 19 },
+    },
+    {
+      id: 'rom-donyell-malen', name: "Donyell Malen", number: 14, age: 27, nationality: 'NED', positions: ['ST', 'AMR'], foot: 'R',
+      technical: { corners: 10, crossing: 10, dribbling: 15, finishing: 17, firstTouch: 18, freeKicks: 8, heading: 14, longShots: 14, marking: 9, passing: 14, penalties: 15, tackling: 9, technique: 17 },
+      mental: { aggression: 10, anticipation: 18, bravery: 14, composure: 17, concentration: 13, decisions: 14, determination: 16, flair: 15, leadership: 8, offTheBall: 18, positioning: 8, teamwork: 15, vision: 15, workRate: 13 },
+      physical: { acceleration: 20, agility: 17, balance: 16, jumping: 16, naturalFitness: 15, pace: 18, stamina: 13, strength: 14 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'rom-evan-ferguson', name: "Evan Ferguson", number: 9, age: 21, nationality: 'IRL', positions: ['ST'], foot: 'R',
+      technical: { corners: 7, crossing: 8, dribbling: 15, finishing: 17, firstTouch: 17, freeKicks: 9, heading: 14, longShots: 12, marking: 8, passing: 14, penalties: 15, tackling: 9, technique: 15 },
+      mental: { aggression: 8, anticipation: 17, bravery: 12, composure: 16, concentration: 13, decisions: 13, determination: 14, flair: 11, leadership: 7, offTheBall: 17, positioning: 9, teamwork: 12, vision: 14, workRate: 12 },
+      physical: { acceleration: 14, agility: 14, balance: 14, jumping: 14, naturalFitness: 14, pace: 14, stamina: 13, strength: 17 },
+      flag: "On loan / loan return reported for 2026-27; status not confirmed.",
+    },
+  ],
+});
