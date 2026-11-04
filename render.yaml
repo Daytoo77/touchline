@@ -1,18 +1,13 @@
-# Render Blueprint: free Node web service running the authoritative match server.
+# Render Blueprint: ONE free Node web service that serves both the app and the match server.
+# After deploy, open https://<service>.onrender.com on both phones: no Pages, no CORS, no extra variables.
 services:
   - type: web
-    name: touchline-server
+    name: touchline
     runtime: node
     plan: free
-    buildCommand: npm ci && npm run build:server
+    buildCommand: npm ci && npm run build && npm run build:server
     startCommand: npm start
     healthCheckPath: /health
     envVars:
       - key: NODE_VERSION
         value: "22"
-      # Your GitHub Pages origin, e.g. https://<user>.github.io (comma-separate several).
-      - key: CORS_ORIGIN
-        sync: false
-      # The web app is hosted on GitHub Pages; don't serve it from here.
-      - key: SERVE_WEB
-        value: "0"

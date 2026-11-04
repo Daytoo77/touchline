@@ -10,7 +10,7 @@ const shots = process.env.SHOTS;
 if (shots) mkdirSync(shots, { recursive: true });
 const PORT = 3123;
 
-execSync('npm run build', { stdio: 'inherit', env: { ...process.env, VITE_SERVER_URL: `http://localhost:${PORT}` } });
+execSync('npm run build', { stdio: 'inherit' }); // production build: the client talks to its own origin
 execSync('npm run build:server', { stdio: 'inherit' });
 const server = spawn('node', ['apps/server/dist/server.mjs'], { env: { ...process.env, PORT: String(PORT), SPEED: '10', BREAK_SECONDS: '30' }, stdio: 'inherit' });
 await new Promise((r) => setTimeout(r, 1200));

@@ -5,6 +5,8 @@ import type { MatchConnection, MatchStreamListener } from './types';
 export function serverUrl(): string {
   const env = import.meta.env.VITE_SERVER_URL as string | undefined;
   if (env) return env;
+  // Production: the game server also serves the app, so use the same origin. Dev: the server runs on :3001.
+  if (import.meta.env.PROD) return location.origin;
   return `${location.protocol}//${location.hostname}:3001`;
 }
 

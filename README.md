@@ -111,25 +111,20 @@ The schema is `packages/shared/src/schema/player.ts` (zod; your editor autocompl
 
 Club files were generated from compact scouting lines in `packages/data/scouting/` (level + archetype + signature traits) by `npm run squads:expand`. Once generated, the club file is the source of truth: the generator never overwrites it unless you pass `--force`.
 
-## Deploy (free tiers)
+## Deploy (free, one service, about 5 minutes)
 
-### Web app → GitHub Pages
+The simplest setup is a single Render web service that serves the app and runs the match server, so both phones just open one URL.
 
-1. Repository **Settings → Pages → Source: GitHub Actions**.
-2. Push to `main` (or run the "Deploy web app to GitHub Pages" workflow by hand). The app is served at `https://<user>.github.io/<repo>/`.
-3. Once the server is deployed, add a repository variable **`SERVER_URL`** (Settings → Secrets and variables → Actions → Variables) with the server's URL, and re-run the workflow.
+1. Merge this branch into `main` on GitHub.
+2. On [render.com](https://render.com) (free account) choose **New → Blueprint**, pick this repository and apply. `render.yaml` defines everything: no environment variables needed.
+3. When the build finishes, open `https://<your-service>.onrender.com` on both phones, then **Share → Add to Home Screen** (iOS) or **Install app** (Android).
+4. One player taps **Create room** and shares the 4-letter code; the other taps **Join room**.
 
-On the phone, open the Pages URL, then use **Share → Add to Home Screen** (iOS) or **Install app** (Android).
+Free Render instances sleep after 15 idle minutes and take about a minute to wake. The app pings `/health` on open, so the server is usually awake by kickoff. WebSocket traffic keeps it awake during a match, but a free instance can still restart and lose a match in progress.
 
-### Server → Render (free web service)
+### Optional: app on GitHub Pages, server on Render
 
-1. On [render.com](https://render.com) choose **New → Blueprint** and point it at this repository; `render.yaml` defines the service. Or create a Web Service manually:
-   - build command: `npm ci && npm run build:server`
-   - start command: `npm start`
-2. Set the environment variable `CORS_ORIGIN` to your Pages origin, e.g. `https://<user>.github.io`.
-3. Copy the service URL into the `SERVER_URL` repository variable (see above).
-
-Free Render instances sleep after 15 idle minutes and take about a minute to wake. The app pings `/health` as soon as it opens, so the server is usually awake by kickoff. Since February 2026, WebSocket traffic keeps a free instance awake during a match. A free instance can still restart at any time, and that loses rooms in progress.
+Set `SERVER_URL` (repository variable) to the Render URL, `CORS_ORIGIN=https://<user>.github.io` and `SERVE_WEB=0` on Render, enable **Settings → Pages → Source: GitHub Actions**, and run the "Deploy web app to GitHub Pages" workflow. The Pages build does not need this for the single-service setup above.
 
 ## Project layout
 
