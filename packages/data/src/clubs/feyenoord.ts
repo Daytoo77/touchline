@@ -1,0 +1,163 @@
+// Feyenoord: 2026-27 squad. Ratings are Touchline's own estimates from each player's level and role
+// (not taken from any game or ratings database). Generated from packages/data/scouting/feyenoord.ts;
+// this file is now the source of truth: edit any number by hand (1-20), then run `npm run data:check`.
+import { defineClub } from '../define';
+
+export default defineClub({
+  id: 'feyenoord',
+  name: "Feyenoord",
+  shortName: "Feyenoord",
+  abbr: 'FEY',
+  country: 'NED',
+  pot: 3,
+  kits: {
+    home: {"shirt":"#e2001a","trim":"#ffffff","pattern":"halves","shorts":"#111111","number":"#111111"},
+    away: {"shirt":"#111111","trim":"#e2001a","pattern":"plain","shorts":"#111111","number":"#ffffff"},
+    gk: {"shirt":"#16a34a","trim":"#111111","pattern":"plain","shorts":"#111111","number":"#ffffff"},
+  },
+  defaultTactic: { formation: '4-3-3', instructions: {"mentality":1,"pressing":1,"line":0,"width":0,"tempo":1,"directness":0,"timeWasting":0} },
+  dataAsOf: '2026-11-03',
+  players: [
+    {
+      id: 'fey-justin-bijlow', name: "Justin Bijlow", number: 1, age: 28, nationality: 'NED', positions: ['GK'], foot: 'R',
+      technical: { corners: 4, crossing: 4, dribbling: 2, finishing: 2, firstTouch: 15, freeKicks: 2, heading: 4, longShots: 3, marking: 3, passing: 13, penalties: 2, tackling: 3, technique: 9 },
+      mental: { aggression: 9, anticipation: 14, bravery: 14, composure: 14, concentration: 15, decisions: 14, determination: 14, flair: 4, leadership: 7, offTheBall: 3, positioning: 15, teamwork: 13, vision: 12, workRate: 7 },
+      physical: { acceleration: 9, agility: 16, balance: 12, jumping: 14, naturalFitness: 13, pace: 7, stamina: 7, strength: 12 },
+      goalkeeping: { aerialReach: 13, commandOfArea: 14, communication: 14, handling: 16, kicking: 16, oneOnOnes: 14, reflexes: 16, rushingOut: 16, throwing: 13 },
+    },
+    {
+      id: 'fey-florian-kastenmeier', name: "Florian Kastenmeier", number: 22, age: 29, nationality: 'GER', positions: ['GK'], foot: 'R',
+      technical: { corners: 1, crossing: 2, dribbling: 3, finishing: 3, firstTouch: 13, freeKicks: 3, heading: 1, longShots: 2, marking: 2, passing: 7, penalties: 3, tackling: 3, technique: 6 },
+      mental: { aggression: 7, anticipation: 15, bravery: 14, composure: 15, concentration: 17, decisions: 14, determination: 14, flair: 1, leadership: 10, offTheBall: 3, positioning: 17, teamwork: 12, vision: 7, workRate: 7 },
+      physical: { acceleration: 7, agility: 15, balance: 12, jumping: 14, naturalFitness: 13, pace: 7, stamina: 8, strength: 13 },
+      goalkeeping: { aerialReach: 15, commandOfArea: 15, communication: 14, handling: 17, kicking: 10, oneOnOnes: 15, reflexes: 16, rushingOut: 10, throwing: 12 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'fey-liam-bossin', name: "Liam Bossin", number: 31, age: 29, nationality: 'BEL', positions: ['GK'], foot: 'R',
+      technical: { corners: 1, crossing: 1, dribbling: 2, finishing: 2, firstTouch: 11, freeKicks: 2, heading: 1, longShots: 1, marking: 1, passing: 6, penalties: 2, tackling: 2, technique: 5 },
+      mental: { aggression: 6, anticipation: 13, bravery: 12, composure: 13, concentration: 15, decisions: 12, determination: 12, flair: 1, leadership: 9, offTheBall: 2, positioning: 15, teamwork: 10, vision: 6, workRate: 6 },
+      physical: { acceleration: 5, agility: 14, balance: 10, jumping: 12, naturalFitness: 12, pace: 5, stamina: 6, strength: 11 },
+      goalkeeping: { aerialReach: 13, commandOfArea: 13, communication: 12, handling: 15, kicking: 8, oneOnOnes: 13, reflexes: 14, rushingOut: 8, throwing: 10 },
+    },
+    {
+      id: 'fey-gernot-trauner', name: "Gernot Trauner", number: 18, age: 34, nationality: 'AUT', positions: ['DC'], foot: 'R',
+      technical: { corners: 8, crossing: 8, dribbling: 8, finishing: 3, firstTouch: 14, freeKicks: 8, heading: 15, longShots: 7, marking: 15, passing: 15, penalties: 8, tackling: 15, technique: 15 },
+      mental: { aggression: 14, anticipation: 13, bravery: 13, composure: 16, concentration: 14, decisions: 15, determination: 13, flair: 8, leadership: 17, offTheBall: 7, positioning: 17, teamwork: 12, vision: 12, workRate: 12 },
+      physical: { acceleration: 9, agility: 8, balance: 13, jumping: 17, naturalFitness: 11, pace: 9, stamina: 9, strength: 15 },
+    },
+    {
+      id: 'fey-tsuyoshi-watanabe', name: "Tsuyoshi Watanabe", number: 4, age: 29, nationality: 'JPN', positions: ['DC'], foot: 'R',
+      technical: { corners: 7, crossing: 8, dribbling: 9, finishing: 4, firstTouch: 13, freeKicks: 9, heading: 16, longShots: 8, marking: 16, passing: 10, penalties: 9, tackling: 17, technique: 11 },
+      mental: { aggression: 16, anticipation: 15, bravery: 14, composure: 12, concentration: 15, decisions: 14, determination: 14, flair: 7, leadership: 11, offTheBall: 9, positioning: 17, teamwork: 12, vision: 8, workRate: 12 },
+      physical: { acceleration: 12, agility: 12, balance: 12, jumping: 16, naturalFitness: 14, pace: 11, stamina: 13, strength: 18 },
+    },
+    {
+      id: 'fey-thomas-beelen', name: "Thomas Beelen", number: 3, age: 25, nationality: 'NED', positions: ['DC', 'DR'], foot: 'R',
+      technical: { corners: 8, crossing: 7, dribbling: 8, finishing: 3, firstTouch: 15, freeKicks: 8, heading: 15, longShots: 9, marking: 17, passing: 17, penalties: 8, tackling: 16, technique: 15 },
+      mental: { aggression: 13, anticipation: 14, bravery: 15, composure: 15, concentration: 14, decisions: 16, determination: 15, flair: 8, leadership: 11, offTheBall: 8, positioning: 16, teamwork: 11, vision: 11, workRate: 13 },
+      physical: { acceleration: 11, agility: 13, balance: 11, jumping: 15, naturalFitness: 15, pace: 13, stamina: 12, strength: 16 },
+    },
+    {
+      id: 'fey-anel-ahmedhodzic', name: "Anel Ahmedhodžić", number: 6, age: 27, nationality: 'BIH', positions: ['DC'], foot: 'R',
+      technical: { corners: 9, crossing: 9, dribbling: 7, finishing: 2, firstTouch: 12, freeKicks: 7, heading: 18, longShots: 8, marking: 16, passing: 10, penalties: 7, tackling: 16, technique: 13 },
+      mental: { aggression: 17, anticipation: 14, bravery: 14, composure: 10, concentration: 13, decisions: 14, determination: 14, flair: 9, leadership: 7, offTheBall: 8, positioning: 15, teamwork: 13, vision: 9, workRate: 11 },
+      physical: { acceleration: 13, agility: 12, balance: 12, jumping: 16, naturalFitness: 13, pace: 10, stamina: 11, strength: 17 },
+    },
+    {
+      id: 'fey-jeyland-mitchell', name: "Jeyland Mitchell", number: 33, age: 21, nationality: 'CRC', positions: ['DC'], foot: 'R',
+      technical: { corners: 7, crossing: 6, dribbling: 7, finishing: 2, firstTouch: 11, freeKicks: 7, heading: 14, longShots: 8, marking: 16, passing: 12, penalties: 7, tackling: 15, technique: 11 },
+      mental: { aggression: 12, anticipation: 14, bravery: 14, composure: 10, concentration: 13, decisions: 13, determination: 14, flair: 7, leadership: 8, offTheBall: 7, positioning: 15, teamwork: 10, vision: 6, workRate: 12 },
+      physical: { acceleration: 14, agility: 14, balance: 10, jumping: 14, naturalFitness: 14, pace: 16, stamina: 11, strength: 15 },
+    },
+    {
+      id: 'fey-givairo-read', name: "Givairo Read", number: 2, age: 20, nationality: 'NED', positions: ['DR'], foot: 'R',
+      technical: { corners: 7, crossing: 18, dribbling: 17, finishing: 9, firstTouch: 13, freeKicks: 9, heading: 11, longShots: 8, marking: 12, passing: 14, penalties: 9, tackling: 15, technique: 12 },
+      mental: { aggression: 12, anticipation: 15, bravery: 12, composure: 12, concentration: 15, decisions: 11, determination: 14, flair: 7, leadership: 7, offTheBall: 16, positioning: 13, teamwork: 14, vision: 8, workRate: 16 },
+      physical: { acceleration: 16, agility: 14, balance: 12, jumping: 12, naturalFitness: 14, pace: 16, stamina: 17, strength: 13 },
+    },
+    {
+      id: 'fey-jordan-bos', name: "Jordan Bos", number: 15, age: 23, nationality: 'AUS', positions: ['DL', 'AML'], foot: 'L',
+      technical: { corners: 8, crossing: 18, dribbling: 16, finishing: 8, firstTouch: 11, freeKicks: 8, heading: 12, longShots: 7, marking: 11, passing: 13, penalties: 8, tackling: 13, technique: 13 },
+      mental: { aggression: 12, anticipation: 13, bravery: 11, composure: 12, concentration: 14, decisions: 11, determination: 13, flair: 8, leadership: 9, offTheBall: 14, positioning: 12, teamwork: 14, vision: 8, workRate: 16 },
+      physical: { acceleration: 16, agility: 13, balance: 13, jumping: 13, naturalFitness: 14, pace: 16, stamina: 16, strength: 11 },
+    },
+    {
+      id: 'fey-gijs-smal', name: "Gijs Smal", number: 5, age: 29, nationality: 'NED', positions: ['DL'], foot: 'L',
+      technical: { corners: 7, crossing: 17, dribbling: 15, finishing: 7, firstTouch: 10, freeKicks: 7, heading: 11, longShots: 6, marking: 10, passing: 12, penalties: 7, tackling: 12, technique: 12 },
+      mental: { aggression: 11, anticipation: 12, bravery: 10, composure: 11, concentration: 13, decisions: 10, determination: 12, flair: 7, leadership: 10, offTheBall: 13, positioning: 11, teamwork: 13, vision: 7, workRate: 15 },
+      physical: { acceleration: 15, agility: 12, balance: 12, jumping: 12, naturalFitness: 13, pace: 15, stamina: 15, strength: 10 },
+    },
+    {
+      id: 'fey-javi-lopez', name: "Javi López", number: 21, age: 24, nationality: 'ESP', positions: ['DL'], foot: 'L',
+      technical: { corners: 8, crossing: 19, dribbling: 15, finishing: 6, firstTouch: 12, freeKicks: 6, heading: 13, longShots: 7, marking: 12, passing: 14, penalties: 6, tackling: 14, technique: 14 },
+      mental: { aggression: 13, anticipation: 14, bravery: 12, composure: 11, concentration: 13, decisions: 12, determination: 14, flair: 8, leadership: 6, offTheBall: 15, positioning: 11, teamwork: 15, vision: 8, workRate: 15 },
+      physical: { acceleration: 17, agility: 14, balance: 12, jumping: 12, naturalFitness: 13, pace: 15, stamina: 15, strength: 12 },
+      flag: "On loan / loan return reported for 2026-27; status not confirmed.",
+    },
+    {
+      id: 'fey-quinten-timber', name: "Quinten Timber", number: 8, age: 25, nationality: 'NED', positions: ['MC', 'DM'], foot: 'R',
+      technical: { corners: 13, crossing: 12, dribbling: 15, finishing: 13, firstTouch: 17, freeKicks: 13, heading: 9, longShots: 16, marking: 14, passing: 18, penalties: 9, tackling: 16, technique: 17 },
+      mental: { aggression: 12, anticipation: 15, bravery: 14, composure: 15, concentration: 13, decisions: 18, determination: 16, flair: 13, leadership: 16, offTheBall: 17, positioning: 15, teamwork: 16, vision: 13, workRate: 20 },
+      physical: { acceleration: 12, agility: 14, balance: 12, jumping: 8, naturalFitness: 16, pace: 14, stamina: 20, strength: 13 },
+      flag: "May have left (or been loaned out) in the summer-2026 window; not confirmed.",
+    },
+    {
+      id: 'fey-sem-steijn', name: "Sem Steijn", number: 14, age: 24, nationality: 'NED', positions: ['AMC', 'MC'], foot: 'R',
+      technical: { corners: 13, crossing: 13, dribbling: 17, finishing: 18, firstTouch: 16, freeKicks: 13, heading: 8, longShots: 14, marking: 7, passing: 14, penalties: 13, tackling: 7, technique: 17 },
+      mental: { aggression: 8, anticipation: 16, bravery: 7, composure: 17, concentration: 13, decisions: 14, determination: 12, flair: 17, leadership: 9, offTheBall: 17, positioning: 8, teamwork: 13, vision: 15, workRate: 13 },
+      physical: { acceleration: 13, agility: 14, balance: 16, jumping: 9, naturalFitness: 15, pace: 13, stamina: 13, strength: 7 },
+    },
+    {
+      id: 'fey-oussama-targhalline', name: "Oussama Targhalline", number: 28, age: 24, nationality: 'MAR', positions: ['DM', 'MC'], foot: 'R',
+      technical: { corners: 8, crossing: 8, dribbling: 6, finishing: 6, firstTouch: 16, freeKicks: 6, heading: 13, longShots: 12, marking: 11, passing: 19, penalties: 6, tackling: 13, technique: 16 },
+      mental: { aggression: 13, anticipation: 16, bravery: 12, composure: 15, concentration: 13, decisions: 16, determination: 14, flair: 8, leadership: 6, offTheBall: 7, positioning: 15, teamwork: 17, vision: 17, workRate: 13 },
+      physical: { acceleration: 13, agility: 12, balance: 12, jumping: 12, naturalFitness: 13, pace: 11, stamina: 13, strength: 12 },
+    },
+    {
+      id: 'fey-jakub-moder', name: "Jakub Moder", number: 17, age: 27, nationality: 'POL', positions: ['MC'], foot: 'R',
+      technical: { corners: 12, crossing: 12, dribbling: 14, finishing: 11, firstTouch: 15, freeKicks: 12, heading: 7, longShots: 13, marking: 11, passing: 15, penalties: 7, tackling: 14, technique: 16 },
+      mental: { aggression: 12, anticipation: 13, bravery: 11, composure: 14, concentration: 12, decisions: 15, determination: 13, flair: 12, leadership: 8, offTheBall: 15, positioning: 14, teamwork: 16, vision: 13, workRate: 19 },
+      physical: { acceleration: 12, agility: 11, balance: 13, jumping: 8, naturalFitness: 14, pace: 12, stamina: 19, strength: 11 },
+    },
+    {
+      id: 'fey-calvin-stengs', name: "Calvin Stengs", number: 10, age: 27, nationality: 'NED', positions: ['AMR', 'AMC'], foot: 'L',
+      technical: { corners: 11, crossing: 12, dribbling: 17, finishing: 15, firstTouch: 17, freeKicks: 13, heading: 7, longShots: 14, marking: 8, passing: 18, penalties: 13, tackling: 9, technique: 15 },
+      mental: { aggression: 8, anticipation: 15, bravery: 8, composure: 15, concentration: 13, decisions: 15, determination: 12, flair: 17, leadership: 9, offTheBall: 15, positioning: 9, teamwork: 12, vision: 18, workRate: 12 },
+      physical: { acceleration: 12, agility: 14, balance: 14, jumping: 8, naturalFitness: 14, pace: 12, stamina: 13, strength: 9 },
+      flag: "May have left (or been loaned out) in the summer-2026 window; not confirmed.",
+    },
+    {
+      id: 'fey-anis-hadj-moussa', name: "Anis Hadj Moussa", number: 23, age: 24, nationality: 'ALG', positions: ['AMR', 'AML'], foot: 'L',
+      technical: { corners: 12, crossing: 14, dribbling: 17, finishing: 19, firstTouch: 16, freeKicks: 14, heading: 7, longShots: 15, marking: 8, passing: 15, penalties: 14, tackling: 9, technique: 16 },
+      mental: { aggression: 8, anticipation: 14, bravery: 8, composure: 15, concentration: 14, decisions: 13, determination: 13, flair: 16, leadership: 9, offTheBall: 16, positioning: 9, teamwork: 13, vision: 13, workRate: 15 },
+      physical: { acceleration: 17, agility: 17, balance: 15, jumping: 8, naturalFitness: 15, pace: 17, stamina: 16, strength: 9 },
+    },
+    {
+      id: 'fey-goncalo-borges', name: "Gonçalo Borges", number: 11, age: 25, nationality: 'POR', positions: ['AMR'], foot: 'L',
+      technical: { corners: 12, crossing: 12, dribbling: 18, finishing: 17, firstTouch: 14, freeKicks: 12, heading: 7, longShots: 15, marking: 8, passing: 15, penalties: 12, tackling: 7, technique: 16 },
+      mental: { aggression: 6, anticipation: 12, bravery: 8, composure: 13, concentration: 12, decisions: 13, determination: 13, flair: 16, leadership: 10, offTheBall: 14, positioning: 7, teamwork: 11, vision: 11, workRate: 15 },
+      physical: { acceleration: 15, agility: 17, balance: 13, jumping: 6, naturalFitness: 15, pace: 17, stamina: 14, strength: 7 },
+    },
+    {
+      id: 'fey-reiss-nelson', name: "Reiss Nelson", number: 7, age: 26, nationality: 'ENG', positions: ['AML', 'AMR'], foot: 'R',
+      technical: { corners: 12, crossing: 17, dribbling: 17, finishing: 12, firstTouch: 14, freeKicks: 12, heading: 8, longShots: 12, marking: 9, passing: 15, penalties: 12, tackling: 8, technique: 16 },
+      mental: { aggression: 7, anticipation: 12, bravery: 9, composure: 12, concentration: 12, decisions: 13, determination: 13, flair: 14, leadership: 11, offTheBall: 14, positioning: 8, teamwork: 11, vision: 11, workRate: 15 },
+      physical: { acceleration: 16, agility: 17, balance: 13, jumping: 7, naturalFitness: 15, pace: 18, stamina: 14, strength: 8 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'fey-casper-tengstedt', name: "Casper Tengstedt", number: 9, age: 26, nationality: 'DEN', positions: ['ST'], foot: 'R',
+      technical: { corners: 7, crossing: 7, dribbling: 14, finishing: 18, firstTouch: 15, freeKicks: 7, heading: 14, longShots: 11, marking: 6, passing: 8, penalties: 14, tackling: 6, technique: 14 },
+      mental: { aggression: 7, anticipation: 17, bravery: 11, composure: 17, concentration: 12, decisions: 11, determination: 13, flair: 12, leadership: 8, offTheBall: 17, positioning: 7, teamwork: 12, vision: 9, workRate: 10 },
+      physical: { acceleration: 14, agility: 13, balance: 15, jumping: 15, naturalFitness: 14, pace: 14, stamina: 10, strength: 13 },
+    },
+    {
+      id: 'fey-cyle-larin', name: "Cyle Larin", number: 19, age: 31, nationality: 'CAN', positions: ['ST'], foot: 'R',
+      technical: { corners: 6, crossing: 7, dribbling: 11, finishing: 16, firstTouch: 16, freeKicks: 8, heading: 16, longShots: 11, marking: 7, passing: 11, penalties: 14, tackling: 8, technique: 12 },
+      mental: { aggression: 7, anticipation: 16, bravery: 13, composure: 16, concentration: 12, decisions: 12, determination: 13, flair: 10, leadership: 11, offTheBall: 16, positioning: 9, teamwork: 11, vision: 11, workRate: 11 },
+      physical: { acceleration: 9, agility: 9, balance: 13, jumping: 16, naturalFitness: 12, pace: 9, stamina: 11, strength: 18 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+  ],
+});

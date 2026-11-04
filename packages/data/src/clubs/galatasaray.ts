@@ -1,0 +1,163 @@
+// Galatasaray: 2026-27 squad. Ratings are Touchline's own estimates from each player's level and role
+// (not taken from any game or ratings database). Generated from packages/data/scouting/galatasaray.ts;
+// this file is now the source of truth: edit any number by hand (1-20), then run `npm run data:check`.
+import { defineClub } from '../define';
+
+export default defineClub({
+  id: 'galatasaray',
+  name: "Galatasaray",
+  shortName: "Galatasaray",
+  abbr: 'GAL',
+  country: 'TUR',
+  pot: 3,
+  kits: {
+    home: {"shirt":"#a90432","trim":"#fdb912","pattern":"halves","shorts":"#a90432","number":"#ffffff"},
+    away: {"shirt":"#fdb912","trim":"#a90432","pattern":"plain","shorts":"#fdb912","number":"#a90432"},
+    gk: {"shirt":"#111827","trim":"#fdb912","pattern":"plain","shorts":"#111827","number":"#ffffff"},
+  },
+  defaultTactic: { formation: '4-2-3-1', instructions: {"mentality":1,"pressing":1,"line":0,"width":0,"tempo":1,"directness":0,"timeWasting":0} },
+  dataAsOf: '2026-11-03',
+  players: [
+    {
+      id: 'gal-ugurcan-cakir', name: "Uğurcan Çakır", number: 1, age: 30, nationality: 'TUR', positions: ['GK'], foot: 'R',
+      technical: { corners: 4, crossing: 3, dribbling: 4, finishing: 4, firstTouch: 13, freeKicks: 4, heading: 4, longShots: 5, marking: 5, passing: 10, penalties: 4, tackling: 4, technique: 9 },
+      mental: { aggression: 8, anticipation: 15, bravery: 16, composure: 15, concentration: 17, decisions: 16, determination: 16, flair: 4, leadership: 14, offTheBall: 4, positioning: 17, teamwork: 12, vision: 8, workRate: 10 },
+      physical: { acceleration: 7, agility: 18, balance: 12, jumping: 14, naturalFitness: 16, pace: 9, stamina: 8, strength: 13 },
+      goalkeeping: { aerialReach: 15, commandOfArea: 15, communication: 14, handling: 17, kicking: 12, oneOnOnes: 15, reflexes: 18, rushingOut: 12, throwing: 12 },
+    },
+    {
+      id: 'gal-gunay-guvenc', name: "Günay Güvenç", number: 19, age: 35, nationality: 'TUR', positions: ['GK'], foot: 'R',
+      technical: { corners: 2, crossing: 2, dribbling: 1, finishing: 1, firstTouch: 10, freeKicks: 1, heading: 2, longShots: 1, marking: 1, passing: 6, penalties: 1, tackling: 1, technique: 7 },
+      mental: { aggression: 7, anticipation: 12, bravery: 12, composure: 12, concentration: 13, decisions: 13, determination: 12, flair: 2, leadership: 9, offTheBall: 1, positioning: 14, teamwork: 11, vision: 7, workRate: 5 },
+      physical: { acceleration: 4, agility: 11, balance: 10, jumping: 12, naturalFitness: 8, pace: 2, stamina: 2, strength: 10 },
+      goalkeeping: { aerialReach: 11, commandOfArea: 11, communication: 12, handling: 14, kicking: 10, oneOnOnes: 13, reflexes: 15, rushingOut: 9, throwing: 11 },
+    },
+    {
+      id: 'gal-davinson-sanchez', name: "Davinson Sánchez", number: 6, age: 30, nationality: 'COL', positions: ['DC'], foot: 'R',
+      technical: { corners: 9, crossing: 9, dribbling: 9, finishing: 4, firstTouch: 12, freeKicks: 9, heading: 18, longShots: 8, marking: 16, passing: 10, penalties: 9, tackling: 16, technique: 13 },
+      mental: { aggression: 17, anticipation: 14, bravery: 14, composure: 12, concentration: 15, decisions: 14, determination: 14, flair: 9, leadership: 12, offTheBall: 8, positioning: 17, teamwork: 13, vision: 9, workRate: 13 },
+      physical: { acceleration: 13, agility: 12, balance: 14, jumping: 18, naturalFitness: 15, pace: 12, stamina: 13, strength: 17 },
+    },
+    {
+      id: 'gal-abdulkerim-bardakci', name: "Abdülkerim Bardakcı", number: 42, age: 32, nationality: 'TUR', positions: ['DC'], foot: 'L',
+      technical: { corners: 8, crossing: 7, dribbling: 8, finishing: 3, firstTouch: 13, freeKicks: 8, heading: 18, longShots: 9, marking: 18, passing: 12, penalties: 8, tackling: 17, technique: 13 },
+      mental: { aggression: 16, anticipation: 15, bravery: 16, composure: 12, concentration: 15, decisions: 17, determination: 16, flair: 8, leadership: 14, offTheBall: 8, positioning: 18, teamwork: 12, vision: 7, workRate: 14 },
+      physical: { acceleration: 10, agility: 12, balance: 12, jumping: 16, naturalFitness: 14, pace: 11, stamina: 11, strength: 18 },
+    },
+    {
+      id: 'gal-wilfried-singo', name: "Wilfried Singo", number: 90, age: 25, nationality: 'CIV', positions: ['DC', 'DR'], foot: 'R',
+      technical: { corners: 9, crossing: 9, dribbling: 9, finishing: 4, firstTouch: 12, freeKicks: 9, heading: 16, longShots: 8, marking: 16, passing: 12, penalties: 9, tackling: 16, technique: 13 },
+      mental: { aggression: 15, anticipation: 15, bravery: 14, composure: 13, concentration: 15, decisions: 14, determination: 14, flair: 9, leadership: 10, offTheBall: 8, positioning: 17, teamwork: 13, vision: 9, workRate: 13 },
+      physical: { acceleration: 17, agility: 14, balance: 14, jumping: 18, naturalFitness: 15, pace: 17, stamina: 13, strength: 16 },
+    },
+    {
+      id: 'gal-kaan-ayhan', name: "Kaan Ayhan", number: 23, age: 31, nationality: 'TUR', positions: ['DC', 'DM', 'DR'], foot: 'R',
+      technical: { corners: 8, crossing: 8, dribbling: 8, finishing: 3, firstTouch: 14, freeKicks: 8, heading: 15, longShots: 7, marking: 15, passing: 15, penalties: 8, tackling: 15, technique: 15 },
+      mental: { aggression: 14, anticipation: 13, bravery: 13, composure: 15, concentration: 14, decisions: 15, determination: 13, flair: 8, leadership: 12, offTheBall: 7, positioning: 17, teamwork: 12, vision: 12, workRate: 12 },
+      physical: { acceleration: 11, agility: 10, balance: 13, jumping: 17, naturalFitness: 13, pace: 11, stamina: 11, strength: 15 },
+    },
+    {
+      id: 'gal-el-chadaille-bitshiabu', name: "El Chadaille Bitshiabu", number: 4, age: 21, nationality: 'FRA', positions: ['DC'], foot: 'L',
+      technical: { corners: 8, crossing: 8, dribbling: 6, finishing: 1, firstTouch: 12, freeKicks: 6, heading: 16, longShots: 7, marking: 16, passing: 12, penalties: 6, tackling: 16, technique: 13 },
+      mental: { aggression: 15, anticipation: 15, bravery: 14, composure: 10, concentration: 13, decisions: 13, determination: 14, flair: 8, leadership: 4, offTheBall: 7, positioning: 15, teamwork: 13, vision: 8, workRate: 11 },
+      physical: { acceleration: 17, agility: 14, balance: 12, jumping: 16, naturalFitness: 13, pace: 15, stamina: 11, strength: 16 },
+      flag: "On loan / loan return reported for 2026-27; status not confirmed.",
+    },
+    {
+      id: 'gal-roland-sallai', name: "Roland Sallai", number: 7, age: 29, nationality: 'HUN', positions: ['DR', 'AMR'], foot: 'R',
+      technical: { corners: 13, crossing: 17, dribbling: 15, finishing: 15, firstTouch: 14, freeKicks: 13, heading: 8, longShots: 12, marking: 12, passing: 14, penalties: 13, tackling: 13, technique: 17 },
+      mental: { aggression: 8, anticipation: 12, bravery: 7, composure: 13, concentration: 13, decisions: 12, determination: 12, flair: 13, leadership: 11, offTheBall: 14, positioning: 13, teamwork: 16, vision: 13, workRate: 19 },
+      physical: { acceleration: 16, agility: 15, balance: 16, jumping: 9, naturalFitness: 14, pace: 16, stamina: 18, strength: 7 },
+    },
+    {
+      id: 'gal-eren-elmali', name: "Eren Elmalı", number: 17, age: 26, nationality: 'TUR', positions: ['DL'], foot: 'L',
+      technical: { corners: 8, crossing: 18, dribbling: 16, finishing: 8, firstTouch: 11, freeKicks: 8, heading: 12, longShots: 7, marking: 11, passing: 13, penalties: 8, tackling: 13, technique: 13 },
+      mental: { aggression: 12, anticipation: 13, bravery: 11, composure: 12, concentration: 14, decisions: 11, determination: 13, flair: 8, leadership: 9, offTheBall: 14, positioning: 12, teamwork: 14, vision: 8, workRate: 16 },
+      physical: { acceleration: 16, agility: 13, balance: 13, jumping: 13, naturalFitness: 14, pace: 16, stamina: 16, strength: 11 },
+    },
+    {
+      id: 'gal-ismail-jakobs', name: "İsmail Jakobs", number: 3, age: 27, nationality: 'SEN', positions: ['DL'], foot: 'L',
+      technical: { corners: 7, crossing: 18, dribbling: 17, finishing: 9, firstTouch: 13, freeKicks: 9, heading: 11, longShots: 8, marking: 12, passing: 14, penalties: 9, tackling: 15, technique: 12 },
+      mental: { aggression: 12, anticipation: 15, bravery: 12, composure: 13, concentration: 15, decisions: 12, determination: 14, flair: 7, leadership: 9, offTheBall: 16, positioning: 13, teamwork: 14, vision: 8, workRate: 16 },
+      physical: { acceleration: 16, agility: 14, balance: 12, jumping: 12, naturalFitness: 14, pace: 16, stamina: 17, strength: 13 },
+    },
+    {
+      id: 'gal-lucas-torreira', name: "Lucas Torreira", number: 34, age: 30, nationality: 'URU', positions: ['DM'], foot: 'R',
+      technical: { corners: 10, crossing: 10, dribbling: 8, finishing: 8, firstTouch: 15, freeKicks: 8, heading: 14, longShots: 13, marking: 15, passing: 17, penalties: 8, tackling: 20, technique: 12 },
+      mental: { aggression: 18, anticipation: 17, bravery: 15, composure: 13, concentration: 14, decisions: 17, determination: 15, flair: 10, leadership: 10, offTheBall: 9, positioning: 16, teamwork: 18, vision: 11, workRate: 17 },
+      physical: { acceleration: 14, agility: 13, balance: 13, jumping: 13, naturalFitness: 14, pace: 12, stamina: 16, strength: 15 },
+    },
+    {
+      id: 'gal-gabriel-sara', name: "Gabriel Sara", number: 8, age: 27, nationality: 'BRA', positions: ['MC', 'AMC'], foot: 'L',
+      technical: { corners: 17, crossing: 13, dribbling: 16, finishing: 9, firstTouch: 18, freeKicks: 14, heading: 9, longShots: 17, marking: 15, passing: 20, penalties: 9, tackling: 14, technique: 20 },
+      mental: { aggression: 13, anticipation: 16, bravery: 15, composure: 18, concentration: 14, decisions: 20, determination: 17, flair: 14, leadership: 12, offTheBall: 16, positioning: 16, teamwork: 17, vision: 19, workRate: 18 },
+      physical: { acceleration: 13, agility: 15, balance: 13, jumping: 8, naturalFitness: 17, pace: 15, stamina: 17, strength: 14 },
+    },
+    {
+      id: 'gal-mario-lemina', name: "Mario Lemina", number: 20, age: 33, nationality: 'GAB', positions: ['DM', 'MC'], foot: 'R',
+      technical: { corners: 8, crossing: 8, dribbling: 6, finishing: 8, firstTouch: 13, freeKicks: 8, heading: 12, longShots: 11, marking: 15, passing: 13, penalties: 8, tackling: 16, technique: 12 },
+      mental: { aggression: 12, anticipation: 15, bravery: 11, composure: 15, concentration: 14, decisions: 16, determination: 13, flair: 8, leadership: 13, offTheBall: 7, positioning: 19, teamwork: 16, vision: 9, workRate: 14 },
+      physical: { acceleration: 9, agility: 8, balance: 13, jumping: 13, naturalFitness: 11, pace: 9, stamina: 11, strength: 15 },
+      flag: "May have left (or been loaned out) in the summer-2026 window; not confirmed.",
+    },
+    {
+      id: 'gal-ilkay-gundogan', name: "İlkay Gündoğan", number: 21, age: 35, nationality: 'GER', positions: ['MC', 'AMC'], foot: 'R',
+      technical: { corners: 13, crossing: 12, dribbling: 15, finishing: 9, firstTouch: 17, freeKicks: 13, heading: 9, longShots: 16, marking: 14, passing: 20, penalties: 9, tackling: 13, technique: 19 },
+      mental: { aggression: 12, anticipation: 15, bravery: 14, composure: 18, concentration: 13, decisions: 20, determination: 16, flair: 13, leadership: 16, offTheBall: 15, positioning: 16, teamwork: 16, vision: 18, workRate: 17 },
+      physical: { acceleration: 9, agility: 11, balance: 12, jumping: 8, naturalFitness: 13, pace: 11, stamina: 13, strength: 13 },
+      flag: "May have left (or been loaned out) in the summer-2026 window; not confirmed.",
+    },
+    {
+      id: 'gal-lesley-ugochukwu', name: "Lesley Ugochukwu", number: 5, age: 22, nationality: 'FRA', positions: ['DM', 'MC'], foot: 'R',
+      technical: { corners: 9, crossing: 9, dribbling: 7, finishing: 7, firstTouch: 14, freeKicks: 7, heading: 13, longShots: 12, marking: 14, passing: 16, penalties: 7, tackling: 19, technique: 11 },
+      mental: { aggression: 17, anticipation: 16, bravery: 14, composure: 11, concentration: 13, decisions: 15, determination: 14, flair: 9, leadership: 5, offTheBall: 8, positioning: 15, teamwork: 17, vision: 10, workRate: 16 },
+      physical: { acceleration: 13, agility: 12, balance: 12, jumping: 12, naturalFitness: 13, pace: 11, stamina: 15, strength: 14 },
+      flag: "On loan / loan return reported for 2026-27; status not confirmed.",
+    },
+    {
+      id: 'gal-aleksey-batrakov', name: "Aleksey Batrakov", number: 14, age: 21, nationality: 'RUS', positions: ['AMC', 'MC'], foot: 'L',
+      technical: { corners: 14, crossing: 14, dribbling: 16, finishing: 14, firstTouch: 17, freeKicks: 12, heading: 9, longShots: 15, marking: 8, passing: 19, penalties: 12, tackling: 8, technique: 18 },
+      mental: { aggression: 9, anticipation: 15, bravery: 8, composure: 13, concentration: 12, decisions: 15, determination: 13, flair: 20, leadership: 5, offTheBall: 15, positioning: 7, teamwork: 14, vision: 20, workRate: 12 },
+      physical: { acceleration: 14, agility: 15, balance: 15, jumping: 8, naturalFitness: 14, pace: 12, stamina: 12, strength: 8 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'gal-leroy-sane', name: "Leroy Sané", number: 10, age: 30, nationality: 'GER', positions: ['AMR', 'AML'], foot: 'L',
+      technical: { corners: 14, crossing: 15, dribbling: 20, finishing: 19, firstTouch: 15, freeKicks: 14, heading: 10, longShots: 15, marking: 9, passing: 15, penalties: 14, tackling: 9, technique: 18 },
+      mental: { aggression: 10, anticipation: 13, bravery: 9, composure: 15, concentration: 14, decisions: 13, determination: 13, flair: 18, leadership: 13, offTheBall: 15, positioning: 10, teamwork: 14, vision: 14, workRate: 16 },
+      physical: { acceleration: 18, agility: 17, balance: 17, jumping: 11, naturalFitness: 16, pace: 18, stamina: 16, strength: 9 },
+    },
+    {
+      id: 'gal-yunus-akgun', name: "Yunus Akgün", number: 11, age: 26, nationality: 'TUR', positions: ['AMR'], foot: 'L',
+      technical: { corners: 13, crossing: 14, dribbling: 19, finishing: 18, firstTouch: 14, freeKicks: 13, heading: 8, longShots: 14, marking: 7, passing: 14, penalties: 13, tackling: 7, technique: 17 },
+      mental: { aggression: 8, anticipation: 12, bravery: 7, composure: 14, concentration: 13, decisions: 12, determination: 12, flair: 17, leadership: 9, offTheBall: 14, positioning: 8, teamwork: 13, vision: 13, workRate: 15 },
+      physical: { acceleration: 17, agility: 16, balance: 16, jumping: 9, naturalFitness: 15, pace: 17, stamina: 15, strength: 7 },
+    },
+    {
+      id: 'gal-baris-alper-yilmaz', name: "Barış Alper Yılmaz", shortName: "Barış Alper", number: 53, age: 26, nationality: 'TUR', positions: ['AMR', 'ST', 'AML'], foot: 'R',
+      technical: { corners: 10, crossing: 10, dribbling: 15, finishing: 17, firstTouch: 18, freeKicks: 8, heading: 17, longShots: 14, marking: 9, passing: 14, penalties: 15, tackling: 9, technique: 16 },
+      mental: { aggression: 13, anticipation: 18, bravery: 14, composure: 16, concentration: 13, decisions: 14, determination: 18, flair: 15, leadership: 8, offTheBall: 18, positioning: 8, teamwork: 18, vision: 15, workRate: 18 },
+      physical: { acceleration: 17, agility: 16, balance: 16, jumping: 16, naturalFitness: 15, pace: 17, stamina: 17, strength: 17 },
+    },
+    {
+      id: 'gal-rafael-leao', name: "Rafael Leão", shortName: "Leão", number: 77, age: 27, nationality: 'POR', positions: ['AML'], foot: 'R',
+      technical: { corners: 15, crossing: 20, dribbling: 18, finishing: 15, firstTouch: 16, freeKicks: 15, heading: 10, longShots: 13, marking: 9, passing: 16, penalties: 15, tackling: 9, technique: 19 },
+      mental: { aggression: 10, anticipation: 14, bravery: 9, composure: 15, concentration: 15, decisions: 14, determination: 14, flair: 17, leadership: 11, offTheBall: 16, positioning: 10, teamwork: 15, vision: 15, workRate: 17 },
+      physical: { acceleration: 20, agility: 18, balance: 18, jumping: 11, naturalFitness: 17, pace: 19, stamina: 17, strength: 9 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'gal-victor-osimhen', name: "Victor Osimhen", number: 45, age: 27, nationality: 'NGA', positions: ['ST'], foot: 'R',
+      technical: { corners: 12, crossing: 12, dribbling: 16, finishing: 18, firstTouch: 19, freeKicks: 10, heading: 15, longShots: 15, marking: 11, passing: 15, penalties: 16, tackling: 11, technique: 18 },
+      mental: { aggression: 12, anticipation: 19, bravery: 15, composure: 18, concentration: 14, decisions: 15, determination: 17, flair: 16, leadership: 10, offTheBall: 19, positioning: 10, teamwork: 16, vision: 16, workRate: 14 },
+      physical: { acceleration: 20, agility: 18, balance: 17, jumping: 18, naturalFitness: 16, pace: 19, stamina: 14, strength: 15 },
+    },
+    {
+      id: 'gal-deniz-gul', name: "Deniz Gül", number: 27, age: 22, nationality: 'SWE', positions: ['ST'], foot: 'R',
+      technical: { corners: 8, crossing: 8, dribbling: 9, finishing: 14, firstTouch: 15, freeKicks: 6, heading: 18, longShots: 11, marking: 7, passing: 11, penalties: 12, tackling: 7, technique: 14 },
+      mental: { aggression: 8, anticipation: 15, bravery: 13, composure: 13, concentration: 10, decisions: 10, determination: 13, flair: 12, leadership: 4, offTheBall: 15, positioning: 6, teamwork: 12, vision: 12, workRate: 10 },
+      physical: { acceleration: 11, agility: 10, balance: 13, jumping: 16, naturalFitness: 12, pace: 9, stamina: 10, strength: 17 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+  ],
+});

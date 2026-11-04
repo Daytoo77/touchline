@@ -153,11 +153,5 @@ export default defineClub({
       physical: { acceleration: 15, agility: 14, balance: 14, jumping: 14, naturalFitness: 13, pace: 13, stamina: 9, strength: 14 },
       flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
     },
-    {
-      id: 'fcp-deniz-gul', name: "Deniz Gül", number: 27, age: 22, nationality: 'SWE', positions: ['ST'], foot: 'R',
-      technical: { corners: 7, crossing: 6, dribbling: 10, finishing: 15, firstTouch: 15, freeKicks: 7, heading: 17, longShots: 12, marking: 8, passing: 12, penalties: 13, tackling: 7, technique: 13 },
-      mental: { aggression: 6, anticipation: 15, bravery: 14, composure: 14, concentration: 11, decisions: 11, determination: 14, flair: 11, leadership: 8, offTheBall: 15, positioning: 7, teamwork: 10, vision: 10, workRate: 12 },
-      physical: { acceleration: 9, agility: 11, balance: 12, jumping: 15, naturalFitness: 14, pace: 11, stamina: 11, strength: 17 },
-    },
   ],
 });

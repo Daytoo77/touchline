@@ -1,0 +1,31 @@
+import { FLAG_LEAVE, FLAG_LOAN, FLAG_NEW, kit, scout } from '../src/scout';
+
+export default scout({
+  id: 'fenerbahce', name: 'Fenerbahçe', shortName: 'Fenerbahçe', abbr: 'FEN', country: 'TUR', pot: 3, prefix: 'fen',
+  kits: { home: kit('#fff200', '#00205b', 'stripes', '#00205b', '#00205b'), away: kit('#00205b', '#fff200', 'plain', '#00205b', '#fff200'), gk: kit('#f97316', '#111111', 'plain', '#111111', '#111111') },
+  formation: '4-2-3-1', instructions: { mentality: 1, tempo: 1 },
+  players: [
+    [31, 'Ederson', 33, 'BRA', 'GK', 'L', 15.5, 'gkSweeper', { kicking: 19 }],
+    [1, 'İrfan Can Eğribayat', 28, 'TUR', 'GK', 'R', 13.5, 'gk', {}, '', 'İrfan Can'],
+    [37, 'Milan Škriniar', 31, 'SVK', 'DC', 'R', 15, 'cbStopper', { leadership: 17 }],
+    [24, 'Jayden Oosterwolde', 25, 'NED', 'DC,DL', 'L', 14, 'cbAthletic'],
+    [2, 'Nathan Aké', 31, 'NED', 'DC,DL', 'L', 14.5, 'cbBallPlayer', {}, FLAG_NEW],
+    [4, 'Çağlar Söyüncü', 30, 'TUR', 'DC', 'R', 13.5, 'cbStopper'],
+    [27, 'Nélson Semedo', 32, 'POR', 'DR', 'R', 14, 'fbAttacking'],
+    [16, 'Mert Müldür', 27, 'TUR', 'DR,DL', 'R', 13.5, 'fbAttacking'],
+    [3, 'Archie Brown', 24, 'ENG', 'DL', 'L', 13.5, 'fbAttacking'],
+    [22, 'Levent Mercan', 26, 'TUR', 'DL', 'L', 12.5, 'fbAttacking'],
+    [33, 'Kojo Peprah Oppong', 22, 'GHA', 'DC,DL', 'L', 12.5, 'cbAthletic', {}, FLAG_NEW],
+    [11, 'Edson Álvarez', 28, 'MEX', 'DM,DC', 'R', 14.5, 'dmAnchor', {}, FLAG_LOAN],
+    [5, 'İsmail Yüksek', 27, 'TUR', 'DM,MC', 'R', 14, 'dmBallWinner'],
+    [35, 'Fred', 33, 'BRA', 'MC,DM', 'L', 13.5, 'cmBoxToBox', {}, FLAG_LEAVE],
+    [21, 'Marco Asensio', 30, 'ESP', 'AMR,AMC', 'L', 15, 'amCreator', { longShots: 18, freeKicks: 17 }],
+    [9, 'Kerem Aktürkoğlu', 27, 'TUR', 'AML,AMR', 'R', 14.5, 'wingerInverted'],
+    [18, 'Mason Greenwood', 25, 'ENG', 'AMR,ST', 'L', 16, 'wingerInverted', { finishing: 18, longShots: 18 }, FLAG_NEW],
+    [7, 'Dorgeles Nene', 23, 'MLI', 'AMR,AML', 'R', 13.5, 'wingerClassic'],
+    [17, 'Oğuz Aydın', 25, 'TUR', 'AMR,AML', 'R', 13, 'wingerClassic'],
+    [10, 'Vedat Muriqi', 32, 'KOS', 'ST', 'R', 14, 'stTarget', { heading: 18 }, FLAG_NEW],
+    [90, 'Romelu Lukaku', 33, 'BEL', 'ST', 'L', 14.5, 'stTarget', { strength: 18 }, FLAG_NEW],
+    [19, 'Youssef En-Nesyri', 29, 'MAR', 'ST', 'R', 14.5, 'stTarget', { jumping: 18 }, FLAG_LEAVE],
+  ],
+});

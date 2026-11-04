@@ -26,6 +26,5 @@ export default scout({
     [7, 'William Gomes', 20, 'BRA', 'AMR,AML', 'L', 13.5, 'wingerInverted'],
     [9, 'Samu Aghehowa', 22, 'ESP', 'ST', 'R', 15, 'stTarget', { strength: 18 }, '', 'Samu'],
     [19, 'André Silva', 30, 'POR', 'ST', 'R', 13.5, 'stPoacher', {}, FLAG_NEW],
-    [27, 'Deniz Gül', 22, 'SWE', 'ST', 'R', 12.5, 'stTarget'],
   ],
 });

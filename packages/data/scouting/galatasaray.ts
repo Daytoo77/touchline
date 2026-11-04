@@ -1,0 +1,31 @@
+import { FLAG_LEAVE, FLAG_LOAN, FLAG_NEW, kit, scout } from '../src/scout';
+
+export default scout({
+  id: 'galatasaray', name: 'Galatasaray', shortName: 'Galatasaray', abbr: 'GAL', country: 'TUR', pot: 3, prefix: 'gal',
+  kits: { home: kit('#a90432', '#fdb912', 'halves', '#a90432', '#ffffff'), away: kit('#fdb912', '#a90432', 'plain', '#fdb912', '#a90432'), gk: kit('#111827', '#fdb912', 'plain', '#111827', '#ffffff') },
+  formation: '4-2-3-1', instructions: { mentality: 1, pressing: 1, tempo: 1 },
+  players: [
+    [1, 'Uğurcan Çakır', 30, 'TUR', 'GK', 'R', 14.5, 'gk'],
+    [19, 'Günay Güvenç', 35, 'TUR', 'GK', 'R', 11.5, 'gk'],
+    [6, 'Davinson Sánchez', 30, 'COL', 'DC', 'R', 14.5, 'cbStopper'],
+    [42, 'Abdülkerim Bardakcı', 32, 'TUR', 'DC', 'L', 14, 'cbStopper'],
+    [90, 'Wilfried Singo', 25, 'CIV', 'DC,DR', 'R', 14.5, 'cbAthletic'],
+    [23, 'Kaan Ayhan', 31, 'TUR', 'DC,DM,DR', 'R', 13.5, 'cbBallPlayer'],
+    [4, 'El Chadaille Bitshiabu', 21, 'FRA', 'DC', 'L', 13, 'cbAthletic', {}, FLAG_LOAN],
+    [7, 'Roland Sallai', 29, 'HUN', 'DR,AMR', 'R', 14, 'wideWorker'],
+    [17, 'Eren Elmalı', 26, 'TUR', 'DL', 'L', 13.5, 'fbAttacking'],
+    [3, 'İsmail Jakobs', 27, 'SEN', 'DL', 'L', 13.5, 'fbAttacking'],
+    [34, 'Lucas Torreira', 30, 'URU', 'DM', 'R', 14.5, 'dmBallWinner'],
+    [8, 'Gabriel Sara', 27, 'BRA', 'MC,AMC', 'L', 15, 'cmPlaymaker', { corners: 17 }],
+    [20, 'Mario Lemina', 33, 'GAB', 'DM,MC', 'R', 13.5, 'dmAnchor', {}, FLAG_LEAVE],
+    [21, 'İlkay Gündoğan', 35, 'GER', 'MC,AMC', 'R', 14.5, 'cmPlaymaker', { vision: 18 }, FLAG_LEAVE],
+    [5, 'Lesley Ugochukwu', 22, 'FRA', 'DM,MC', 'R', 13.5, 'dmBallWinner', {}, FLAG_LOAN],
+    [14, 'Aleksey Batrakov', 21, 'RUS', 'AMC,MC', 'L', 14, 'amCreator', {}, FLAG_NEW],
+    [10, 'Leroy Sané', 30, 'GER', 'AMR,AML', 'L', 15.5, 'wingerInverted', { pace: 18 }],
+    [11, 'Yunus Akgün', 26, 'TUR', 'AMR', 'L', 14, 'wingerInverted'],
+    [53, 'Barış Alper Yılmaz', 26, 'TUR', 'AMR,ST,AML', 'R', 15, 'stPresser', { pace: 17, strength: 17 }, '', 'Barış Alper'],
+    [77, 'Rafael Leão', 27, 'POR', 'AML', 'R', 16, 'wingerClassic', { pace: 19, dribbling: 18 }, FLAG_NEW, 'Leão'],
+    [45, 'Victor Osimhen', 27, 'NGA', 'ST', 'R', 16.5, 'stPacey', { finishing: 18, jumping: 18 }],
+    [27, 'Deniz Gül', 22, 'SWE', 'ST', 'R', 12.5, 'stTarget', {}, FLAG_NEW],
+  ],
+});
