@@ -152,7 +152,7 @@ export class MatchHost {
       return;
     }
     this.breakEndsAt = null;
-    const rate = this.governor.rate(m, now / 1000) * this.opts.speed;
+    const rate = this.governor.rate(m, now / 1000, this.opts.speed);
     this.acc += ((dtMs / 1000) * rate) / DT;
     let n = Math.floor(this.acc);
     this.acc -= n;

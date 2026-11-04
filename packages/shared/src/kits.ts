@@ -26,8 +26,12 @@ export function colourDistance(a: string, b: string): number {
   return Math.sqrt((A[0] - B[0]) ** 2 + (A[1] - B[1]) ** 2 + (A[2] - B[2]) ** 2);
 }
 
+/** How distinguishable two kits are on the pitch view; trim only counts when a pattern actually shows it. */
 function kitDistance(a: Kit, b: Kit): number {
-  return Math.min(colourDistance(a.shirt, b.shirt), colourDistance(a.shirt, b.trim) + 15, colourDistance(a.trim, b.shirt) + 15);
+  let d = colourDistance(a.shirt, b.shirt);
+  if (b.pattern !== 'plain') d = Math.min(d, colourDistance(a.shirt, b.trim) + 20);
+  if (a.pattern !== 'plain') d = Math.min(d, colourDistance(a.trim, b.shirt) + 20);
+  return d;
 }
 
 /** Home side always wears home; the away side wears whichever of its kits contrasts best. */

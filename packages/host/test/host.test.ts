@@ -59,6 +59,20 @@ describe('MatchHost pacing', () => {
   });
 });
 
+describe('MatchHost speed', () => {
+  it('a speed multiplier shortens the match proportionally', () => {
+    const h = makeHost({ ai: [true, true], targetSeconds: 600, speed: 10 });
+    let end = -1;
+    for (let i = 0; i < 40_000 && end < 0; i++) {
+      h.advance(50);
+      if (h.events.some((e) => e.type === 'periodEnd' && e.period === 2)) end = h.now;
+    }
+    console.log(`90 minutes at 10x took ${(end / 1000).toFixed(0)} s`);
+    expect(end / 1000).toBeGreaterThan(45);
+    expect(end / 1000).toBeLessThan(80);
+  });
+});
+
 describe('MatchHost commands, pause and replay', () => {
   it('a human seat can command; the AI seat cannot be commanded', () => {
     const h = makeHost({ ai: [false, true] });

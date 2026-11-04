@@ -39,8 +39,8 @@ export class PacingGovernor {
   private period = 0;
   constructor(private readonly targetSeconds: number) {}
 
-  /** match-seconds per real second, given wall-clock seconds `now`. */
-  rate(m: Match, nowSec: number): number {
+  /** match-seconds per real second, given wall-clock seconds `now` and the current speed multiplier. */
+  rate(m: Match, nowSec: number, speed = 1): number {
     if (m.s.period !== this.period) {
       this.period = m.s.period;
       this.periodWallStart = nowSec;
@@ -48,7 +48,7 @@ export class PacingGovernor {
     let r = baseRate(m);
     const len = PERIOD_LEN[m.s.period];
     if (len && m.s.phase === 'play') {
-      const budget = (this.targetSeconds * len) / 5400;
+      const budget = (this.targetSeconds * len) / 5400 / Math.max(0.1, speed);
       const elapsedMatch = m.s.periodTick * DT;
       const expectedWall = (Math.min(elapsedMatch, len) / len) * budget;
       const actualWall = nowSec - this.periodWallStart;
@@ -57,6 +57,7 @@ export class PacingGovernor {
       // Only stretch the fast phases; keep the drama readable.
       r = r >= 10 ? r * k : r * Math.max(0.85, Math.min(1.35, k));
     }
+    r *= speed;
     this.smoothed += (r - this.smoothed) * (r < this.smoothed ? 0.6 : 0.25);
     return this.smoothed;
   }
