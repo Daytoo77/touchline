@@ -1,0 +1,30 @@
+import { FLAG_LEAVE, FLAG_NEW, kit, scout } from '../src/scout';
+
+export default scout({
+  id: 'porto', name: 'FC Porto', shortName: 'Porto', abbr: 'POR', country: 'POR', pot: 2, prefix: 'fcp',
+  kits: { home: kit('#1f4fa0', '#ffffff', 'stripes', '#1f4fa0', '#ffffff'), away: kit('#f97316', '#111111', 'plain', '#111111', '#111111'), gk: kit('#334155', '#111111', 'plain', '#334155', '#ffffff') },
+  formation: '4-3-3', instructions: { mentality: 1, pressing: 1, line: 1, tempo: 1 },
+  players: [
+    [99, 'Diogo Costa', 26, 'POR', 'GK', 'R', 16, 'gkSweeper', { reflexes: 18 }],
+    [14, 'Cláudio Ramos', 35, 'POR', 'GK', 'R', 11.5, 'gk'],
+    [5, 'Jan Bednarek', 30, 'POL', 'DC', 'R', 14.5, 'cbStopper'],
+    [4, 'Jakub Kiwior', 26, 'POL', 'DC,DL', 'L', 14.5, 'cbBallPlayer', {}, FLAG_NEW],
+    [24, 'Nehuén Pérez', 26, 'ARG', 'DC', 'R', 14, 'cbStopper'],
+    [20, 'Alberto Costa', 22, 'POR', 'DR', 'R', 13.5, 'fbAttacking', {}, '', 'A. Costa'],
+    [52, 'Martim Fernandes', 20, 'POR', 'DR,DL', 'R', 13.5, 'fbAttacking', {}, FLAG_LEAVE],
+    [74, 'Francisco Moura', 26, 'POR', 'DL,AML', 'L', 13.5, 'fbAttacking'],
+    [12, 'Zaidu Sanusi', 29, 'NGA', 'DL', 'L', 13, 'fbDefensive', {}, FLAG_LEAVE, 'Zaidu'],
+    [22, 'Alan Varela', 25, 'ARG', 'DM', 'R', 14.5, 'dmPlaymaker'],
+    [6, 'Stephen Eustáquio', 29, 'CAN', 'DM,MC', 'R', 14, 'dmPlaymaker', {}, FLAG_LEAVE],
+    [8, 'Victor Froholdt', 20, 'DEN', 'MC', 'R', 14.5, 'cmBoxToBox'],
+    [10, 'Gabri Veiga', 24, 'ESP', 'MC,AMC', 'R', 15, 'cmMezzala', { longShots: 17 }],
+    [16, 'Seko Fofana', 31, 'CIV', 'MC', 'R', 13.5, 'cmBoxToBox', {}, FLAG_NEW],
+    [13, 'Hwang In-beom', 29, 'KOR', 'MC,DM', 'R', 14, 'cmPlaymaker', {}, FLAG_NEW, 'Hwang'],
+    [86, 'Rodrigo Mora', 19, 'POR', 'AMC,AMR', 'L', 14.5, 'amCreator', { flair: 18 }],
+    [11, 'Pepê', 29, 'BRA', 'AMR,AML', 'R', 14, 'wideWorker'],
+    [17, 'Borja Sainz', 25, 'ESP', 'AML', 'L', 14, 'wingerInverted'],
+    [7, 'William Gomes', 20, 'BRA', 'AMR,AML', 'L', 13.5, 'wingerInverted'],
+    [9, 'Samu Aghehowa', 22, 'ESP', 'ST', 'R', 15, 'stTarget', { strength: 18 }, '', 'Samu'],
+    [19, 'André Silva', 30, 'POR', 'ST', 'R', 13.5, 'stPoacher', {}, FLAG_NEW],
+  ],
+});

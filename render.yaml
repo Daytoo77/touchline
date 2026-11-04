@@ -1,0 +1,18 @@
+# Render Blueprint: free Node web service running the authoritative match server.
+services:
+  - type: web
+    name: touchline-server
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build:server
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      # Your GitHub Pages origin, e.g. https://<user>.github.io (comma-separate several).
+      - key: CORS_ORIGIN
+        sync: false
+      # The web app is hosted on GitHub Pages; don't serve it from here.
+      - key: SERVE_WEB
+        value: "0"

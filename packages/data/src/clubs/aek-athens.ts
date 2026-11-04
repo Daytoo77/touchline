@@ -1,0 +1,163 @@
+// AEK Athens: 2026-27 squad. Ratings are Touchline's own estimates from each player's level and role
+// (not taken from any game or ratings database). Generated from packages/data/scouting/aek-athens.ts;
+// this file is now the source of truth: edit any number by hand (1-20), then run `npm run data:check`.
+import { defineClub } from '../define';
+
+export default defineClub({
+  id: 'aek-athens',
+  name: "AEK Athens",
+  shortName: "AEK",
+  abbr: 'AEK',
+  country: 'GRE',
+  pot: 4,
+  kits: {
+    home: {"shirt":"#ffd200","trim":"#111111","pattern":"plain","shorts":"#111111","number":"#111111"},
+    away: {"shirt":"#111111","trim":"#ffd200","pattern":"plain","shorts":"#111111","number":"#ffd200"},
+    gk: {"shirt":"#22c55e","trim":"#111111","pattern":"plain","shorts":"#111111","number":"#111111"},
+  },
+  defaultTactic: { formation: '4-2-3-1', instructions: {"mentality":0,"pressing":1,"line":0,"width":0,"tempo":0,"directness":0,"timeWasting":0} },
+  dataAsOf: '2026-11-03',
+  players: [
+    {
+      id: 'aek-thomas-strakosha', name: "Thomas Strakosha", number: 1, age: 31, nationality: 'ALB', positions: ['GK'], foot: 'R',
+      technical: { corners: 2, crossing: 3, dribbling: 4, finishing: 4, firstTouch: 13, freeKicks: 4, heading: 2, longShots: 3, marking: 3, passing: 8, penalties: 4, tackling: 4, technique: 7 },
+      mental: { aggression: 8, anticipation: 15, bravery: 14, composure: 15, concentration: 17, decisions: 15, determination: 14, flair: 2, leadership: 12, offTheBall: 4, positioning: 18, teamwork: 12, vision: 8, workRate: 8 },
+      physical: { acceleration: 6, agility: 15, balance: 12, jumping: 14, naturalFitness: 13, pace: 6, stamina: 7, strength: 13 },
+      goalkeeping: { aerialReach: 15, commandOfArea: 15, communication: 14, handling: 17, kicking: 10, oneOnOnes: 15, reflexes: 16, rushingOut: 10, throwing: 12 },
+    },
+    {
+      id: 'aek-georgios-athanasiadis', name: "Georgios Athanasiadis", number: 30, age: 33, nationality: 'GRE', positions: ['GK'], foot: 'R',
+      technical: { corners: 1, crossing: 1, dribbling: 1, finishing: 1, firstTouch: 9, freeKicks: 1, heading: 1, longShots: 1, marking: 1, passing: 5, penalties: 1, tackling: 1, technique: 6 },
+      mental: { aggression: 6, anticipation: 11, bravery: 11, composure: 13, concentration: 14, decisions: 12, determination: 11, flair: 1, leadership: 11, offTheBall: 1, positioning: 15, teamwork: 10, vision: 6, workRate: 6 },
+      physical: { acceleration: 3, agility: 10, balance: 11, jumping: 13, naturalFitness: 9, pace: 3, stamina: 3, strength: 9 },
+      goalkeeping: { aerialReach: 12, commandOfArea: 12, communication: 13, handling: 13, kicking: 9, oneOnOnes: 14, reflexes: 16, rushingOut: 10, throwing: 10 },
+    },
+    {
+      id: 'aek-domagoj-vida', name: "Domagoj Vida", number: 21, age: 37, nationality: 'CRO', positions: ['DC'], foot: 'R',
+      technical: { corners: 7, crossing: 7, dribbling: 7, finishing: 2, firstTouch: 10, freeKicks: 7, heading: 16, longShots: 6, marking: 14, passing: 8, penalties: 7, tackling: 14, technique: 11 },
+      mental: { aggression: 15, anticipation: 12, bravery: 12, composure: 11, concentration: 13, decisions: 13, determination: 12, flair: 7, leadership: 18, offTheBall: 6, positioning: 16, teamwork: 11, vision: 7, workRate: 11 },
+      physical: { acceleration: 8, agility: 7, balance: 12, jumping: 16, naturalFitness: 10, pace: 7, stamina: 8, strength: 15 },
+    },
+    {
+      id: 'aek-harold-moukoudi', name: "Harold Moukoudi", number: 2, age: 28, nationality: 'CMR', positions: ['DC'], foot: 'R',
+      technical: { corners: 8, crossing: 8, dribbling: 8, finishing: 3, firstTouch: 11, freeKicks: 8, heading: 17, longShots: 7, marking: 15, passing: 9, penalties: 8, tackling: 15, technique: 12 },
+      mental: { aggression: 16, anticipation: 13, bravery: 13, composure: 11, concentration: 14, decisions: 13, determination: 13, flair: 8, leadership: 9, offTheBall: 7, positioning: 16, teamwork: 12, vision: 8, workRate: 12 },
+      physical: { acceleration: 12, agility: 11, balance: 13, jumping: 17, naturalFitness: 14, pace: 11, stamina: 12, strength: 16 },
+    },
+    {
+      id: 'aek-alexander-callens', name: "Alexander Callens", number: 5, age: 34, nationality: 'PER', positions: ['DC', 'DL'], foot: 'L',
+      technical: { corners: 7, crossing: 6, dribbling: 7, finishing: 2, firstTouch: 14, freeKicks: 7, heading: 14, longShots: 8, marking: 16, passing: 16, penalties: 7, tackling: 15, technique: 14 },
+      mental: { aggression: 12, anticipation: 13, bravery: 14, composure: 15, concentration: 13, decisions: 16, determination: 14, flair: 7, leadership: 14, offTheBall: 7, positioning: 16, teamwork: 10, vision: 10, workRate: 12 },
+      physical: { acceleration: 7, agility: 9, balance: 10, jumping: 14, naturalFitness: 11, pace: 9, stamina: 8, strength: 15 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'aek-filipe-relvas', name: "Filipe Relvas", number: 15, age: 27, nationality: 'POR', positions: ['DC'], foot: 'L',
+      technical: { corners: 7, crossing: 6, dribbling: 7, finishing: 2, firstTouch: 15, freeKicks: 7, heading: 15, longShots: 8, marking: 17, passing: 17, penalties: 7, tackling: 16, technique: 15 },
+      mental: { aggression: 13, anticipation: 14, bravery: 15, composure: 15, concentration: 14, decisions: 16, determination: 15, flair: 7, leadership: 10, offTheBall: 7, positioning: 16, teamwork: 11, vision: 10, workRate: 13 },
+      physical: { acceleration: 11, agility: 13, balance: 11, jumping: 15, naturalFitness: 15, pace: 13, stamina: 12, strength: 16 },
+    },
+    {
+      id: 'aek-lazaros-rota', name: "Lazaros Rota", number: 12, age: 29, nationality: 'GRE', positions: ['DR'], foot: 'R',
+      technical: { corners: 7, crossing: 17, dribbling: 16, finishing: 7, firstTouch: 12, freeKicks: 7, heading: 12, longShots: 8, marking: 13, passing: 15, penalties: 7, tackling: 14, technique: 13 },
+      mental: { aggression: 11, anticipation: 14, bravery: 13, composure: 12, concentration: 14, decisions: 13, determination: 15, flair: 7, leadership: 12, offTheBall: 15, positioning: 12, teamwork: 13, vision: 6, workRate: 17 },
+      physical: { acceleration: 14, agility: 14, balance: 11, jumping: 11, naturalFitness: 14, pace: 16, stamina: 15, strength: 12 },
+    },
+    {
+      id: 'aek-stavros-pilios', name: "Stavros Pilios", number: 3, age: 25, nationality: 'GRE', positions: ['DL'], foot: 'L',
+      technical: { corners: 7, crossing: 16, dribbling: 15, finishing: 7, firstTouch: 11, freeKicks: 7, heading: 11, longShots: 8, marking: 12, passing: 14, penalties: 7, tackling: 13, technique: 12 },
+      mental: { aggression: 10, anticipation: 13, bravery: 12, composure: 11, concentration: 13, decisions: 12, determination: 14, flair: 7, leadership: 10, offTheBall: 14, positioning: 11, teamwork: 12, vision: 6, workRate: 16 },
+      physical: { acceleration: 14, agility: 14, balance: 10, jumping: 10, naturalFitness: 14, pace: 16, stamina: 15, strength: 11 },
+    },
+    {
+      id: 'aek-ehsan-hajsafi', name: "Ehsan Hajsafi", number: 28, age: 36, nationality: 'IRN', positions: ['DL', 'MC'], foot: 'L',
+      technical: { corners: 7, crossing: 14, dribbling: 10, finishing: 5, firstTouch: 11, freeKicks: 5, heading: 12, longShots: 6, marking: 16, passing: 13, penalties: 5, tackling: 17, technique: 12 },
+      mental: { aggression: 12, anticipation: 13, bravery: 11, composure: 11, concentration: 12, decisions: 12, determination: 13, flair: 7, leadership: 9, offTheBall: 9, positioning: 16, teamwork: 14, vision: 7, workRate: 14 },
+      physical: { acceleration: 13, agility: 10, balance: 11, jumping: 11, naturalFitness: 9, pace: 11, stamina: 11, strength: 11 },
+      flag: "May have left (or been loaned out) in the summer-2026 window; not confirmed.",
+    },
+    {
+      id: 'aek-damian-szymanski', name: "Damian Szymański", number: 4, age: 31, nationality: 'POL', positions: ['DM', 'MC'], foot: 'R',
+      technical: { corners: 7, crossing: 7, dribbling: 7, finishing: 7, firstTouch: 13, freeKicks: 7, heading: 12, longShots: 11, marking: 13, passing: 15, penalties: 7, tackling: 18, technique: 10 },
+      mental: { aggression: 16, anticipation: 15, bravery: 13, composure: 13, concentration: 14, decisions: 16, determination: 13, flair: 7, leadership: 11, offTheBall: 6, positioning: 17, teamwork: 16, vision: 9, workRate: 17 },
+      physical: { acceleration: 10, agility: 9, balance: 13, jumping: 13, naturalFitness: 12, pace: 10, stamina: 14, strength: 13 },
+    },
+    {
+      id: 'aek-marko-grujic', name: "Marko Grujić", number: 6, age: 30, nationality: 'SRB', positions: ['DM', 'MC'], foot: 'R',
+      technical: { corners: 7, crossing: 8, dribbling: 7, finishing: 9, firstTouch: 15, freeKicks: 9, heading: 11, longShots: 12, marking: 16, passing: 14, penalties: 9, tackling: 18, technique: 11 },
+      mental: { aggression: 12, anticipation: 17, bravery: 12, composure: 15, concentration: 15, decisions: 16, determination: 14, flair: 7, leadership: 11, offTheBall: 9, positioning: 19, teamwork: 16, vision: 9, workRate: 14 },
+      physical: { acceleration: 12, agility: 12, balance: 12, jumping: 12, naturalFitness: 14, pace: 12, stamina: 15, strength: 17 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'aek-kaan-kairinen', name: "Kaan Kairinen", number: 16, age: 27, nationality: 'FIN', positions: ['MC', 'DM'], foot: 'R',
+      technical: { corners: 11, crossing: 12, dribbling: 15, finishing: 13, firstTouch: 17, freeKicks: 13, heading: 7, longShots: 14, marking: 12, passing: 16, penalties: 9, tackling: 16, technique: 15 },
+      mental: { aggression: 12, anticipation: 15, bravery: 12, composure: 15, concentration: 13, decisions: 16, determination: 14, flair: 11, leadership: 9, offTheBall: 17, positioning: 15, teamwork: 16, vision: 13, workRate: 19 },
+      physical: { acceleration: 12, agility: 12, balance: 12, jumping: 8, naturalFitness: 14, pace: 12, stamina: 20, strength: 13 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'aek-roberto-pereyra', name: "Roberto Pereyra", number: 37, age: 35, nationality: 'ARG', positions: ['MC', 'AMC'], foot: 'R',
+      technical: { corners: 12, crossing: 12, dribbling: 14, finishing: 8, firstTouch: 15, freeKicks: 12, heading: 8, longShots: 13, marking: 11, passing: 18, penalties: 8, tackling: 11, technique: 18 },
+      mental: { aggression: 12, anticipation: 13, bravery: 11, composure: 17, concentration: 12, decisions: 18, determination: 13, flair: 12, leadership: 13, offTheBall: 13, positioning: 15, teamwork: 16, vision: 18, workRate: 15 },
+      physical: { acceleration: 9, agility: 8, balance: 13, jumping: 9, naturalFitness: 11, pace: 9, stamina: 12, strength: 11 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'aek-lovro-majer', name: "Lovro Majer", number: 10, age: 28, nationality: 'CRO', positions: ['AMC', 'MC'], foot: 'L',
+      technical: { corners: 13, crossing: 13, dribbling: 17, finishing: 15, firstTouch: 16, freeKicks: 13, heading: 8, longShots: 14, marking: 7, passing: 17, penalties: 13, tackling: 7, technique: 17 },
+      mental: { aggression: 8, anticipation: 14, bravery: 7, composure: 15, concentration: 13, decisions: 15, determination: 12, flair: 19, leadership: 9, offTheBall: 14, positioning: 8, teamwork: 13, vision: 19, workRate: 13 },
+      physical: { acceleration: 13, agility: 14, balance: 16, jumping: 9, naturalFitness: 15, pace: 13, stamina: 13, strength: 7 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'aek-mijat-gacinovic', name: "Mijat Gaćinović", number: 8, age: 31, nationality: 'SRB', positions: ['AMC', 'AMR'], foot: 'R',
+      technical: { corners: 12, crossing: 11, dribbling: 16, finishing: 14, firstTouch: 16, freeKicks: 12, heading: 8, longShots: 15, marking: 9, passing: 19, penalties: 12, tackling: 8, technique: 16 },
+      mental: { aggression: 7, anticipation: 14, bravery: 9, composure: 14, concentration: 12, decisions: 17, determination: 13, flair: 18, leadership: 14, offTheBall: 14, positioning: 9, teamwork: 11, vision: 17, workRate: 13 },
+      physical: { acceleration: 10, agility: 14, balance: 13, jumping: 7, naturalFitness: 14, pace: 12, stamina: 11, strength: 8 },
+    },
+    {
+      id: 'aek-petros-mantalos', name: "Petros Mantalos", number: 20, age: 35, nationality: 'GRE', positions: ['AMC'], foot: 'R',
+      technical: { corners: 10, crossing: 11, dribbling: 16, finishing: 14, firstTouch: 16, freeKicks: 12, heading: 6, longShots: 13, marking: 7, passing: 17, penalties: 12, tackling: 8, technique: 14 },
+      mental: { aggression: 7, anticipation: 14, bravery: 7, composure: 15, concentration: 12, decisions: 15, determination: 11, flair: 16, leadership: 17, offTheBall: 14, positioning: 9, teamwork: 11, vision: 17, workRate: 11 },
+      physical: { acceleration: 8, agility: 10, balance: 13, jumping: 7, naturalFitness: 10, pace: 8, stamina: 9, strength: 8 },
+    },
+    {
+      id: 'aek-oleksandr-zubkov', name: "Oleksandr Zubkov", number: 11, age: 30, nationality: 'UKR', positions: ['AMR'], foot: 'R',
+      technical: { corners: 11, crossing: 18, dribbling: 18, finishing: 13, firstTouch: 15, freeKicks: 13, heading: 7, longShots: 11, marking: 8, passing: 14, penalties: 13, tackling: 9, technique: 15 },
+      mental: { aggression: 8, anticipation: 13, bravery: 8, composure: 13, concentration: 13, decisions: 12, determination: 12, flair: 13, leadership: 11, offTheBall: 15, positioning: 9, teamwork: 12, vision: 12, workRate: 14 },
+      physical: { acceleration: 17, agility: 16, balance: 14, jumping: 8, naturalFitness: 14, pace: 17, stamina: 15, strength: 9 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'aek-aboubakary-koita', name: "Aboubakary Koita", number: 17, age: 28, nationality: 'BEL', positions: ['AMR', 'AML'], foot: 'R',
+      technical: { corners: 13, crossing: 14, dribbling: 17, finishing: 16, firstTouch: 14, freeKicks: 11, heading: 9, longShots: 14, marking: 8, passing: 14, penalties: 11, tackling: 8, technique: 17 },
+      mental: { aggression: 9, anticipation: 12, bravery: 8, composure: 12, concentration: 11, decisions: 12, determination: 12, flair: 17, leadership: 7, offTheBall: 14, positioning: 7, teamwork: 13, vision: 13, workRate: 13 },
+      physical: { acceleration: 17, agility: 16, balance: 14, jumping: 8, naturalFitness: 13, pace: 15, stamina: 13, strength: 8 },
+    },
+    {
+      id: 'aek-niclas-eliasson', name: "Niclas Eliasson", number: 23, age: 30, nationality: 'SWE', positions: ['AML'], foot: 'L',
+      technical: { corners: 11, crossing: 18, dribbling: 18, finishing: 13, firstTouch: 15, freeKicks: 13, heading: 6, longShots: 11, marking: 7, passing: 14, penalties: 13, tackling: 8, technique: 15 },
+      mental: { aggression: 7, anticipation: 13, bravery: 7, composure: 13, concentration: 13, decisions: 12, determination: 12, flair: 13, leadership: 10, offTheBall: 15, positioning: 8, teamwork: 12, vision: 12, workRate: 14 },
+      physical: { acceleration: 16, agility: 15, balance: 14, jumping: 7, naturalFitness: 13, pace: 16, stamina: 14, strength: 8 },
+    },
+    {
+      id: 'aek-levi-garcia', name: "Levi García", number: 7, age: 29, nationality: 'TRI', positions: ['ST', 'AML'], foot: 'R',
+      technical: { corners: 8, crossing: 8, dribbling: 15, finishing: 17, firstTouch: 16, freeKicks: 8, heading: 12, longShots: 12, marking: 7, passing: 12, penalties: 15, tackling: 7, technique: 15 },
+      mental: { aggression: 8, anticipation: 16, bravery: 12, composure: 17, concentration: 13, decisions: 12, determination: 14, flair: 13, leadership: 11, offTheBall: 16, positioning: 8, teamwork: 13, vision: 13, workRate: 13 },
+      physical: { acceleration: 18, agility: 14, balance: 16, jumping: 16, naturalFitness: 14, pace: 17, stamina: 12, strength: 12 },
+    },
+    {
+      id: 'aek-zini', name: "Zini", number: 9, age: 24, nationality: 'ANG', positions: ['ST'], foot: 'R',
+      technical: { corners: 8, crossing: 8, dribbling: 13, finishing: 17, firstTouch: 16, freeKicks: 6, heading: 15, longShots: 12, marking: 7, passing: 9, penalties: 13, tackling: 7, technique: 15 },
+      mental: { aggression: 8, anticipation: 18, bravery: 12, composure: 16, concentration: 11, decisions: 12, determination: 14, flair: 13, leadership: 6, offTheBall: 18, positioning: 6, teamwork: 13, vision: 10, workRate: 9 },
+      physical: { acceleration: 15, agility: 14, balance: 14, jumping: 14, naturalFitness: 13, pace: 13, stamina: 9, strength: 14 },
+    },
+    {
+      id: 'aek-frantzdy-pierrot', name: "Frantzdy Pierrot", number: 14, age: 31, nationality: 'HAI', positions: ['ST'], foot: 'R',
+      technical: { corners: 7, crossing: 7, dribbling: 10, finishing: 15, firstTouch: 14, freeKicks: 7, heading: 17, longShots: 10, marking: 6, passing: 10, penalties: 13, tackling: 6, technique: 13 },
+      mental: { aggression: 7, anticipation: 14, bravery: 12, composure: 15, concentration: 11, decisions: 11, determination: 12, flair: 11, leadership: 11, offTheBall: 14, positioning: 8, teamwork: 11, vision: 11, workRate: 11 },
+      physical: { acceleration: 9, agility: 8, balance: 14, jumping: 17, naturalFitness: 12, pace: 9, stamina: 10, strength: 16 },
+    },
+  ],
+});

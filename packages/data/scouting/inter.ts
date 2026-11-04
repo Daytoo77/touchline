@@ -1,0 +1,32 @@
+import { FLAG_LEAVE, FLAG_NEW, kit, scout } from '../src/scout';
+
+export default scout({
+  id: 'inter', name: 'Inter', shortName: 'Inter', abbr: 'INT', country: 'ITA', pot: 1, prefix: 'int',
+  kits: { home: kit('#0068a8', '#0b0b0b', 'stripes', '#0b0b0b', '#ffffff'), away: kit('#f5f5f5', '#0068a8', 'plain', '#f5f5f5', '#0b0b0b'), gk: kit('#f59e0b', '#111111', 'plain', '#111111', '#111111') },
+  formation: '3-5-2', instructions: { mentality: 0, pressing: 0, line: 0, tempo: 0 },
+  players: [
+    [12, 'Ivan Provedel', 32, 'ITA', 'GK', 'R', 14.5, 'gkSweeper', {}, FLAG_NEW],
+    [13, 'Josep Martínez', 28, 'ESP', 'GK', 'L', 14, 'gkSweeper'],
+    [95, 'Alessandro Bastoni', 27, 'ITA', 'DC,DL', 'L', 16.5, 'cbBallPlayer', { passing: 17 }, FLAG_LEAVE],
+    [25, 'Manuel Akanji', 31, 'SUI', 'DC', 'R', 15.5, 'cbBallPlayer'],
+    [31, 'Yann Bisseck', 25, 'GER', 'DC', 'R', 15, 'cbAthletic'],
+    [15, 'Francesco Acerbi', 38, 'ITA', 'DC', 'L', 14.5, 'cbStopper', { leadership: 17 }, FLAG_LEAVE],
+    [6, 'Stefan de Vrij', 34, 'NED', 'DC', 'R', 14.5, 'cbBallPlayer', {}, FLAG_LEAVE],
+    [30, 'Carlos Augusto', 27, 'BRA', 'DL,DC,WBL', 'L', 14, 'fbAttacking'],
+    [32, 'Federico Dimarco', 28, 'ITA', 'WBL,DL', 'L', 16, 'fbAttacking', { crossing: 19, freeKicks: 17, corners: 17 }],
+    [36, 'Matteo Darmian', 36, 'ITA', 'WBR,DC,DR', 'R', 13, 'fbDefensive', {}, FLAG_LEAVE],
+    [11, 'Luis Henrique', 24, 'BRA', 'WBR,AMR', 'R', 14, 'wingerClassic'],
+    [20, 'Hakan Çalhanoğlu', 32, 'TUR', 'DM,MC', 'R', 16, 'dmPlaymaker', { freeKicks: 18, penalties: 18, longShots: 17 }],
+    [23, 'Nicolò Barella', 29, 'ITA', 'MC', 'R', 16.5, 'cmBoxToBox', { passing: 17 }],
+    [22, 'Henrikh Mkhitaryan', 37, 'ARM', 'MC,AMC', 'R', 14.5, 'cmPlaymaker', {}, FLAG_LEAVE],
+    [16, 'Davide Frattesi', 26, 'ITA', 'MC', 'R', 15, 'cmMezzala', {}, FLAG_LEAVE],
+    [8, 'Petar Sučić', 23, 'CRO', 'MC,AMC', 'R', 14.5, 'cmPlaymaker'],
+    [7, 'Piotr Zieliński', 32, 'POL', 'MC,AMC', 'R', 15, 'cmPlaymaker'],
+    [17, 'Andy Diouf', 23, 'FRA', 'MC,WBL', 'L', 14, 'cmBoxToBox', {}, FLAG_LEAVE],
+    [21, 'Aleksandar Stanković', 21, 'SRB', 'DM,MC', 'R', 13.5, 'dmPlaymaker', {}, FLAG_NEW],
+    [10, 'Lautaro Martínez', 29, 'ARG', 'ST', 'R', 17, 'stComplete', { finishing: 19, leadership: 18 }, '', 'Lautaro'],
+    [9, 'Marcus Thuram', 29, 'FRA', 'ST,AML', 'R', 16, 'stComplete', { pace: 17, strength: 17 }],
+    [14, 'Ange-Yoan Bonny', 22, 'FRA', 'ST', 'R', 14, 'stPacey'],
+    [94, 'Francesco Pio Esposito', 21, 'ITA', 'ST', 'R', 14, 'stTarget', {}, '', 'Pio Esposito'],
+  ],
+});

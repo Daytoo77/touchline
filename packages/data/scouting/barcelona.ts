@@ -1,0 +1,33 @@
+import { FLAG_LEAVE, FLAG_LOAN, FLAG_NEW, kit, scout } from '../src/scout';
+
+export default scout({
+  id: 'barcelona', name: 'Barcelona', shortName: 'Barcelona', abbr: 'BAR', country: 'ESP', pot: 1, prefix: 'bar',
+  kits: { home: kit('#a50044', '#004d98', 'stripes', '#004d98', '#f2c14e'), away: kit('#f2c14e', '#a50044', 'plain', '#f2c14e', '#a50044'), gk: kit('#0ea5e9', '#111111', 'plain', '#111111', '#111111') },
+  formation: '4-2-3-1', instructions: { mentality: 2, pressing: 2, line: 2, tempo: 1, directness: -1 },
+  players: [
+    [13, 'Joan García', 25, 'ESP', 'GK', 'R', 16, 'gkSweeper'],
+    [1, 'Marc-André ter Stegen', 34, 'GER', 'GK', 'R', 15.5, 'gkSweeper', {}, FLAG_LEAVE],
+    [25, 'Wojciech Szczęsny', 36, 'POL', 'GK', 'R', 14.5, 'gk', {}, FLAG_LEAVE],
+    [2, 'Pau Cubarsí', 19, 'ESP', 'DC', 'R', 16, 'cbBallPlayer', { passing: 17 }],
+    [23, 'Jules Koundé', 27, 'FRA', 'DR,DC', 'R', 16, 'fbDefensive', { pace: 17 }],
+    [3, 'Alejandro Balde', 22, 'ESP', 'DL', 'L', 15.5, 'fbAttacking', { pace: 19 }],
+    [24, 'Eric García', 25, 'ESP', 'DC,DM,DR', 'R', 15, 'cbBallPlayer'],
+    [15, 'Andreas Christensen', 30, 'DEN', 'DC,DM', 'R', 14.5, 'cbBallPlayer', {}, FLAG_LEAVE],
+    [18, 'Gerard Martín', 24, 'ESP', 'DL,DC', 'L', 14, 'fbDefensive'],
+    [32, 'Héctor Fort', 20, 'ESP', 'DR,DL', 'R', 13, 'fbAttacking', {}, FLAG_LOAN],
+    [8, 'Pedri', 23, 'ESP', 'MC,AMC', 'R', 17.5, 'cmPlaymaker', { vision: 19, passing: 19, technique: 19 }],
+    [21, 'Frenkie de Jong', 29, 'NED', 'MC,DM', 'R', 16.5, 'cmPlaymaker', { dribbling: 17 }],
+    [6, 'Gavi', 22, 'ESP', 'MC,AMC', 'R', 15.5, 'cmBoxToBox', { aggression: 17 }],
+    [17, 'Marc Casadó', 23, 'ESP', 'DM,MC', 'R', 14.5, 'dmBallWinner'],
+    [22, 'Marc Bernal', 19, 'ESP', 'DM', 'R', 14, 'dmPlaymaker'],
+    [20, 'Dani Olmo', 28, 'ESP', 'AMC,AML', 'R', 16, 'amCreator'],
+    [16, 'Fermín López', 23, 'ESP', 'AMC,MC', 'R', 15.5, 'amShadow'],
+    [10, 'Lamine Yamal', 19, 'ESP', 'AMR', 'L', 18, 'wingerInverted', { dribbling: 20, flair: 20, vision: 18, crossing: 18 }],
+    [11, 'Raphinha', 29, 'BRA', 'AML,AMR', 'L', 17, 'wingerInverted', { finishing: 17, workRate: 18 }],
+    [7, 'Ferran Torres', 26, 'ESP', 'ST,AML', 'R', 15, 'stPoacher', {}, FLAG_LEAVE],
+    [9, 'Karim Adeyemi', 24, 'GER', 'AML,ST', 'R', 15, 'stPacey', { pace: 19 }, FLAG_NEW],
+    [19, 'Anthony Gordon', 25, 'ENG', 'AML,AMR', 'R', 15.5, 'wingerClassic', {}, FLAG_NEW],
+    [28, 'Roony Bardghji', 20, 'SWE', 'AMR', 'L', 13.5, 'wingerInverted'],
+    [30, 'Jesse Bisiwu', 18, 'BEL', 'AML,AMR', 'R', 12, 'wingerClassic', {}, FLAG_NEW],
+  ],
+});

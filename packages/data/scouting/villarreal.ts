@@ -1,0 +1,30 @@
+import { FLAG_LEAVE, FLAG_LOAN, FLAG_NEW, kit, scout } from '../src/scout';
+
+export default scout({
+  id: 'villarreal', name: 'Villarreal', shortName: 'Villarreal', abbr: 'VIL', country: 'ESP', pot: 3, prefix: 'vil',
+  kits: { home: kit('#ffe667', '#005187', 'plain', '#ffe667', '#005187'), away: kit('#1d3557', '#ffe667', 'plain', '#1d3557', '#ffe667'), gk: kit('#22d3ee', '#111111', 'plain', '#111111', '#111111') },
+  formation: '4-4-2', instructions: { mentality: 1, tempo: 1 },
+  players: [
+    [1, 'Luiz Júnior', 25, 'BRA', 'GK', 'R', 14, 'gk', {}, '', 'Luiz Júnior'],
+    [13, 'Diego Conde', 28, 'ESP', 'GK', 'R', 13, 'gk', {}, FLAG_LEAVE],
+    [25, 'Péter Gulácsi', 36, 'HUN', 'GK', 'R', 13.5, 'gk', {}, FLAG_NEW],
+    [8, 'Juan Foyth', 28, 'ARG', 'DC,DR', 'R', 14.5, 'cbBallPlayer'],
+    [12, 'Renato Veiga', 23, 'POR', 'DC,DL,DM', 'L', 14.5, 'cbBallPlayer'],
+    [15, 'Santiago Mouriño', 24, 'URU', 'DC,DR', 'R', 14, 'cbStopper'],
+    [2, 'Logan Costa', 25, 'CPV', 'DC', 'R', 13.5, 'cbAthletic'],
+    [5, 'Willy Kambwala', 22, 'FRA', 'DC', 'R', 13.5, 'cbAthletic'],
+    [23, 'Sergi Cardona', 27, 'ESP', 'DL', 'L', 13.5, 'fbAttacking'],
+    [24, 'Alfonso Pedraza', 30, 'ESP', 'DL,ML', 'L', 13.5, 'fbAttacking', {}, FLAG_LEAVE],
+    [14, 'Santi Comesaña', 30, 'ESP', 'MC', 'R', 14, 'cmBoxToBox'],
+    [18, 'Pape Gueye', 27, 'SEN', 'DM,MC', 'L', 14.5, 'dmBallWinner'],
+    [20, 'Alberto Moleiro', 22, 'ESP', 'ML,AML,AMC', 'L', 15, 'amCreator', { dribbling: 17 }],
+    [11, 'Ilias Akhomach', 22, 'MAR', 'MR,AMR', 'L', 13.5, 'wingerInverted'],
+    [19, 'Nicolas Pépé', 31, 'CIV', 'MR,AMR', 'L', 14.5, 'wingerInverted'],
+    [17, 'Tajon Buchanan', 27, 'CAN', 'MR,DR,AMR', 'R', 14, 'wingerClassic'],
+    [16, 'Alfon González', 27, 'ESP', 'ML,AML', 'L', 12.5, 'wingerClassic', {}, FLAG_LOAN],
+    [9, 'Georges Mikautadze', 25, 'GEO', 'ST', 'R', 14.5, 'stPoacher'],
+    [7, 'Gerard Moreno', 34, 'ESP', 'ST', 'L', 14, 'stComplete', { finishing: 17, penalties: 18 }, FLAG_LEAVE],
+    [22, 'Ayoze Pérez', 33, 'ESP', 'ST,AMR', 'R', 14, 'stComplete'],
+    [21, 'Tani Oluwaseyi', 26, 'CAN', 'ST', 'R', 13, 'stPresser'],
+  ],
+});

@@ -1,0 +1,32 @@
+import { FLAG_LEAVE, FLAG_LOAN, FLAG_NEW, kit, scout } from '../src/scout';
+
+export default scout({
+  id: 'rb-leipzig', name: 'RB Leipzig', shortName: 'Leipzig', abbr: 'RBL', country: 'GER', pot: 3, prefix: 'rbl',
+  kits: { home: kit('#f5f5f5', '#dd0741', 'plain', '#dd0741', '#0c2043'), away: kit('#0c2043', '#dd0741', 'plain', '#0c2043', '#ffffff'), gk: kit('#f59e0b', '#111111', 'plain', '#111111', '#111111') },
+  formation: '4-2-3-1', instructions: { mentality: 1, pressing: 2, tempo: 2, directness: 1 },
+  players: [
+    [1, 'Maarten Vandevoordt', 24, 'BEL', 'GK', 'R', 14.5, 'gk'],
+    [21, 'Leopold Zingerle', 31, 'GER', 'GK', 'R', 11, 'gk'],
+    [4, 'Willi Orbán', 33, 'HUN', 'DC', 'R', 14.5, 'cbStopper', { leadership: 17 }],
+    [23, 'Castello Lukeba', 23, 'FRA', 'DC', 'L', 15, 'cbBallPlayer', { pace: 17 }],
+    [22, 'David Raum', 28, 'GER', 'DL', 'L', 15, 'fbAttacking', { crossing: 18 }, FLAG_LEAVE],
+    [17, 'Ridle Baku', 28, 'GER', 'DR', 'R', 14.5, 'fbAttacking'],
+    [39, 'Benjamin Henrichs', 29, 'GER', 'DR,DL,DC', 'R', 14, 'fbDefensive'],
+    [26, 'Kosta Nedeljković', 20, 'SRB', 'DR', 'R', 13, 'fbAttacking', {}, FLAG_LOAN],
+    [3, 'Max Finkgräfe', 22, 'GER', 'DL', 'L', 13, 'fbAttacking'],
+    [24, 'Xaver Schlager', 28, 'AUT', 'MC,DM', 'R', 15, 'dmBallWinner'],
+    [13, 'Nicolas Seiwald', 25, 'AUT', 'DM,MC', 'R', 14.5, 'dmAnchor'],
+    [8, 'Amadou Haidara', 28, 'MLI', 'MC', 'R', 14, 'cmBoxToBox', {}, FLAG_LEAVE],
+    [20, 'Assan Ouédraogo', 20, 'GER', 'MC,AMC', 'R', 14, 'cmMezzala'],
+    [44, 'Kevin Kampl', 35, 'SVN', 'DM', 'R', 13.5, 'dmPlaymaker', {}, FLAG_LEAVE],
+    [6, 'Ezechiel Banzuzi', 21, 'NED', 'DM,MC', 'R', 13, 'dmBallWinner'],
+    [14, 'Christoph Baumgartner', 27, 'AUT', 'AMC,MC', 'L', 15, 'amShadow'],
+    [18, 'Nadiem Amiri', 29, 'GER', 'AMC,MC', 'R', 14.5, 'amCreator', {}, FLAG_NEW],
+    [10, 'Brajan Gruda', 22, 'GER', 'AMR,AMC', 'L', 14, 'wingerInverted', {}, FLAG_LOAN],
+    [7, 'Antonio Nusa', 21, 'NOR', 'AML', 'R', 15, 'wingerClassic', { dribbling: 18, pace: 18 }],
+    [9, 'Johan Bakayoko', 23, 'BEL', 'AMR', 'L', 15, 'wingerInverted', {}, FLAG_LEAVE],
+    [40, 'Rômulo', 24, 'BRA', 'ST', 'R', 13.5, 'stComplete'],
+    [11, 'Conrad Harder', 21, 'DEN', 'ST', 'R', 13.5, 'stPacey', {}, FLAG_LEAVE],
+    [19, 'Fisnik Asllani', 24, 'KOS', 'ST,AMC', 'R', 14, 'stComplete', {}, FLAG_NEW],
+  ],
+});

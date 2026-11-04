@@ -1,0 +1,152 @@
+// Atlético de Madrid: 2026-27 squad. Ratings are Touchline's own estimates from each player's level and role
+// (not taken from any game or ratings database). Generated from packages/data/scouting/atletico-madrid.ts;
+// this file is now the source of truth: edit any number by hand (1-20), then run `npm run data:check`.
+import { defineClub } from '../define';
+
+export default defineClub({
+  id: 'atletico-madrid',
+  name: "Atlético de Madrid",
+  shortName: "Atlético",
+  abbr: 'ATM',
+  country: 'ESP',
+  pot: 1,
+  kits: {
+    home: {"shirt":"#cb3524","trim":"#ffffff","pattern":"stripes","shorts":"#272e61","number":"#272e61"},
+    away: {"shirt":"#272e61","trim":"#cb3524","pattern":"plain","shorts":"#272e61","number":"#ffffff"},
+    gk: {"shirt":"#a3e635","trim":"#111111","pattern":"plain","shorts":"#111111","number":"#111111"},
+  },
+  defaultTactic: { formation: '4-4-2', instructions: {"mentality":0,"pressing":1,"line":-1,"width":0,"tempo":0,"directness":0,"timeWasting":1} },
+  dataAsOf: '2026-11-03',
+  players: [
+    {
+      id: 'atm-jan-oblak', name: "Jan Oblak", number: 13, age: 33, nationality: 'SVN', positions: ['GK'], foot: 'R',
+      technical: { corners: 6, crossing: 6, dribbling: 6, finishing: 6, firstTouch: 14, freeKicks: 6, heading: 6, longShots: 5, marking: 5, passing: 10, penalties: 6, tackling: 5, technique: 11 },
+      mental: { aggression: 11, anticipation: 16, bravery: 16, composure: 18, concentration: 19, decisions: 17, determination: 16, flair: 6, leadership: 16, offTheBall: 5, positioning: 20, teamwork: 15, vision: 11, workRate: 11 },
+      physical: { acceleration: 8, agility: 15, balance: 16, jumping: 18, naturalFitness: 14, pace: 8, stamina: 8, strength: 14 },
+      goalkeeping: { aerialReach: 17, commandOfArea: 17, communication: 18, handling: 18, kicking: 14, oneOnOnes: 19, reflexes: 19, rushingOut: 15, throwing: 15 },
+    },
+    {
+      id: 'atm-juan-musso', name: "Juan Musso", number: 1, age: 32, nationality: 'ARG', positions: ['GK'], foot: 'R',
+      technical: { corners: 2, crossing: 3, dribbling: 4, finishing: 4, firstTouch: 13, freeKicks: 4, heading: 2, longShots: 3, marking: 3, passing: 8, penalties: 4, tackling: 4, technique: 7 },
+      mental: { aggression: 8, anticipation: 15, bravery: 14, composure: 15, concentration: 17, decisions: 15, determination: 14, flair: 2, leadership: 12, offTheBall: 4, positioning: 18, teamwork: 12, vision: 8, workRate: 8 },
+      physical: { acceleration: 6, agility: 15, balance: 12, jumping: 14, naturalFitness: 13, pace: 6, stamina: 7, strength: 13 },
+      goalkeeping: { aerialReach: 15, commandOfArea: 15, communication: 14, handling: 17, kicking: 10, oneOnOnes: 15, reflexes: 16, rushingOut: 10, throwing: 12 },
+      flag: "May have left (or been loaned out) in the summer-2026 window; not confirmed.",
+    },
+    {
+      id: 'atm-jose-maria-gimenez', name: "José María Giménez", shortName: "Giménez", number: 2, age: 31, nationality: 'URU', positions: ['DC'], foot: 'R',
+      technical: { corners: 9, crossing: 10, dribbling: 11, finishing: 6, firstTouch: 15, freeKicks: 11, heading: 18, longShots: 10, marking: 18, passing: 12, penalties: 11, tackling: 19, technique: 13 },
+      mental: { aggression: 18, anticipation: 17, bravery: 16, composure: 14, concentration: 17, decisions: 17, determination: 16, flair: 9, leadership: 14, offTheBall: 11, positioning: 20, teamwork: 14, vision: 10, workRate: 14 },
+      physical: { acceleration: 13, agility: 13, balance: 14, jumping: 18, naturalFitness: 15, pace: 12, stamina: 14, strength: 20 },
+    },
+    {
+      id: 'atm-robin-le-normand', name: "Robin Le Normand", number: 24, age: 29, nationality: 'ESP', positions: ['DC'], foot: 'R',
+      technical: { corners: 8, crossing: 9, dribbling: 10, finishing: 5, firstTouch: 15, freeKicks: 10, heading: 18, longShots: 9, marking: 18, passing: 12, penalties: 10, tackling: 19, technique: 13 },
+      mental: { aggression: 18, anticipation: 17, bravery: 16, composure: 14, concentration: 17, decisions: 16, determination: 16, flair: 8, leadership: 12, offTheBall: 10, positioning: 19, teamwork: 14, vision: 9, workRate: 14 },
+      physical: { acceleration: 13, agility: 13, balance: 14, jumping: 18, naturalFitness: 15, pace: 12, stamina: 14, strength: 20 },
+    },
+    {
+      id: 'atm-david-hancko', name: "Dávid Hancko", number: 17, age: 28, nationality: 'SVK', positions: ['DC', 'DL'], foot: 'L',
+      technical: { corners: 10, crossing: 10, dribbling: 10, finishing: 5, firstTouch: 16, freeKicks: 10, heading: 17, longShots: 9, marking: 17, passing: 17, penalties: 10, tackling: 17, technique: 17 },
+      mental: { aggression: 16, anticipation: 15, bravery: 15, composure: 17, concentration: 16, decisions: 16, determination: 15, flair: 10, leadership: 11, offTheBall: 9, positioning: 18, teamwork: 14, vision: 14, workRate: 14 },
+      physical: { acceleration: 14, agility: 13, balance: 15, jumping: 19, naturalFitness: 16, pace: 14, stamina: 14, strength: 17 },
+    },
+    {
+      id: 'atm-cristian-romero', name: "Cristian Romero", shortName: "Romero", number: 22, age: 28, nationality: 'ARG', positions: ['DC'], foot: 'R',
+      technical: { corners: 9, crossing: 10, dribbling: 11, finishing: 6, firstTouch: 16, freeKicks: 11, heading: 19, longShots: 10, marking: 19, passing: 13, penalties: 11, tackling: 20, technique: 14 },
+      mental: { aggression: 19, anticipation: 18, bravery: 17, composure: 15, concentration: 18, decisions: 17, determination: 17, flair: 9, leadership: 11, offTheBall: 11, positioning: 20, teamwork: 15, vision: 10, workRate: 15 },
+      physical: { acceleration: 15, agility: 15, balance: 15, jumping: 19, naturalFitness: 17, pace: 14, stamina: 16, strength: 20 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'atm-clement-lenglet', name: "Clément Lenglet", number: 15, age: 31, nationality: 'FRA', positions: ['DC', 'DL'], foot: 'L',
+      technical: { corners: 7, crossing: 8, dribbling: 9, finishing: 4, firstTouch: 17, freeKicks: 9, heading: 15, longShots: 8, marking: 17, passing: 17, penalties: 9, tackling: 18, technique: 15 },
+      mental: { aggression: 15, anticipation: 16, bravery: 15, composure: 17, concentration: 16, decisions: 17, determination: 15, flair: 7, leadership: 12, offTheBall: 9, positioning: 19, teamwork: 13, vision: 12, workRate: 13 },
+      physical: { acceleration: 11, agility: 11, balance: 13, jumping: 17, naturalFitness: 13, pace: 11, stamina: 12, strength: 18 },
+      flag: "May have left (or been loaned out) in the summer-2026 window; not confirmed.",
+    },
+    {
+      id: 'atm-marc-pubill', name: "Marc Pubill", number: 18, age: 23, nationality: 'ESP', positions: ['DR', 'DC'], foot: 'R',
+      technical: { corners: 8, crossing: 15, dribbling: 14, finishing: 10, firstTouch: 14, freeKicks: 10, heading: 12, longShots: 9, marking: 18, passing: 15, penalties: 10, tackling: 20, technique: 12 },
+      mental: { aggression: 13, anticipation: 16, bravery: 13, composure: 14, concentration: 16, decisions: 13, determination: 15, flair: 8, leadership: 10, offTheBall: 12, positioning: 19, teamwork: 15, vision: 9, workRate: 17 },
+      physical: { acceleration: 17, agility: 15, balance: 13, jumping: 13, naturalFitness: 15, pace: 17, stamina: 18, strength: 14 },
+    },
+    {
+      id: 'atm-alex-grimaldo', name: "Álex Grimaldo", number: 3, age: 30, nationality: 'ESP', positions: ['DL', 'WBL'], foot: 'L',
+      technical: { corners: 10, crossing: 18, dribbling: 18, finishing: 10, firstTouch: 14, freeKicks: 18, heading: 14, longShots: 11, marking: 15, passing: 17, penalties: 10, tackling: 16, technique: 15 },
+      mental: { aggression: 13, anticipation: 16, bravery: 15, composure: 14, concentration: 16, decisions: 15, determination: 17, flair: 10, leadership: 15, offTheBall: 17, positioning: 14, teamwork: 15, vision: 9, workRate: 19 },
+      physical: { acceleration: 17, agility: 17, balance: 13, jumping: 13, naturalFitness: 17, pace: 19, stamina: 18, strength: 14 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'atm-koke', name: "Koke", number: 6, age: 34, nationality: 'ESP', positions: ['MC', 'DM'], foot: 'R',
+      technical: { corners: 12, crossing: 13, dribbling: 16, finishing: 10, firstTouch: 18, freeKicks: 14, heading: 8, longShots: 15, marking: 13, passing: 20, penalties: 10, tackling: 14, technique: 18 },
+      mental: { aggression: 13, anticipation: 16, bravery: 13, composure: 19, concentration: 14, decisions: 20, determination: 15, flair: 12, leadership: 19, offTheBall: 16, positioning: 17, teamwork: 17, vision: 19, workRate: 16 },
+      physical: { acceleration: 10, agility: 10, balance: 13, jumping: 9, naturalFitness: 12, pace: 10, stamina: 14, strength: 14 },
+    },
+    {
+      id: 'atm-pablo-barrios', name: "Pablo Barrios", number: 8, age: 23, nationality: 'ESP', positions: ['MC'], foot: 'R',
+      technical: { corners: 15, crossing: 15, dribbling: 15, finishing: 13, firstTouch: 18, freeKicks: 13, heading: 11, longShots: 16, marking: 14, passing: 18, penalties: 9, tackling: 17, technique: 19 },
+      mental: { aggression: 15, anticipation: 16, bravery: 14, composure: 15, concentration: 13, decisions: 18, determination: 16, flair: 15, leadership: 9, offTheBall: 18, positioning: 15, teamwork: 19, vision: 16, workRate: 20 },
+      physical: { acceleration: 15, agility: 14, balance: 14, jumping: 10, naturalFitness: 15, pace: 13, stamina: 20, strength: 14 },
+    },
+    {
+      id: 'atm-johnny-cardoso', name: "Johnny Cardoso", number: 5, age: 25, nationality: 'USA', positions: ['DM', 'MC'], foot: 'R',
+      technical: { corners: 9, crossing: 8, dribbling: 9, finishing: 9, firstTouch: 16, freeKicks: 9, heading: 14, longShots: 15, marking: 17, passing: 19, penalties: 9, tackling: 20, technique: 12 },
+      mental: { aggression: 17, anticipation: 18, bravery: 17, composure: 15, concentration: 16, decisions: 19, determination: 17, flair: 9, leadership: 12, offTheBall: 9, positioning: 18, teamwork: 17, vision: 10, workRate: 20 },
+      physical: { acceleration: 13, agility: 15, balance: 13, jumping: 13, naturalFitness: 17, pace: 15, stamina: 18, strength: 16 },
+    },
+    {
+      id: 'atm-morten-hjulmand', name: "Morten Hjulmand", number: 21, age: 27, nationality: 'DEN', positions: ['DM'], foot: 'R',
+      technical: { corners: 10, crossing: 10, dribbling: 8, finishing: 10, firstTouch: 15, freeKicks: 10, heading: 14, longShots: 13, marking: 17, passing: 15, penalties: 10, tackling: 18, technique: 14 },
+      mental: { aggression: 14, anticipation: 17, bravery: 13, composure: 16, concentration: 16, decisions: 17, determination: 15, flair: 10, leadership: 17, offTheBall: 9, positioning: 20, teamwork: 18, vision: 11, workRate: 16 },
+      physical: { acceleration: 14, agility: 13, balance: 15, jumping: 15, naturalFitness: 16, pace: 14, stamina: 16, strength: 17 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'atm-conor-gallagher', name: "Conor Gallagher", number: 4, age: 26, nationality: 'ENG', positions: ['MC'], foot: 'R',
+      technical: { corners: 14, crossing: 14, dribbling: 16, finishing: 13, firstTouch: 17, freeKicks: 14, heading: 9, longShots: 15, marking: 13, passing: 17, penalties: 9, tackling: 16, technique: 18 },
+      mental: { aggression: 14, anticipation: 15, bravery: 13, composure: 16, concentration: 14, decisions: 17, determination: 15, flair: 14, leadership: 10, offTheBall: 17, positioning: 16, teamwork: 18, vision: 15, workRate: 20 },
+      physical: { acceleration: 14, agility: 13, balance: 15, jumping: 10, naturalFitness: 16, pace: 14, stamina: 20, strength: 13 },
+      flag: "May have left (or been loaned out) in the summer-2026 window; not confirmed.",
+    },
+    {
+      id: 'atm-alex-baena', name: "Álex Baena", number: 10, age: 25, nationality: 'ESP', positions: ['AML', 'AMC', 'ML'], foot: 'L',
+      technical: { corners: 17, crossing: 17, dribbling: 18, finishing: 16, firstTouch: 18, freeKicks: 14, heading: 10, longShots: 17, marking: 11, passing: 20, penalties: 14, tackling: 10, technique: 18 },
+      mental: { aggression: 9, anticipation: 16, bravery: 11, composure: 16, concentration: 14, decisions: 18, determination: 15, flair: 20, leadership: 13, offTheBall: 16, positioning: 10, teamwork: 13, vision: 19, workRate: 15 },
+      physical: { acceleration: 13, agility: 17, balance: 15, jumping: 9, naturalFitness: 17, pace: 15, stamina: 14, strength: 10 },
+    },
+    {
+      id: 'atm-giuliano-simeone', name: "Giuliano Simeone", number: 20, age: 23, nationality: 'ARG', positions: ['MR', 'DR', 'AMR'], foot: 'R',
+      technical: { corners: 13, crossing: 17, dribbling: 15, finishing: 15, firstTouch: 14, freeKicks: 13, heading: 9, longShots: 12, marking: 13, passing: 14, penalties: 13, tackling: 14, technique: 17 },
+      mental: { aggression: 9, anticipation: 12, bravery: 8, composure: 13, concentration: 13, decisions: 12, determination: 12, flair: 13, leadership: 10, offTheBall: 14, positioning: 14, teamwork: 16, vision: 13, workRate: 19 },
+      physical: { acceleration: 17, agility: 16, balance: 16, jumping: 10, naturalFitness: 15, pace: 17, stamina: 19, strength: 8 },
+    },
+    {
+      id: 'atm-lee-kang-in', name: "Lee Kang-in", shortName: "Lee", number: 14, age: 25, nationality: 'KOR', positions: ['MR', 'AMC', 'AMR'], foot: 'L',
+      technical: { corners: 13, crossing: 14, dribbling: 19, finishing: 17, firstTouch: 19, freeKicks: 15, heading: 8, longShots: 16, marking: 9, passing: 20, penalties: 15, tackling: 10, technique: 17 },
+      mental: { aggression: 9, anticipation: 17, bravery: 9, composure: 17, concentration: 15, decisions: 17, determination: 14, flair: 19, leadership: 10, offTheBall: 17, positioning: 10, teamwork: 14, vision: 20, workRate: 14 },
+      physical: { acceleration: 14, agility: 16, balance: 16, jumping: 9, naturalFitness: 16, pace: 14, stamina: 15, strength: 10 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'atm-julian-alvarez', name: "Julián Álvarez", shortName: "Julián", number: 19, age: 26, nationality: 'ARG', positions: ['ST'], foot: 'R',
+      technical: { corners: 12, crossing: 12, dribbling: 17, finishing: 18, firstTouch: 20, freeKicks: 16, heading: 20, longShots: 16, marking: 11, passing: 18, penalties: 17, tackling: 11, technique: 20 },
+      mental: { aggression: 12, anticipation: 20, bravery: 16, composure: 19, concentration: 15, decisions: 18, determination: 18, flair: 17, leadership: 10, offTheBall: 20, positioning: 10, teamwork: 17, vision: 19, workRate: 19 },
+      physical: { acceleration: 19, agility: 18, balance: 18, jumping: 18, naturalFitness: 17, pace: 17, stamina: 15, strength: 20 },
+    },
+    {
+      id: 'atm-alexander-sorloth', name: "Alexander Sørloth", number: 9, age: 30, nationality: 'NOR', positions: ['ST'], foot: 'L',
+      technical: { corners: 8, crossing: 9, dribbling: 14, finishing: 19, firstTouch: 19, freeKicks: 10, heading: 19, longShots: 14, marking: 9, passing: 14, penalties: 17, tackling: 10, technique: 15 },
+      mental: { aggression: 9, anticipation: 19, bravery: 16, composure: 19, concentration: 15, decisions: 14, determination: 16, flair: 13, leadership: 12, offTheBall: 19, positioning: 10, teamwork: 14, vision: 14, workRate: 14 },
+      physical: { acceleration: 12, agility: 12, balance: 16, jumping: 19, naturalFitness: 15, pace: 12, stamina: 14, strength: 20 },
+    },
+    {
+      id: 'atm-giacomo-raspadori', name: "Giacomo Raspadori", number: 23, age: 26, nationality: 'ITA', positions: ['ST', 'AMC'], foot: 'R',
+      technical: { corners: 10, crossing: 10, dribbling: 14, finishing: 16, firstTouch: 17, freeKicks: 8, heading: 17, longShots: 13, marking: 9, passing: 15, penalties: 14, tackling: 9, technique: 18 },
+      mental: { aggression: 10, anticipation: 17, bravery: 13, composure: 16, concentration: 12, decisions: 15, determination: 15, flair: 14, leadership: 8, offTheBall: 17, positioning: 8, teamwork: 14, vision: 16, workRate: 12 },
+      physical: { acceleration: 16, agility: 15, balance: 15, jumping: 15, naturalFitness: 14, pace: 14, stamina: 12, strength: 17 },
+      flag: "May have left (or been loaned out) in the summer-2026 window; not confirmed.",
+    },
+  ],
+});

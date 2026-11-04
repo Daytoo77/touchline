@@ -1,0 +1,31 @@
+import { FLAG_LEAVE, FLAG_LOAN, FLAG_NEW, kit, scout } from '../src/scout';
+
+export default scout({
+  id: 'feyenoord', name: 'Feyenoord', shortName: 'Feyenoord', abbr: 'FEY', country: 'NED', pot: 3, prefix: 'fey',
+  kits: { home: kit('#e2001a', '#ffffff', 'halves', '#111111', '#111111'), away: kit('#111111', '#e2001a', 'plain', '#111111', '#ffffff'), gk: kit('#16a34a', '#111111', 'plain', '#111111', '#ffffff') },
+  formation: '4-3-3', instructions: { mentality: 1, pressing: 1, tempo: 1 },
+  players: [
+    [1, 'Justin Bijlow', 28, 'NED', 'GK', 'R', 13.5, 'gkSweeper'],
+    [22, 'Florian Kastenmeier', 29, 'GER', 'GK', 'R', 13, 'gk', {}, FLAG_NEW],
+    [31, 'Liam Bossin', 29, 'BEL', 'GK', 'R', 11.5, 'gk'],
+    [18, 'Gernot Trauner', 34, 'AUT', 'DC', 'R', 13.5, 'cbBallPlayer', { leadership: 17 }],
+    [4, 'Tsuyoshi Watanabe', 29, 'JPN', 'DC', 'R', 13.5, 'cbStopper'],
+    [3, 'Thomas Beelen', 25, 'NED', 'DC,DR', 'R', 13.5, 'cbBallPlayer'],
+    [6, 'Anel Ahmedhodžić', 27, 'BIH', 'DC', 'R', 13.5, 'cbStopper'],
+    [33, 'Jeyland Mitchell', 21, 'CRC', 'DC', 'R', 12.5, 'cbAthletic'],
+    [2, 'Givairo Read', 20, 'NED', 'DR', 'R', 13.5, 'fbAttacking'],
+    [15, 'Jordan Bos', 23, 'AUS', 'DL,AML', 'L', 13.5, 'fbAttacking'],
+    [5, 'Gijs Smal', 29, 'NED', 'DL', 'L', 12.5, 'fbAttacking'],
+    [21, 'Javi López', 24, 'ESP', 'DL', 'L', 13, 'fbAttacking', {}, FLAG_LOAN],
+    [8, 'Quinten Timber', 25, 'NED', 'MC,DM', 'R', 14.5, 'cmBoxToBox', { leadership: 16 }, FLAG_LEAVE],
+    [14, 'Sem Steijn', 24, 'NED', 'AMC,MC', 'R', 14, 'amShadow'],
+    [28, 'Oussama Targhalline', 24, 'MAR', 'DM,MC', 'R', 13, 'dmPlaymaker'],
+    [17, 'Jakub Moder', 27, 'POL', 'MC', 'R', 13, 'cmBoxToBox'],
+    [10, 'Calvin Stengs', 27, 'NED', 'AMR,AMC', 'L', 13.5, 'amCreator', {}, FLAG_LEAVE],
+    [23, 'Anis Hadj Moussa', 24, 'ALG', 'AMR,AML', 'L', 14, 'wingerInverted', { dribbling: 17 }],
+    [11, 'Gonçalo Borges', 25, 'POR', 'AMR', 'L', 13, 'wingerInverted'],
+    [7, 'Reiss Nelson', 26, 'ENG', 'AML,AMR', 'R', 13.5, 'wingerClassic', {}, FLAG_NEW],
+    [9, 'Casper Tengstedt', 26, 'DEN', 'ST', 'R', 13, 'stPoacher'],
+    [19, 'Cyle Larin', 31, 'CAN', 'ST', 'R', 12.5, 'stTarget', {}, FLAG_NEW],
+  ],
+});

@@ -1,0 +1,157 @@
+// Club Brugge: 2026-27 squad. Ratings are Touchline's own estimates from each player's level and role
+// (not taken from any game or ratings database). Generated from packages/data/scouting/club-brugge.ts;
+// this file is now the source of truth: edit any number by hand (1-20), then run `npm run data:check`.
+import { defineClub } from '../define';
+
+export default defineClub({
+  id: 'club-brugge',
+  name: "Club Brugge",
+  shortName: "Club Brugge",
+  abbr: 'CLU',
+  country: 'BEL',
+  pot: 2,
+  kits: {
+    home: {"shirt":"#0f5fa8","trim":"#111111","pattern":"stripes","shorts":"#111111","number":"#ffffff"},
+    away: {"shirt":"#f5f5f5","trim":"#0f5fa8","pattern":"plain","shorts":"#f5f5f5","number":"#0f5fa8"},
+    gk: {"shirt":"#f59e0b","trim":"#111111","pattern":"plain","shorts":"#111111","number":"#111111"},
+  },
+  defaultTactic: { formation: '4-2-3-1', instructions: {"mentality":1,"pressing":1,"line":0,"width":0,"tempo":1,"directness":0,"timeWasting":0} },
+  dataAsOf: '2026-11-03',
+  players: [
+    {
+      id: 'clu-yann-sommer', name: "Yann Sommer", number: 1, age: 37, nationality: 'SUI', positions: ['GK'], foot: 'R',
+      technical: { corners: 4, crossing: 3, dribbling: 4, finishing: 4, firstTouch: 13, freeKicks: 4, heading: 4, longShots: 5, marking: 5, passing: 10, penalties: 4, tackling: 4, technique: 9 },
+      mental: { aggression: 8, anticipation: 15, bravery: 16, composure: 16, concentration: 17, decisions: 17, determination: 16, flair: 4, leadership: 16, offTheBall: 4, positioning: 18, teamwork: 12, vision: 8, workRate: 10 },
+      physical: { acceleration: 5, agility: 15, balance: 12, jumping: 14, naturalFitness: 13, pace: 7, stamina: 6, strength: 13 },
+      goalkeeping: { aerialReach: 15, commandOfArea: 15, communication: 14, handling: 17, kicking: 12, oneOnOnes: 15, reflexes: 18, rushingOut: 12, throwing: 12 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'clu-nordin-jackers', name: "Nordin Jackers", number: 29, age: 29, nationality: 'BEL', positions: ['GK'], foot: 'R',
+      technical: { corners: 2, crossing: 1, dribbling: 2, finishing: 2, firstTouch: 12, freeKicks: 2, heading: 2, longShots: 3, marking: 3, passing: 8, penalties: 2, tackling: 2, technique: 7 },
+      mental: { aggression: 6, anticipation: 14, bravery: 15, composure: 14, concentration: 16, decisions: 15, determination: 15, flair: 2, leadership: 12, offTheBall: 2, positioning: 16, teamwork: 11, vision: 6, workRate: 8 },
+      physical: { acceleration: 6, agility: 16, balance: 11, jumping: 13, naturalFitness: 14, pace: 8, stamina: 7, strength: 12 },
+      goalkeeping: { aerialReach: 14, commandOfArea: 14, communication: 13, handling: 16, kicking: 11, oneOnOnes: 14, reflexes: 17, rushingOut: 11, throwing: 11 },
+    },
+    {
+      id: 'clu-simon-mignolet', name: "Simon Mignolet", number: 22, age: 38, nationality: 'BEL', positions: ['GK'], foot: 'R',
+      technical: { corners: 1, crossing: 2, dribbling: 3, finishing: 3, firstTouch: 12, freeKicks: 3, heading: 1, longShots: 2, marking: 2, passing: 7, penalties: 3, tackling: 3, technique: 6 },
+      mental: { aggression: 7, anticipation: 14, bravery: 13, composure: 15, concentration: 16, decisions: 14, determination: 13, flair: 1, leadership: 12, offTheBall: 3, positioning: 17, teamwork: 11, vision: 7, workRate: 7 },
+      physical: { acceleration: 4, agility: 12, balance: 11, jumping: 13, naturalFitness: 10, pace: 4, stamina: 5, strength: 12 },
+      goalkeeping: { aerialReach: 14, commandOfArea: 14, communication: 13, handling: 16, kicking: 9, oneOnOnes: 14, reflexes: 15, rushingOut: 9, throwing: 11 },
+      flag: "May have left (or been loaned out) in the summer-2026 window; not confirmed.",
+    },
+    {
+      id: 'clu-brandon-mechele', name: "Brandon Mechele", number: 44, age: 33, nationality: 'BEL', positions: ['DC'], foot: 'R',
+      technical: { corners: 8, crossing: 7, dribbling: 8, finishing: 3, firstTouch: 12, freeKicks: 8, heading: 17, longShots: 9, marking: 17, passing: 11, penalties: 8, tackling: 16, technique: 12 },
+      mental: { aggression: 15, anticipation: 14, bravery: 15, composure: 12, concentration: 14, decisions: 16, determination: 15, flair: 8, leadership: 16, offTheBall: 8, positioning: 17, teamwork: 11, vision: 7, workRate: 13 },
+      physical: { acceleration: 8, agility: 10, balance: 11, jumping: 15, naturalFitness: 12, pace: 9, stamina: 9, strength: 17 },
+    },
+    {
+      id: 'clu-joel-ordonez', name: "Joel Ordóñez", number: 4, age: 22, nationality: 'ECU', positions: ['DC'], foot: 'L',
+      technical: { corners: 8, crossing: 7, dribbling: 8, finishing: 3, firstTouch: 13, freeKicks: 8, heading: 16, longShots: 9, marking: 18, passing: 14, penalties: 8, tackling: 17, technique: 13 },
+      mental: { aggression: 14, anticipation: 16, bravery: 16, composure: 12, concentration: 15, decisions: 15, determination: 16, flair: 8, leadership: 9, offTheBall: 8, positioning: 17, teamwork: 12, vision: 7, workRate: 14 },
+      physical: { acceleration: 16, agility: 16, balance: 12, jumping: 16, naturalFitness: 16, pace: 18, stamina: 13, strength: 17 },
+    },
+    {
+      id: 'clu-zaid-romero', name: "Zaid Romero", number: 5, age: 26, nationality: 'ARG', positions: ['DC'], foot: 'R',
+      technical: { corners: 7, crossing: 7, dribbling: 7, finishing: 2, firstTouch: 11, freeKicks: 7, heading: 17, longShots: 6, marking: 15, passing: 9, penalties: 7, tackling: 15, technique: 12 },
+      mental: { aggression: 16, anticipation: 13, bravery: 13, composure: 11, concentration: 14, decisions: 13, determination: 13, flair: 7, leadership: 8, offTheBall: 6, positioning: 16, teamwork: 12, vision: 7, workRate: 12 },
+      physical: { acceleration: 12, agility: 11, balance: 13, jumping: 17, naturalFitness: 14, pace: 11, stamina: 12, strength: 16 },
+    },
+    {
+      id: 'clu-jorne-spileers', name: "Jorne Spileers", number: 58, age: 21, nationality: 'BEL', positions: ['DC', 'DR'], foot: 'R',
+      technical: { corners: 7, crossing: 6, dribbling: 7, finishing: 2, firstTouch: 14, freeKicks: 7, heading: 14, longShots: 8, marking: 16, passing: 16, penalties: 7, tackling: 15, technique: 14 },
+      mental: { aggression: 12, anticipation: 13, bravery: 14, composure: 13, concentration: 13, decisions: 14, determination: 14, flair: 7, leadership: 8, offTheBall: 7, positioning: 15, teamwork: 10, vision: 10, workRate: 12 },
+      physical: { acceleration: 10, agility: 12, balance: 10, jumping: 14, naturalFitness: 14, pace: 12, stamina: 11, strength: 15 },
+    },
+    {
+      id: 'clu-lee-han-beom', name: "Lee Han-beom", shortName: "Lee", number: 3, age: 24, nationality: 'KOR', positions: ['DC'], foot: 'R',
+      technical: { corners: 7, crossing: 6, dribbling: 7, finishing: 2, firstTouch: 11, freeKicks: 7, heading: 16, longShots: 8, marking: 16, passing: 10, penalties: 7, tackling: 15, technique: 11 },
+      mental: { aggression: 14, anticipation: 13, bravery: 14, composure: 10, concentration: 13, decisions: 14, determination: 14, flair: 7, leadership: 10, offTheBall: 7, positioning: 15, teamwork: 10, vision: 6, workRate: 12 },
+      physical: { acceleration: 10, agility: 12, balance: 10, jumping: 14, naturalFitness: 14, pace: 11, stamina: 11, strength: 16 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'clu-kyriani-sabbe', name: "Kyriani Sabbe", number: 64, age: 21, nationality: 'BEL', positions: ['DR'], foot: 'R',
+      technical: { corners: 8, crossing: 19, dribbling: 15, finishing: 6, firstTouch: 12, freeKicks: 6, heading: 13, longShots: 7, marking: 12, passing: 14, penalties: 6, tackling: 14, technique: 14 },
+      mental: { aggression: 13, anticipation: 14, bravery: 12, composure: 10, concentration: 13, decisions: 11, determination: 14, flair: 8, leadership: 4, offTheBall: 15, positioning: 11, teamwork: 15, vision: 8, workRate: 15 },
+      physical: { acceleration: 17, agility: 14, balance: 12, jumping: 12, naturalFitness: 13, pace: 15, stamina: 15, strength: 12 },
+    },
+    {
+      id: 'clu-hugo-siquet', name: "Hugo Siquet", number: 2, age: 24, nationality: 'BEL', positions: ['DR', 'WBR'], foot: 'R',
+      technical: { corners: 8, crossing: 18, dribbling: 14, finishing: 6, firstTouch: 11, freeKicks: 6, heading: 12, longShots: 7, marking: 11, passing: 13, penalties: 6, tackling: 13, technique: 13 },
+      mental: { aggression: 12, anticipation: 13, bravery: 11, composure: 10, concentration: 12, decisions: 11, determination: 13, flair: 8, leadership: 6, offTheBall: 14, positioning: 10, teamwork: 14, vision: 8, workRate: 14 },
+      physical: { acceleration: 16, agility: 13, balance: 11, jumping: 11, naturalFitness: 12, pace: 14, stamina: 14, strength: 11 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'clu-joaquin-seys', name: "Joaquin Seys", number: 65, age: 21, nationality: 'BEL', positions: ['DL'], foot: 'L',
+      technical: { corners: 7, crossing: 17, dribbling: 16, finishing: 7, firstTouch: 12, freeKicks: 7, heading: 12, longShots: 8, marking: 13, passing: 15, penalties: 7, tackling: 14, technique: 13 },
+      mental: { aggression: 11, anticipation: 14, bravery: 13, composure: 11, concentration: 14, decisions: 12, determination: 15, flair: 7, leadership: 8, offTheBall: 15, positioning: 12, teamwork: 13, vision: 6, workRate: 17 },
+      physical: { acceleration: 15, agility: 15, balance: 11, jumping: 11, naturalFitness: 15, pace: 17, stamina: 16, strength: 12 },
+    },
+    {
+      id: 'clu-bjorn-meijer', name: "Bjorn Meijer", number: 14, age: 23, nationality: 'NED', positions: ['DL'], foot: 'L',
+      technical: { corners: 7, crossing: 17, dribbling: 16, finishing: 7, firstTouch: 12, freeKicks: 7, heading: 12, longShots: 8, marking: 13, passing: 15, penalties: 7, tackling: 14, technique: 13 },
+      mental: { aggression: 11, anticipation: 14, bravery: 13, composure: 12, concentration: 14, decisions: 13, determination: 15, flair: 7, leadership: 10, offTheBall: 15, positioning: 12, teamwork: 13, vision: 6, workRate: 17 },
+      physical: { acceleration: 15, agility: 15, balance: 11, jumping: 11, naturalFitness: 15, pace: 17, stamina: 16, strength: 12 },
+    },
+    {
+      id: 'clu-freddie-potts', name: "Freddie Potts", number: 6, age: 22, nationality: 'ENG', positions: ['DM', 'MC'], foot: 'R',
+      technical: { corners: 7, crossing: 6, dribbling: 7, finishing: 7, firstTouch: 14, freeKicks: 7, heading: 12, longShots: 13, marking: 15, passing: 17, penalties: 7, tackling: 19, technique: 10 },
+      mental: { aggression: 15, anticipation: 16, bravery: 15, composure: 12, concentration: 14, decisions: 16, determination: 15, flair: 7, leadership: 8, offTheBall: 7, positioning: 16, teamwork: 15, vision: 8, workRate: 18 },
+      physical: { acceleration: 11, agility: 13, balance: 11, jumping: 11, naturalFitness: 15, pace: 13, stamina: 16, strength: 14 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'clu-hugo-vetlesen', name: "Hugo Vetlesen", number: 10, age: 26, nationality: 'NOR', positions: ['MC', 'AMC'], foot: 'R',
+      technical: { corners: 12, crossing: 11, dribbling: 14, finishing: 12, firstTouch: 16, freeKicks: 12, heading: 8, longShots: 15, marking: 13, passing: 17, penalties: 8, tackling: 15, technique: 16 },
+      mental: { aggression: 11, anticipation: 14, bravery: 13, composure: 14, concentration: 12, decisions: 17, determination: 15, flair: 12, leadership: 11, offTheBall: 16, positioning: 14, teamwork: 15, vision: 12, workRate: 20 },
+      physical: { acceleration: 11, agility: 13, balance: 11, jumping: 7, naturalFitness: 15, pace: 13, stamina: 19, strength: 12 },
+    },
+    {
+      id: 'clu-hans-vanaken', name: "Hans Vanaken", number: 20, age: 33, nationality: 'BEL', positions: ['AMC', 'MC'], foot: 'R',
+      technical: { corners: 14, crossing: 14, dribbling: 16, finishing: 14, firstTouch: 17, freeKicks: 12, heading: 10, longShots: 15, marking: 9, passing: 17, penalties: 12, tackling: 9, technique: 18 },
+      mental: { aggression: 10, anticipation: 15, bravery: 9, composure: 15, concentration: 12, decisions: 17, determination: 13, flair: 20, leadership: 17, offTheBall: 15, positioning: 9, teamwork: 14, vision: 20, workRate: 12 },
+      physical: { acceleration: 11, agility: 12, balance: 15, jumping: 9, naturalFitness: 11, pace: 9, stamina: 9, strength: 9 },
+    },
+    {
+      id: 'clu-mamadou-diakhon', name: "Mamadou Diakhon", number: 18, age: 20, nationality: 'SEN', positions: ['AMR', 'AML'], foot: 'R',
+      technical: { corners: 11, crossing: 17, dribbling: 16, finishing: 11, firstTouch: 12, freeKicks: 11, heading: 7, longShots: 9, marking: 6, passing: 12, penalties: 11, tackling: 6, technique: 15 },
+      mental: { aggression: 7, anticipation: 10, bravery: 6, composure: 10, concentration: 11, decisions: 9, determination: 10, flair: 13, leadership: 6, offTheBall: 12, positioning: 7, teamwork: 11, vision: 11, workRate: 13 },
+      physical: { acceleration: 16, agility: 14, balance: 14, jumping: 8, naturalFitness: 13, pace: 16, stamina: 13, strength: 6 },
+    },
+    {
+      id: 'clu-carlos-forbs', name: "Carlos Forbs", number: 9, age: 22, nationality: 'POR', positions: ['AML', 'AMR'], foot: 'R',
+      technical: { corners: 12, crossing: 18, dribbling: 17, finishing: 12, firstTouch: 13, freeKicks: 12, heading: 8, longShots: 10, marking: 7, passing: 13, penalties: 12, tackling: 7, technique: 16 },
+      mental: { aggression: 8, anticipation: 11, bravery: 7, composure: 11, concentration: 12, decisions: 10, determination: 11, flair: 14, leadership: 7, offTheBall: 13, positioning: 8, teamwork: 12, vision: 12, workRate: 14 },
+      physical: { acceleration: 17, agility: 15, balance: 15, jumping: 9, naturalFitness: 14, pace: 18, stamina: 14, strength: 7 },
+    },
+    {
+      id: 'clu-nicolo-tresoldi', name: "Nicolò Tresoldi", number: 21, age: 22, nationality: 'GER', positions: ['ST'], foot: 'R',
+      technical: { corners: 8, crossing: 8, dribbling: 13, finishing: 17, firstTouch: 16, freeKicks: 6, heading: 15, longShots: 12, marking: 7, passing: 9, penalties: 13, tackling: 7, technique: 15 },
+      mental: { aggression: 8, anticipation: 18, bravery: 12, composure: 15, concentration: 11, decisions: 11, determination: 14, flair: 13, leadership: 4, offTheBall: 18, positioning: 6, teamwork: 13, vision: 10, workRate: 9 },
+      physical: { acceleration: 15, agility: 14, balance: 14, jumping: 14, naturalFitness: 13, pace: 13, stamina: 9, strength: 14 },
+    },
+    {
+      id: 'clu-gustaf-nilsson', name: "Gustaf Nilsson", number: 19, age: 29, nationality: 'SWE', positions: ['ST'], foot: 'R',
+      technical: { corners: 7, crossing: 7, dribbling: 10, finishing: 15, firstTouch: 14, freeKicks: 7, heading: 17, longShots: 10, marking: 6, passing: 10, penalties: 13, tackling: 6, technique: 13 },
+      mental: { aggression: 7, anticipation: 14, bravery: 12, composure: 15, concentration: 11, decisions: 10, determination: 12, flair: 11, leadership: 10, offTheBall: 14, positioning: 7, teamwork: 11, vision: 11, workRate: 11 },
+      physical: { acceleration: 10, agility: 9, balance: 14, jumping: 17, naturalFitness: 13, pace: 10, stamina: 11, strength: 16 },
+    },
+    {
+      id: 'clu-romeo-vermant', name: "Romeo Vermant", number: 17, age: 22, nationality: 'BEL', positions: ['ST'], foot: 'R',
+      technical: { corners: 7, crossing: 6, dribbling: 13, finishing: 15, firstTouch: 15, freeKicks: 7, heading: 13, longShots: 12, marking: 8, passing: 12, penalties: 13, tackling: 7, technique: 12 },
+      mental: { aggression: 9, anticipation: 15, bravery: 12, composure: 13, concentration: 11, decisions: 11, determination: 16, flair: 11, leadership: 8, offTheBall: 15, positioning: 7, teamwork: 13, vision: 10, workRate: 17 },
+      physical: { acceleration: 12, agility: 14, balance: 12, jumping: 12, naturalFitness: 14, pace: 14, stamina: 15, strength: 13 },
+    },
+    {
+      id: 'clu-andrej-vasovic', name: "Andrej Vasović", number: 11, age: 20, nationality: 'SUI', positions: ['ST', 'AML'], foot: 'R',
+      technical: { corners: 5, crossing: 6, dribbling: 13, finishing: 15, firstTouch: 15, freeKicks: 7, heading: 8, longShots: 10, marking: 6, passing: 10, penalties: 13, tackling: 7, technique: 11 },
+      mental: { aggression: 6, anticipation: 15, bravery: 10, composure: 14, concentration: 11, decisions: 9, determination: 12, flair: 9, leadership: 5, offTheBall: 15, positioning: 7, teamwork: 10, vision: 10, workRate: 10 },
+      physical: { acceleration: 16, agility: 13, balance: 12, jumping: 12, naturalFitness: 12, pace: 15, stamina: 11, strength: 11 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+  ],
+});

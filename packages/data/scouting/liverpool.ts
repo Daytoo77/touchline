@@ -1,0 +1,32 @@
+import { FLAG_LEAVE, FLAG_LOAN, FLAG_NEW, kit, scout } from '../src/scout';
+
+export default scout({
+  id: 'liverpool', name: 'Liverpool', shortName: 'Liverpool', abbr: 'LIV', country: 'ENG', pot: 1, prefix: 'liv',
+  kits: { home: kit('#c8102e', '#ffffff', 'plain', '#c8102e', '#ffffff'), away: kit('#f4f1e8', '#c8102e', 'plain', '#f4f1e8', '#c8102e'), gk: kit('#22d3ee', '#111111', 'plain', '#22d3ee', '#111111') },
+  formation: '4-2-3-1', instructions: { mentality: 1, pressing: 1, line: 1, tempo: 1 },
+  players: [
+    [1, 'Alisson Becker', 33, 'BRA', 'GK', 'R', 16.5, 'gkSweeper', {}, '', 'Alisson'],
+    [25, 'Giorgi Mamardashvili', 25, 'GEO', 'GK', 'R', 15, 'gk'],
+    [28, 'Freddie Woodman', 29, 'ENG', 'GK', 'R', 11, 'gk'],
+    [4, 'Virgil van Dijk', 35, 'NED', 'DC', 'R', 16.5, 'cbBallPlayer', { leadership: 20, heading: 18 }],
+    [5, 'Jérémy Jacquet', 21, 'FRA', 'DC', 'R', 14.5, 'cbAthletic', {}, FLAG_NEW],
+    [15, 'Giovanni Leoni', 19, 'ITA', 'DC', 'R', 13.5, 'cbStopper'],
+    [2, 'Joe Gomez', 29, 'ENG', 'DC,DR,DL', 'R', 14, 'cbAthletic'],
+    [24, 'Ronald Araújo', 27, 'URU', 'DC,DR', 'R', 15, 'cbStopper', { pace: 17 }, FLAG_LOAN],
+    [6, 'Milos Kerkez', 22, 'HUN', 'DL,WBL', 'L', 15, 'fbAttacking'],
+    [30, 'Jeremie Frimpong', 25, 'NED', 'DR,WBR,AMR', 'R', 15.5, 'fbAttacking', { pace: 19, acceleration: 19 }],
+    [12, 'Conor Bradley', 23, 'NIR', 'DR', 'R', 14.5, 'fbAttacking'],
+    [38, 'Ryan Gravenberch', 24, 'NED', 'DM,MC', 'R', 16.5, 'cmBoxToBox', { dribbling: 17, tackling: 16 }],
+    [10, 'Alexis Mac Allister', 27, 'ARG', 'MC,DM', 'R', 16.5, 'cmPlaymaker', { tackling: 15 }],
+    [8, 'Dominik Szoboszlai', 25, 'HUN', 'MC,AMC,DR', 'R', 16.5, 'cmBoxToBox', { longShots: 18, freeKicks: 17 }],
+    [17, 'Curtis Jones', 25, 'ENG', 'MC', 'R', 14.5, 'cmPlaymaker'],
+    [3, 'Wataru Endō', 33, 'JPN', 'DM,DC', 'R', 13.5, 'dmAnchor', {}, FLAG_LEAVE],
+    [7, 'Florian Wirtz', 23, 'GER', 'AMC,AML', 'R', 17, 'amCreator', { vision: 19, dribbling: 18 }],
+    [9, 'Alexander Isak', 26, 'SWE', 'ST', 'R', 17, 'stComplete', { dribbling: 17, finishing: 18 }],
+    [22, 'Hugo Ekitiké', 24, 'FRA', 'ST,AML', 'R', 16, 'stPacey', { dribbling: 17 }],
+    [18, 'Cody Gakpo', 27, 'NED', 'AML,ST', 'R', 15.5, 'wingerInverted'],
+    [14, 'Federico Chiesa', 28, 'ITA', 'AMR,AML', 'R', 14, 'wingerInverted', {}, FLAG_LEAVE],
+    [11, 'Víctor Muñoz', 22, 'ESP', 'AML,AMR', 'R', 14.5, 'wingerClassic', {}, FLAG_NEW],
+    [73, 'Rio Ngumoha', 17, 'ENG', 'AML', 'L', 13, 'wingerClassic'],
+  ],
+});

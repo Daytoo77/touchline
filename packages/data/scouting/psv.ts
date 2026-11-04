@@ -1,0 +1,30 @@
+import { FLAG_LEAVE, FLAG_NEW, kit, scout } from '../src/scout';
+
+export default scout({
+  id: 'psv', name: 'PSV', shortName: 'PSV', abbr: 'PSV', country: 'NED', pot: 2, prefix: 'psv',
+  kits: { home: kit('#e30613', '#ffffff', 'stripes', '#111111', '#111111'), away: kit('#111111', '#e30613', 'plain', '#111111', '#ffffff'), gk: kit('#facc15', '#111111', 'plain', '#111111', '#111111') },
+  formation: '4-3-3', instructions: { mentality: 2, pressing: 2, line: 1, tempo: 2 },
+  players: [
+    [1, 'Walter Benítez', 33, 'ARG', 'GK', 'R', 14, 'gk', {}, FLAG_LEAVE],
+    [32, 'Matěj Kovář', 26, 'CZE', 'GK', 'R', 13.5, 'gk'],
+    [16, 'Niek Schiks', 22, 'NED', 'GK', 'R', 10.5, 'gk'],
+    [22, 'Jerdy Schouten', 29, 'NED', 'DM,DC', 'R', 14.5, 'dmPlaymaker', { leadership: 16 }],
+    [6, 'Ryan Flamingo', 23, 'NED', 'DC', 'L', 14, 'cbAthletic'],
+    [4, 'Armando Obispo', 27, 'NED', 'DC', 'L', 13.5, 'cbStopper', {}, FLAG_LEAVE],
+    [3, 'Yarek Gasiorowski', 21, 'ESP', 'DC,DL', 'L', 13.5, 'cbBallPlayer'],
+    [8, 'Sergiño Dest', 25, 'USA', 'DR,DL', 'R', 14.5, 'fbAttacking', { dribbling: 17 }],
+    [2, 'Kiliann Sildillia', 24, 'FRA', 'DR,DC', 'R', 12.5, 'fbDefensive', {}, FLAG_LEAVE],
+    [17, 'Mauro Júnior', 27, 'BRA', 'DL,MC', 'L', 14, 'fbInverted'],
+    [19, 'Anass Salah-Eddine', 24, 'NED', 'DL', 'L', 13.5, 'fbAttacking'],
+    [14, 'Kodai Sano', 22, 'JPN', 'MC,DM', 'R', 14, 'cmBoxToBox', {}, FLAG_NEW],
+    [20, 'Guus Til', 28, 'NED', 'AMC,MC', 'R', 14.5, 'amShadow'],
+    [10, 'Paul Wanner', 20, 'GER', 'AMC,MC', 'L', 14, 'amCreator'],
+    [27, 'Dennis Man', 27, 'ROU', 'AMR', 'L', 14, 'wingerInverted'],
+    [11, 'Couhaib Driouech', 24, 'NED', 'AML,AMR', 'L', 13.5, 'wingerInverted'],
+    [7, 'Esmir Bajraktarević', 21, 'USA', 'AMR,AML', 'L', 13.5, 'wingerClassic'],
+    [5, 'Ivan Perišić', 37, 'CRO', 'AML,DL', 'L', 13.5, 'wingerClassic', { stamina: 17 }, FLAG_LEAVE],
+    [9, 'Ricardo Pepi', 23, 'USA', 'ST', 'R', 14.5, 'stPoacher'],
+    [21, 'Alassane Pléa', 33, 'FRA', 'ST,AML', 'R', 13, 'stComplete', {}, FLAG_LEAVE],
+    [33, 'Luuk de Jong', 35, 'NED', 'ST', 'R', 13, 'stTarget', { heading: 19, leadership: 17 }, FLAG_LEAVE],
+  ],
+});

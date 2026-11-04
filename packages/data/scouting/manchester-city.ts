@@ -1,0 +1,31 @@
+import { FLAG_LEAVE, FLAG_NEW, kit, scout } from '../src/scout';
+
+export default scout({
+  id: 'manchester-city', name: 'Manchester City', shortName: 'Man City', abbr: 'MCI', country: 'ENG', pot: 1, prefix: 'mci',
+  kits: { home: kit('#6cabdd', '#ffffff', 'plain', '#ffffff', '#1c2c5b'), away: kit('#2d1e4f', '#6cabdd', 'plain', '#2d1e4f', '#ffffff'), gk: kit('#16a34a', '#111111', 'plain', '#111111', '#ffffff') },
+  formation: '4-2-3-1', instructions: { mentality: 1, pressing: 1, line: 1, directness: -1 },
+  players: [
+    [25, 'Gianluigi Donnarumma', 27, 'ITA', 'GK', 'R', 17, 'gk', { reflexes: 19, oneOnOnes: 19 }],
+    [18, 'Stefan Ortega', 33, 'GER', 'GK', 'R', 13.5, 'gkSweeper', {}, FLAG_LEAVE],
+    [13, 'Pierce Charles', 21, 'NIR', 'GK', 'R', 11.5, 'gk', {}, FLAG_NEW],
+    [3, 'Rúben Dias', 29, 'POR', 'DC', 'R', 16, 'cbStopper', { leadership: 18 }],
+    [24, 'Joško Gvardiol', 24, 'CRO', 'DC,DL', 'L', 16, 'cbBallPlayer'],
+    [45, 'Abdukodir Khusanov', 22, 'UZB', 'DC', 'R', 14.5, 'cbAthletic'],
+    [27, 'Matheus Nunes', 28, 'POR', 'DR,MC', 'R', 14.5, 'fbAttacking'],
+    [82, 'Rico Lewis', 21, 'ENG', 'DR,MC', 'R', 14.5, 'fbInverted'],
+    [21, 'Rayan Aït-Nouri', 25, 'ALG', 'DL,WBL', 'L', 15, 'fbAttacking'],
+    [33, "Nico O'Reilly", 21, 'ENG', 'DL,MC', 'L', 14, 'fbInverted'],
+    [16, 'Rodri', 30, 'ESP', 'DM', 'R', 17, 'dmPlaymaker', { tackling: 17, positioning: 19 }, FLAG_LEAVE],
+    [5, 'Elliot Anderson', 23, 'ENG', 'MC,DM', 'L', 16, 'cmBoxToBox', {}, FLAG_NEW],
+    [14, 'Nico González', 24, 'ESP', 'DM,MC', 'R', 15, 'dmAnchor'],
+    [8, 'Mateo Kovačić', 32, 'CRO', 'MC', 'R', 15, 'cmPlaymaker'],
+    [47, 'Phil Foden', 26, 'ENG', 'AMC,AMR,AML', 'L', 16.5, 'amCreator', { finishing: 16 }],
+    [10, 'Rayan Cherki', 22, 'FRA', 'AMC,AMR', 'B', 16, 'amCreator', { flair: 19, dribbling: 18 }],
+    [9, 'Erling Haaland', 26, 'NOR', 'ST', 'L', 18, 'stPoacher', { finishing: 20, strength: 19, pace: 18, heading: 17 }],
+    [7, 'Omar Marmoush', 27, 'EGY', 'ST,AML,AMR', 'R', 15.5, 'stComplete'],
+    [11, 'Jérémy Doku', 24, 'BEL', 'AML,AMR', 'R', 16, 'wingerClassic', { dribbling: 19, acceleration: 19 }],
+    [26, 'Savinho', 22, 'BRA', 'AMR', 'L', 15, 'wingerInverted'],
+    [52, 'Oscar Bobb', 23, 'NOR', 'AMR,AMC', 'L', 14, 'wingerInverted'],
+    [42, 'Jeremy Monga', 17, 'ENG', 'AML,AMR', 'R', 12.5, 'wingerClassic', {}, FLAG_NEW],
+  ],
+});

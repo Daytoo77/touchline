@@ -1,0 +1,30 @@
+import { FLAG_LEAVE, FLAG_NEW, kit, scout } from '../src/scout';
+
+export default scout({
+  id: 'sporting', name: 'Sporting CP', shortName: 'Sporting', abbr: 'SCP', country: 'POR', pot: 2, prefix: 'scp',
+  kits: { home: kit('#008057', '#ffffff', 'hoops', '#111111', '#ffffff'), away: kit('#1f1f1f', '#008057', 'plain', '#1f1f1f', '#ffffff'), gk: kit('#f97316', '#111111', 'plain', '#111111', '#111111') },
+  formation: '4-2-3-1', instructions: { mentality: 1, pressing: 1, tempo: 1 },
+  players: [
+    [1, 'Rui Silva', 32, 'POR', 'GK', 'R', 14.5, 'gk'],
+    [12, 'João Virgínia', 26, 'POR', 'GK', 'R', 12.5, 'gk'],
+    [41, 'Diego Callai', 21, 'BRA', 'GK', 'R', 11, 'gk'],
+    [26, 'Ousmane Diomande', 22, 'CIV', 'DC', 'R', 15, 'cbAthletic', {}, FLAG_LEAVE],
+    [25, 'Gonçalo Inácio', 25, 'POR', 'DC,DL', 'L', 15.5, 'cbBallPlayer'],
+    [6, 'Zeno Debast', 22, 'BEL', 'DC,DM', 'R', 14.5, 'cbBallPlayer'],
+    [72, 'Eduardo Quaresma', 24, 'POR', 'DC,DR', 'R', 14, 'cbAthletic'],
+    [22, 'Iván Fresneda', 21, 'ESP', 'DR', 'R', 13.5, 'fbAttacking'],
+    [13, 'Georgios Vagiannidis', 25, 'GRE', 'DR,DL', 'R', 13.5, 'fbDefensive'],
+    [20, 'Maxi Araújo', 26, 'URU', 'DL,AML', 'L', 14.5, 'fbAttacking'],
+    [42, 'Sergi Altimira', 25, 'ESP', 'DM,MC', 'R', 14, 'dmAnchor', {}, FLAG_NEW],
+    [5, 'Issa Doumbia', 23, 'MLI', 'MC,DM', 'R', 14, 'cmBoxToBox', {}, FLAG_NEW],
+    [16, 'Silas Andersen', 22, 'DEN', 'MC', 'R', 13.5, 'cmBoxToBox', {}, FLAG_NEW],
+    [14, 'Giorgi Kochorashvili', 27, 'GEO', 'MC,DM', 'R', 14, 'dmBallWinner'],
+    [23, 'Daniel Bragança', 27, 'POR', 'MC,DM', 'L', 14, 'cmPlaymaker', {}, FLAG_LEAVE],
+    [52, 'João Simões', 19, 'POR', 'MC', 'R', 13.5, 'cmBoxToBox'],
+    [8, 'Pedro Gonçalves', 28, 'POR', 'AMC,AML', 'R', 15.5, 'amShadow', {}, FLAG_LEAVE, 'Pote'],
+    [10, 'Geny Catamo', 25, 'MOZ', 'AMR,DR', 'L', 14, 'wingerInverted'],
+    [11, 'Nestory Irankunda', 20, 'AUS', 'AMR,AML', 'L', 13.5, 'wingerInverted', {}, FLAG_NEW],
+    [97, 'Luis Suárez', 29, 'COL', 'ST', 'R', 15.5, 'stComplete'],
+    [89, 'Fotis Ioannidis', 26, 'GRE', 'ST', 'R', 14, 'stTarget'],
+  ],
+});

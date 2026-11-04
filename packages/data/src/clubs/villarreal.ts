@@ -1,0 +1,156 @@
+// Villarreal: 2026-27 squad. Ratings are Touchline's own estimates from each player's level and role
+// (not taken from any game or ratings database). Generated from packages/data/scouting/villarreal.ts;
+// this file is now the source of truth: edit any number by hand (1-20), then run `npm run data:check`.
+import { defineClub } from '../define';
+
+export default defineClub({
+  id: 'villarreal',
+  name: "Villarreal",
+  shortName: "Villarreal",
+  abbr: 'VIL',
+  country: 'ESP',
+  pot: 3,
+  kits: {
+    home: {"shirt":"#ffe667","trim":"#005187","pattern":"plain","shorts":"#ffe667","number":"#005187"},
+    away: {"shirt":"#1d3557","trim":"#ffe667","pattern":"plain","shorts":"#1d3557","number":"#ffe667"},
+    gk: {"shirt":"#22d3ee","trim":"#111111","pattern":"plain","shorts":"#111111","number":"#111111"},
+  },
+  defaultTactic: { formation: '4-4-2', instructions: {"mentality":1,"pressing":0,"line":0,"width":0,"tempo":1,"directness":0,"timeWasting":0} },
+  dataAsOf: '2026-11-03',
+  players: [
+    {
+      id: 'vil-luiz-junior', name: "Luiz Júnior", shortName: "Luiz Júnior", number: 1, age: 25, nationality: 'BRA', positions: ['GK'], foot: 'R',
+      technical: { corners: 4, crossing: 4, dribbling: 2, finishing: 2, firstTouch: 13, freeKicks: 2, heading: 4, longShots: 3, marking: 3, passing: 8, penalties: 2, tackling: 3, technique: 9 },
+      mental: { aggression: 9, anticipation: 15, bravery: 15, composure: 14, concentration: 16, decisions: 15, determination: 15, flair: 4, leadership: 7, offTheBall: 3, positioning: 16, teamwork: 14, vision: 9, workRate: 7 },
+      physical: { acceleration: 9, agility: 17, balance: 13, jumping: 15, naturalFitness: 14, pace: 7, stamina: 7, strength: 13 },
+      goalkeeping: { aerialReach: 14, commandOfArea: 14, communication: 15, handling: 17, kicking: 13, oneOnOnes: 16, reflexes: 18, rushingOut: 12, throwing: 14 },
+    },
+    {
+      id: 'vil-diego-conde', name: "Diego Conde", number: 13, age: 28, nationality: 'ESP', positions: ['GK'], foot: 'R',
+      technical: { corners: 3, crossing: 3, dribbling: 1, finishing: 1, firstTouch: 12, freeKicks: 1, heading: 3, longShots: 2, marking: 2, passing: 7, penalties: 1, tackling: 2, technique: 8 },
+      mental: { aggression: 8, anticipation: 14, bravery: 14, composure: 13, concentration: 15, decisions: 14, determination: 14, flair: 3, leadership: 6, offTheBall: 2, positioning: 15, teamwork: 13, vision: 8, workRate: 6 },
+      physical: { acceleration: 8, agility: 16, balance: 12, jumping: 14, naturalFitness: 13, pace: 6, stamina: 6, strength: 12 },
+      goalkeeping: { aerialReach: 13, commandOfArea: 13, communication: 14, handling: 16, kicking: 12, oneOnOnes: 15, reflexes: 17, rushingOut: 11, throwing: 13 },
+      flag: "May have left (or been loaned out) in the summer-2026 window; not confirmed.",
+    },
+    {
+      id: 'vil-peter-gulacsi', name: "Péter Gulácsi", number: 25, age: 36, nationality: 'HUN', positions: ['GK'], foot: 'R',
+      technical: { corners: 3, crossing: 2, dribbling: 3, finishing: 3, firstTouch: 12, freeKicks: 3, heading: 3, longShots: 4, marking: 4, passing: 9, penalties: 3, tackling: 3, technique: 8 },
+      mental: { aggression: 7, anticipation: 14, bravery: 15, composure: 15, concentration: 16, decisions: 16, determination: 15, flair: 3, leadership: 15, offTheBall: 3, positioning: 17, teamwork: 11, vision: 7, workRate: 9 },
+      physical: { acceleration: 4, agility: 14, balance: 11, jumping: 13, naturalFitness: 12, pace: 6, stamina: 5, strength: 12 },
+      goalkeeping: { aerialReach: 14, commandOfArea: 14, communication: 13, handling: 16, kicking: 11, oneOnOnes: 14, reflexes: 17, rushingOut: 11, throwing: 11 },
+      flag: "Reported summer-2026 arrival; not confirmed against an official club squad list.",
+    },
+    {
+      id: 'vil-juan-foyth', name: "Juan Foyth", number: 8, age: 28, nationality: 'ARG', positions: ['DC', 'DR'], foot: 'R',
+      technical: { corners: 9, crossing: 8, dribbling: 9, finishing: 4, firstTouch: 16, freeKicks: 9, heading: 16, longShots: 10, marking: 18, passing: 18, penalties: 9, tackling: 17, technique: 16 },
+      mental: { aggression: 14, anticipation: 15, bravery: 16, composure: 16, concentration: 15, decisions: 17, determination: 16, flair: 9, leadership: 12, offTheBall: 9, positioning: 17, teamwork: 12, vision: 12, workRate: 14 },
+      physical: { acceleration: 12, agility: 14, balance: 12, jumping: 16, naturalFitness: 16, pace: 14, stamina: 13, strength: 17 },
+    },
+    {
+      id: 'vil-renato-veiga', name: "Renato Veiga", number: 12, age: 23, nationality: 'POR', positions: ['DC', 'DL', 'DM'], foot: 'L',
+      technical: { corners: 10, crossing: 10, dribbling: 8, finishing: 3, firstTouch: 16, freeKicks: 8, heading: 17, longShots: 9, marking: 17, passing: 17, penalties: 8, tackling: 17, technique: 17 },
+      mental: { aggression: 16, anticipation: 15, bravery: 15, composure: 15, concentration: 14, decisions: 16, determination: 15, flair: 10, leadership: 8, offTheBall: 9, positioning: 16, teamwork: 14, vision: 14, workRate: 12 },
+      physical: { acceleration: 14, agility: 13, balance: 13, jumping: 17, naturalFitness: 14, pace: 12, stamina: 12, strength: 17 },
+    },
+    {
+      id: 'vil-santiago-mourino', name: "Santiago Mouriño", number: 15, age: 24, nationality: 'URU', positions: ['DC', 'DR'], foot: 'R',
+      technical: { corners: 8, crossing: 8, dribbling: 8, finishing: 3, firstTouch: 12, freeKicks: 8, heading: 18, longShots: 7, marking: 16, passing: 10, penalties: 8, tackling: 16, technique: 13 },
+      mental: { aggression: 17, anticipation: 14, bravery: 14, composure: 12, concentration: 15, decisions: 14, determination: 14, flair: 8, leadership: 9, offTheBall: 7, positioning: 17, teamwork: 13, vision: 8, workRate: 13 },
+      physical: { acceleration: 13, agility: 12, balance: 14, jumping: 18, naturalFitness: 15, pace: 12, stamina: 13, strength: 17 },
+    },
+    {
+      id: 'vil-logan-costa', name: "Logan Costa", number: 2, age: 25, nationality: 'CPV', positions: ['DC'], foot: 'R',
+      technical: { corners: 8, crossing: 8, dribbling: 8, finishing: 3, firstTouch: 11, freeKicks: 8, heading: 15, longShots: 7, marking: 15, passing: 11, penalties: 8, tackling: 15, technique: 12 },
+      mental: { aggression: 14, anticipation: 14, bravery: 13, composure: 12, concentration: 14, decisions: 13, determination: 13, flair: 8, leadership: 9, offTheBall: 7, positioning: 16, teamwork: 12, vision: 8, workRate: 12 },
+      physical: { acceleration: 16, agility: 13, balance: 13, jumping: 17, naturalFitness: 14, pace: 16, stamina: 12, strength: 15 },
+    },
+    {
+      id: 'vil-willy-kambwala', name: "Willy Kambwala", number: 5, age: 22, nationality: 'FRA', positions: ['DC'], foot: 'R',
+      technical: { corners: 8, crossing: 8, dribbling: 8, finishing: 3, firstTouch: 11, freeKicks: 8, heading: 15, longShots: 7, marking: 15, passing: 11, penalties: 8, tackling: 15, technique: 12 },
+      mental: { aggression: 14, anticipation: 14, bravery: 13, composure: 11, concentration: 14, decisions: 12, determination: 13, flair: 8, leadership: 7, offTheBall: 7, positioning: 16, teamwork: 12, vision: 8, workRate: 12 },
+      physical: { acceleration: 16, agility: 13, balance: 13, jumping: 17, naturalFitness: 14, pace: 16, stamina: 12, strength: 15 },
+    },
+    {
+      id: 'vil-sergi-cardona', name: "Sergi Cardona", number: 23, age: 27, nationality: 'ESP', positions: ['DL'], foot: 'L',
+      technical: { corners: 7, crossing: 18, dribbling: 17, finishing: 9, firstTouch: 13, freeKicks: 9, heading: 11, longShots: 8, marking: 12, passing: 14, penalties: 9, tackling: 15, technique: 12 },
+      mental: { aggression: 12, anticipation: 15, bravery: 12, composure: 13, concentration: 15, decisions: 12, determination: 14, flair: 7, leadership: 9, offTheBall: 16, positioning: 13, teamwork: 14, vision: 8, workRate: 16 },
+      physical: { acceleration: 16, agility: 14, balance: 12, jumping: 12, naturalFitness: 14, pace: 16, stamina: 17, strength: 13 },
+    },
+    {
+      id: 'vil-alfonso-pedraza', name: "Alfonso Pedraza", number: 24, age: 30, nationality: 'ESP', positions: ['DL', 'ML'], foot: 'L',
+      technical: { corners: 9, crossing: 19, dribbling: 15, finishing: 7, firstTouch: 12, freeKicks: 7, heading: 13, longShots: 8, marking: 12, passing: 14, penalties: 7, tackling: 14, technique: 14 },
+      mental: { aggression: 13, anticipation: 14, bravery: 12, composure: 11, concentration: 13, decisions: 12, determination: 14, flair: 9, leadership: 9, offTheBall: 15, positioning: 11, teamwork: 15, vision: 9, workRate: 15 },
+      physical: { acceleration: 17, agility: 14, balance: 12, jumping: 12, naturalFitness: 13, pace: 15, stamina: 15, strength: 12 },
+      flag: "May have left (or been loaned out) in the summer-2026 window; not confirmed.",
+    },
+    {
+      id: 'vil-santi-comesana', name: "Santi Comesaña", number: 14, age: 30, nationality: 'ESP', positions: ['MC'], foot: 'R',
+      technical: { corners: 13, crossing: 12, dribbling: 15, finishing: 12, firstTouch: 17, freeKicks: 13, heading: 8, longShots: 16, marking: 14, passing: 18, penalties: 8, tackling: 16, technique: 17 },
+      mental: { aggression: 12, anticipation: 15, bravery: 14, composure: 15, concentration: 13, decisions: 18, determination: 16, flair: 13, leadership: 13, offTheBall: 17, positioning: 15, teamwork: 16, vision: 13, workRate: 20 },
+      physical: { acceleration: 11, agility: 13, balance: 12, jumping: 7, naturalFitness: 15, pace: 13, stamina: 19, strength: 13 },
+    },
+    {
+      id: 'vil-pape-gueye', name: "Pape Gueye", number: 18, age: 27, nationality: 'SEN', positions: ['DM', 'MC'], foot: 'L',
+      technical: { corners: 10, crossing: 10, dribbling: 8, finishing: 8, firstTouch: 15, freeKicks: 8, heading: 14, longShots: 13, marking: 15, passing: 17, penalties: 8, tackling: 20, technique: 12 },
+      mental: { aggression: 18, anticipation: 17, bravery: 15, composure: 13, concentration: 14, decisions: 17, determination: 15, flair: 10, leadership: 8, offTheBall: 9, positioning: 16, teamwork: 18, vision: 11, workRate: 17 },
+      physical: { acceleration: 14, agility: 13, balance: 13, jumping: 13, naturalFitness: 14, pace: 12, stamina: 16, strength: 15 },
+    },
+    {
+      id: 'vil-alberto-moleiro', name: "Alberto Moleiro", number: 20, age: 22, nationality: 'ESP', positions: ['ML', 'AML', 'AMC'], foot: 'L',
+      technical: { corners: 14, crossing: 13, dribbling: 17, finishing: 16, firstTouch: 18, freeKicks: 14, heading: 9, longShots: 17, marking: 10, passing: 20, penalties: 14, tackling: 9, technique: 18 },
+      mental: { aggression: 8, anticipation: 16, bravery: 10, composure: 15, concentration: 14, decisions: 17, determination: 15, flair: 20, leadership: 10, offTheBall: 16, positioning: 9, teamwork: 13, vision: 19, workRate: 15 },
+      physical: { acceleration: 13, agility: 17, balance: 15, jumping: 8, naturalFitness: 17, pace: 15, stamina: 14, strength: 9 },
+    },
+    {
+      id: 'vil-ilias-akhomach', name: "Ilias Akhomach", number: 11, age: 22, nationality: 'MAR', positions: ['MR', 'AMR'], foot: 'L',
+      technical: { corners: 11, crossing: 13, dribbling: 19, finishing: 18, firstTouch: 15, freeKicks: 13, heading: 7, longShots: 14, marking: 8, passing: 14, penalties: 13, tackling: 9, technique: 15 },
+      mental: { aggression: 8, anticipation: 13, bravery: 8, composure: 13, concentration: 13, decisions: 11, determination: 12, flair: 15, leadership: 7, offTheBall: 15, positioning: 9, teamwork: 12, vision: 12, workRate: 14 },
+      physical: { acceleration: 16, agility: 16, balance: 14, jumping: 8, naturalFitness: 14, pace: 16, stamina: 15, strength: 9 },
+    },
+    {
+      id: 'vil-nicolas-pepe', name: "Nicolas Pépé", number: 19, age: 31, nationality: 'CIV', positions: ['MR', 'AMR'], foot: 'L',
+      technical: { corners: 14, crossing: 15, dribbling: 18, finishing: 17, firstTouch: 15, freeKicks: 12, heading: 10, longShots: 15, marking: 9, passing: 15, penalties: 12, tackling: 9, technique: 18 },
+      mental: { aggression: 10, anticipation: 13, bravery: 9, composure: 13, concentration: 12, decisions: 14, determination: 13, flair: 18, leadership: 11, offTheBall: 15, positioning: 9, teamwork: 14, vision: 14, workRate: 14 },
+      physical: { acceleration: 17, agility: 16, balance: 15, jumping: 9, naturalFitness: 13, pace: 15, stamina: 13, strength: 9 },
+    },
+    {
+      id: 'vil-tajon-buchanan', name: "Tajon Buchanan", number: 17, age: 27, nationality: 'CAN', positions: ['MR', 'DR', 'AMR'], foot: 'R',
+      technical: { corners: 12, crossing: 19, dribbling: 19, finishing: 14, firstTouch: 16, freeKicks: 14, heading: 7, longShots: 12, marking: 8, passing: 15, penalties: 14, tackling: 9, technique: 16 },
+      mental: { aggression: 8, anticipation: 14, bravery: 8, composure: 14, concentration: 14, decisions: 13, determination: 13, flair: 14, leadership: 9, offTheBall: 16, positioning: 9, teamwork: 13, vision: 13, workRate: 15 },
+      physical: { acceleration: 18, agility: 17, balance: 15, jumping: 8, naturalFitness: 15, pace: 18, stamina: 16, strength: 9 },
+    },
+    {
+      id: 'vil-alfon-gonzalez', name: "Alfon González", number: 16, age: 27, nationality: 'ESP', positions: ['ML', 'AML'], foot: 'L',
+      technical: { corners: 10, crossing: 17, dribbling: 17, finishing: 12, firstTouch: 14, freeKicks: 12, heading: 6, longShots: 10, marking: 7, passing: 13, penalties: 12, tackling: 8, technique: 14 },
+      mental: { aggression: 7, anticipation: 12, bravery: 7, composure: 12, concentration: 12, decisions: 11, determination: 11, flair: 12, leadership: 8, offTheBall: 14, positioning: 8, teamwork: 11, vision: 11, workRate: 13 },
+      physical: { acceleration: 16, agility: 15, balance: 13, jumping: 7, naturalFitness: 13, pace: 16, stamina: 14, strength: 8 },
+      flag: "On loan / loan return reported for 2026-27; status not confirmed.",
+    },
+    {
+      id: 'vil-georges-mikautadze', name: "Georges Mikautadze", number: 9, age: 25, nationality: 'GEO', positions: ['ST'], foot: 'R',
+      technical: { corners: 9, crossing: 9, dribbling: 15, finishing: 19, firstTouch: 16, freeKicks: 9, heading: 15, longShots: 12, marking: 8, passing: 9, penalties: 15, tackling: 8, technique: 15 },
+      mental: { aggression: 9, anticipation: 18, bravery: 12, composure: 18, concentration: 13, decisions: 12, determination: 14, flair: 13, leadership: 10, offTheBall: 18, positioning: 9, teamwork: 13, vision: 10, workRate: 11 },
+      physical: { acceleration: 15, agility: 14, balance: 16, jumping: 16, naturalFitness: 15, pace: 15, stamina: 11, strength: 14 },
+    },
+    {
+      id: 'vil-gerard-moreno', name: "Gerard Moreno", number: 7, age: 34, nationality: 'ESP', positions: ['ST'], foot: 'L',
+      technical: { corners: 8, crossing: 8, dribbling: 15, finishing: 17, firstTouch: 16, freeKicks: 8, heading: 16, longShots: 12, marking: 7, passing: 14, penalties: 18, tackling: 7, technique: 17 },
+      mental: { aggression: 8, anticipation: 16, bravery: 12, composure: 18, concentration: 13, decisions: 15, determination: 14, flair: 13, leadership: 13, offTheBall: 16, positioning: 9, teamwork: 13, vision: 15, workRate: 13 },
+      physical: { acceleration: 12, agility: 11, balance: 16, jumping: 16, naturalFitness: 12, pace: 12, stamina: 10, strength: 16 },
+      flag: "May have left (or been loaned out) in the summer-2026 window; not confirmed.",
+    },
+    {
+      id: 'vil-ayoze-perez', name: "Ayoze Pérez", number: 22, age: 33, nationality: 'ESP', positions: ['ST', 'AMR'], foot: 'R',
+      technical: { corners: 8, crossing: 7, dribbling: 15, finishing: 17, firstTouch: 17, freeKicks: 8, heading: 16, longShots: 14, marking: 9, passing: 16, penalties: 15, tackling: 8, technique: 17 },
+      mental: { aggression: 7, anticipation: 17, bravery: 14, composure: 18, concentration: 13, decisions: 17, determination: 16, flair: 13, leadership: 15, offTheBall: 17, positioning: 9, teamwork: 12, vision: 14, workRate: 14 },
+      physical: { acceleration: 11, agility: 13, balance: 14, jumping: 14, naturalFitness: 13, pace: 13, stamina: 10, strength: 17 },
+    },
+    {
+      id: 'vil-tani-oluwaseyi', name: "Tani Oluwaseyi", number: 21, age: 26, nationality: 'CAN', positions: ['ST'], foot: 'R',
+      technical: { corners: 6, crossing: 7, dribbling: 15, finishing: 17, firstTouch: 17, freeKicks: 8, heading: 13, longShots: 12, marking: 7, passing: 12, penalties: 15, tackling: 8, technique: 12 },
+      mental: { aggression: 10, anticipation: 17, bravery: 12, composure: 16, concentration: 13, decisions: 12, determination: 16, flair: 11, leadership: 8, offTheBall: 17, positioning: 8, teamwork: 15, vision: 12, workRate: 17 },
+      physical: { acceleration: 14, agility: 14, balance: 14, jumping: 14, naturalFitness: 14, pace: 14, stamina: 17, strength: 15 },
+    },
+  ],
+});

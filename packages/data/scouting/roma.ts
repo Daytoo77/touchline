@@ -1,0 +1,32 @@
+import { FLAG_LEAVE, FLAG_LOAN, FLAG_NEW, kit, scout } from '../src/scout';
+
+export default scout({
+  id: 'roma', name: 'Roma', shortName: 'Roma', abbr: 'ROM', country: 'ITA', pot: 2, prefix: 'rom',
+  kits: { home: kit('#8e1f2f', '#f0bc42', 'plain', '#ffffff', '#f0bc42'), away: kit('#f5f5f5', '#8e1f2f', 'plain', '#f5f5f5', '#8e1f2f'), gk: kit('#16a34a', '#111111', 'plain', '#111111', '#ffffff') },
+  formation: '3-4-2-1', instructions: { mentality: 1, pressing: 2, line: 1, tempo: 1 },
+  players: [
+    [99, 'Mile Svilar', 26, 'SRB', 'GK', 'R', 16, 'gk', { reflexes: 19 }],
+    [95, 'Pierluigi Gollini', 31, 'ITA', 'GK', 'R', 12, 'gk'],
+    [23, 'Gianluca Mancini', 30, 'ITA', 'DC', 'R', 15, 'cbStopper', { aggression: 18 }],
+    [5, 'Evan Ndicka', 27, 'CIV', 'DC', 'L', 15, 'cbAthletic'],
+    [22, 'Mario Hermoso', 31, 'ESP', 'DC,DL', 'L', 14, 'cbBallPlayer', {}, FLAG_LEAVE],
+    [87, 'Daniele Ghilardi', 23, 'ITA', 'DC', 'R', 14, 'cbStopper'],
+    [24, 'Jan Ziółkowski', 21, 'POL', 'DC', 'R', 13, 'cbStopper'],
+    [19, 'Zeki Çelik', 29, 'TUR', 'DR,DC,WBR', 'R', 13.5, 'fbDefensive'],
+    [3, 'Angeliño', 29, 'ESP', 'WBL,DL', 'L', 14.5, 'fbAttacking'],
+    [43, 'Wesley', 22, 'BRA', 'WBR,DR', 'R', 14.5, 'fbAttacking', { pace: 18 }],
+    [2, 'Devyne Rensch', 23, 'NED', 'WBR,DR', 'R', 13.5, 'fbAttacking'],
+    [4, 'Bryan Cristante', 31, 'ITA', 'MC,DM,DC', 'R', 14.5, 'dmAnchor'],
+    [17, 'Manu Koné', 25, 'FRA', 'MC,DM', 'R', 15.5, 'cmBoxToBox'],
+    [8, 'Neil El Aynaoui', 25, 'MAR', 'DM,MC', 'R', 14.5, 'dmBallWinner'],
+    [61, 'Niccolò Pisilli', 22, 'ITA', 'MC', 'R', 13.5, 'cmBoxToBox'],
+    [7, 'Lorenzo Pellegrini', 30, 'ITA', 'AMC,MC', 'R', 14.5, 'amCreator', { corners: 17 }, FLAG_LEAVE],
+    [18, 'Matías Soulé', 23, 'ARG', 'AMR,AMC', 'L', 15, 'wingerInverted'],
+    [21, 'Paulo Dybala', 32, 'ARG', 'AMC,ST,AMR', 'L', 15.5, 'amCreator', { freeKicks: 18, finishing: 16 }, FLAG_LEAVE],
+    [35, 'Tommaso Baldanzi', 23, 'ITA', 'AMC', 'L', 13.5, 'amCreator'],
+    [92, 'Stephan El Shaarawy', 34, 'ITA', 'AML,WBL', 'R', 13.5, 'wingerInverted', {}, FLAG_LEAVE],
+    [11, 'Artem Dovbyk', 29, 'UKR', 'ST', 'L', 14.5, 'stTarget'],
+    [14, 'Donyell Malen', 27, 'NED', 'ST,AMR', 'R', 15, 'stPacey', {}, FLAG_NEW],
+    [9, 'Evan Ferguson', 21, 'IRL', 'ST', 'R', 13.5, 'stComplete', {}, FLAG_LOAN],
+  ],
+});
