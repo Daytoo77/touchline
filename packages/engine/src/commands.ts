@@ -65,9 +65,10 @@ export function applyCommand(m: Match, seat: Seat, cmd: MatchCommand): string | 
   switch (cmd.type) {
     case 'tactic': {
       if (s.phase === 'shootout') return 'Tactics are locked during the shootout.';
-      const err = validateTactic(m, t, cmd.tactic);
+      const tactic = reconcileTactic(t, cmd.tactic);
+      const err = validateTactic(m, t, tactic);
       if (err) return err;
-      applyTactic(m, t, cmd.tactic);
+      applyTactic(m, t, tactic);
       m.emit({ type: 'notice', team: side, kind: 'tacticalChange' });
       return null;
     }
@@ -129,6 +130,36 @@ export function applyCommand(m: Match, seat: Seat, cmd: MatchCommand): string | 
       return null;
     }
   }
+}
+
+/**
+ * A manager may have drafted the tactic before a substitution or red card happened. Swap subbed-off players
+ * for their replacements and clear sent-off players, so the change still applies to the current XI.
+ */
+function reconcileTactic(t: TeamRt, tactic0: Tactic): Tactic {
+  const tactic = structuredClone(tactic0);
+  const on = new Set(t.players.filter((p) => p.onPitch).map((p) => p.def.id));
+  const sentOff = new Set(t.players.filter((p) => p.sentOff).map((p) => p.def.id));
+  for (const slot of tactic.slots) {
+    let id = slot.playerId;
+    if (!id || on.has(id)) continue;
+    let guard = 0;
+    while (id && !on.has(id) && t.replacedBy[id] && guard++ < 12) id = t.replacedBy[id]!;
+    if (id && on.has(id)) slot.playerId = id;
+    else if (sentOff.has(slot.playerId!) || (id && sentOff.has(id))) slot.playerId = null;
+    // Anything else (a bench player, an unknown id) is left as is and rejected by validation.
+  }
+  // Anyone on the pitch but missing from the draft (e.g. the GK stand-in after a red card) fills an empty slot.
+  const placed = new Set(tactic.slots.map((s) => s.playerId).filter(Boolean));
+  for (const p of t.players) {
+    if (!p.onPitch || placed.has(p.def.id)) continue;
+    const empty = tactic.slots.findIndex((s, i) => !s.playerId && (i > 0 || p.slot === 0));
+    if (empty >= 0) {
+      tactic.slots[empty]!.playerId = p.def.id;
+      placed.add(p.def.id);
+    }
+  }
+  return tactic;
 }
 
 function validateTactic(m: Match, t: TeamRt, tactic: Tactic): string | null {
@@ -213,6 +244,7 @@ function doSub(m: Match, t: TeamRt, outId: string, inId: string, _free: boolean)
   m.players[out.idx] = np;
   t.bench = t.bench.filter((b) => b !== inId);
   t.subbedOff.push(outId);
+  t.replacedBy[outId] = inId;
   t.tactic.slots[slot]!.playerId = inId;
   t.subsUsed++;
   refreshEffective(m, np);

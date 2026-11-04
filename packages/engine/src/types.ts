@@ -94,6 +94,8 @@ export interface TeamRt {
   players: PlayerRt[];
   bench: string[];
   subbedOff: string[];
+  /** out → in, for reconciling tactics drafted before a substitution happened. */
+  replacedBy: Record<string, string>;
   subsUsed: number;
   windowsUsed: number;
   subsAllowed: number;

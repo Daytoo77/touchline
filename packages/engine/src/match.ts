@@ -157,6 +157,7 @@ export class Match {
       players: [],
       bench: [...sheet.bench],
       subbedOff: [],
+      replacedBy: {},
       subsUsed: 0,
       windowsUsed: 0,
       subsAllowed: RULES.subs,

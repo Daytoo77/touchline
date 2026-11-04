@@ -181,6 +181,19 @@ describe('in-match management', () => {
     expect(m.teams[0].instr.mentality).toBe(2);
   });
 
+  it('a tactic drafted before a substitution still applies after it (reconciled to the replacement)', () => {
+    const m = newMatch(14);
+    toBreak(m, 'halfTime');
+    const draft = structuredClone(m.teams[0].tactic);
+    const out = m.teams[0].players.find((p) => p.onPitch && p.slot === 6)!.def.id;
+    const inn = benchOutfield(m, 0)[0]!;
+    expect(m.command(0, { type: 'sub', out, in: inn })).toBeNull();
+    draft.instructions.tempo = 2;
+    expect(m.command(0, { type: 'tactic', tactic: draft })).toBeNull();
+    expect(m.teams[0].tactic.slots[6]!.playerId).toBe(inn);
+    expect(m.teams[0].instr.tempo).toBe(2);
+  });
+
   it('both managers ready ends the break immediately', () => {
     const m = newMatch(13);
     toBreak(m, 'halfTime');

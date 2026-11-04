@@ -1,5 +1,5 @@
 import { FORMATIONS, RULES, isRoleValid, positionFit, rolesForPosition, type Club, type FormationId, type Tactic, type TeamSheet } from '@touchline/shared';
-import { abilityAt, pickSetPieces, pickXI } from '@touchline/engine';
+import { abilityAt, pickSetPieces } from '@touchline/engine';
 
 /** A thing you can tap or drag on the lineup screen. */
 export type Ref = { kind: 'slot'; i: number } | { kind: 'player'; id: string };
@@ -72,32 +72,35 @@ export function toggleBench(sheet0: TeamSheet, id: string): TeamSheet {
   return sheet;
 }
 
-/** Change formation keeping the same XI, re-fitted to the new slots; roles reset to the formation's defaults. */
+/**
+ * Change formation keeping exactly the same players, re-fitted to the new slots (every player is placed;
+ * with fewer than eleven, the most advanced slots stay empty). Roles reset to the formation's defaults.
+ */
 export function changeFormation(tactic0: Tactic, players: Club['players'], formation: FormationId): Tactic {
   const tactic = structuredClone(tactic0);
   const ids = tactic.slots.map((s) => s.playerId).filter((x): x is string => !!x);
   const pool = players.filter((p) => ids.includes(p.id));
-  const empty = 11 - ids.length;
-  let xi = pickXI(pool, formation);
-  // With fewer than 11 (red card), leave the most advanced slots empty.
-  if (empty > 0) {
-    const f = FORMATIONS[formation];
-    const order = f.slots.map((s, i) => ({ i, u: s.u })).sort((a, b) => b.u - a.u);
-    const keep = new Set(order.slice(empty).map((o) => o.i));
-    const xi2 = pickXI(pool, formation);
-    xi = xi2.map((id, i) => (keep.has(i) ? id : null));
-    // Re-fit the dropped players into the kept slots.
-    const placed = new Set(xi.filter(Boolean) as string[]);
-    for (const p of pool) {
-      if (placed.has(p.id)) continue;
-      const free = xi.findIndex((x, i) => x === null && keep.has(i));
-      if (free >= 0) {
-        xi[free] = p.id;
-        placed.add(p.id);
-      }
-    }
-  }
   const f = FORMATIONS[formation];
+  const xi: (string | null)[] = new Array(11).fill(null);
+  const left = new Set(pool.map((p) => p.id));
+  // Keeper: the current one if possible, else the best available.
+  const currentGk = tactic.slots[0]?.playerId;
+  const gk = (currentGk && left.has(currentGk) ? pool.find((p) => p.id === currentGk) : undefined) ?? pool.slice().sort((a, b) => abilityAt(b, 'GK') - abilityAt(a, 'GK'))[0];
+  if (gk) {
+    xi[0] = gk.id;
+    left.delete(gk.id);
+  }
+  // Outfield slots to fill: the most defensive ones first when short-handed.
+  const order = f.slots.map((s, i) => ({ i, u: s.u })).filter((o) => o.i > 0).sort((a, b) => a.u - b.u);
+  const keep = order.slice(0, left.size).map((o) => o.i);
+  const pairs: { s: number; slot: number; id: string }[] = [];
+  for (const slot of keep) for (const p of pool) if (left.has(p.id)) pairs.push({ s: abilityAt(p, f.slots[slot]!.pos), slot, id: p.id });
+  pairs.sort((a, b) => b.s - a.s || a.slot - b.slot || (a.id < b.id ? -1 : 1));
+  for (const pr of pairs) {
+    if (xi[pr.slot] || !left.has(pr.id)) continue;
+    xi[pr.slot] = pr.id;
+    left.delete(pr.id);
+  }
   tactic.formation = formation;
   tactic.slots = f.slots.map((s, i) => ({ playerId: xi[i] ?? null, role: s.role, duty: s.duty }));
   return tactic;
@@ -124,4 +127,21 @@ export function ratingAt(club: Club, playerId: string, formation: FormationId, i
   const p = club.players.find((q) => q.id === playerId);
   if (!p) return 0;
   return abilityAt(p, FORMATIONS[formation].slots[i]!.pos);
+}
+
+/** Down to ten: move the most advanced player into an empty, more important slot (as the AI does). */
+export function reshapeForTen(tactic0: Tactic): Tactic | null {
+  const tactic = structuredClone(tactic0);
+  const f = FORMATIONS[tactic.formation];
+  const empty = tactic.slots.findIndex((s, i) => i > 0 && !s.playerId);
+  if (empty < 0) return null;
+  let adv = -1;
+  for (let i = 1; i < 11; i++) {
+    if (!tactic.slots[i]!.playerId) continue;
+    if (adv < 0 || f.slots[i]!.u > f.slots[adv]!.u) adv = i;
+  }
+  if (adv < 0 || f.slots[adv]!.u <= f.slots[empty]!.u + 4) return null;
+  tactic.slots[empty] = { ...tactic.slots[empty]!, playerId: tactic.slots[adv]!.playerId };
+  tactic.slots[adv] = { ...tactic.slots[adv]!, playerId: null };
+  return tactic;
 }

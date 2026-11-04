@@ -1,11 +1,12 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import { clockLabel } from '@touchline/commentary';
 import { SHOUTS, SHOUT_HINT, SHOUT_LABEL, TALK_LABEL, TALK_TONES, colourDistance, type Club, type Kit, type MatchCommand, type Side, type Tactic, type TeamStats } from '@touchline/shared';
 import { playerName, useMatch } from '../matchStore';
 import { KitSwatch } from './Kit';
-import { DragGhost, LineupBoard, SquadRow, useMoveGestures } from './LineupBoard';
+import { DragGhost, LineupBoard, useMoveGestures } from './LineupBoard';
 import { FormationSelect, InstructionsPanel, RolesPanel, SetPiecesPanel } from './TacticPanels';
-import { applyMove, changeFormation } from '../lib/sheet';
+import { applyMove, changeFormation, reshapeForTen } from '../lib/sheet';
+import { FORMATIONS } from '@touchline/shared';
 
 export function Scorebar({ onMenu }: { onMenu?: () => void }) {
   const init = useMatch((s) => s.init);
@@ -179,6 +180,23 @@ export function LiveTactics({ club, send }: { club: Club; send(c: MatchCommand):
       </div>
       {sub === 'board' && (
         <>
+          {(() => {
+            const empty = tactic.slots.findIndex((x, i) => i > 0 && !x.playerId);
+            const fix = empty > 0 ? reshapeForTen(tactic) : null;
+            if (empty < 0) return null;
+            return (
+              <div className="card small stack" style={{ borderColor: 'var(--bad)', padding: 10, gap: 8 }}>
+                <span>
+                  Down to ten: the {FORMATIONS[tactic.formation].slots[empty]!.pos} slot is empty. Pick a formation, move a player into it, or:
+                </span>
+                {fix && (
+                  <button className="btn small" onClick={() => setDraft(fix)}>
+                    Drop the most advanced player into the gap
+                  </button>
+                )}
+              </div>
+            );
+          })()}
           <FormationSelect value={tactic.formation} onChange={(f) => setDraft(changeFormation(tactic, club.players.filter((p) => tactic.slots.some((s) => s.playerId === p.id)), f))} />
           <LineupBoard club={club} tactic={tactic} kit={init.teams[init.you].kit} gkKit={init.teams[init.you].gkKit} g={g} meta={meta} />
           <div className="muted small">Swap positions by dragging or tapping two players. Use the Subs tab to bring players on.</div>
@@ -200,13 +218,39 @@ export function LiveTactics({ club, send }: { club: Club; send(c: MatchCommand):
   );
 }
 
+function SubRow(props: { club: Club; id: string; pos?: string; cond?: number; rating?: string; dim?: boolean; onClick(): void }) {
+  const p = props.club.players.find((q) => q.id === props.id);
+  if (!p) return null;
+  return (
+    <button className="squad-row" style={{ width: '100%', textAlign: 'left', opacity: props.dim ? 0.4 : 1 }} disabled={props.dim} onClick={props.onClick}>
+      <span className="num">{p.number}</span>
+      <span className="name">
+        {playerName(p.id)}
+        {p.flag && (
+          <span className="pill flag" title={p.flag} style={{ marginLeft: 6 }}>
+            ?
+          </span>
+        )}
+      </span>
+      <span className="pill">{props.pos ?? p.positions.slice(0, 2).join(' ')}</span>
+      {props.cond !== undefined && (
+        <div className="cond" title={`Condition ${Math.round(props.cond * 100)}%`}>
+          <div style={{ width: `${props.cond * 100}%`, background: props.cond > 0.75 ? 'var(--good)' : props.cond > 0.6 ? 'var(--warn)' : 'var(--bad)' }} />
+        </div>
+      )}
+      {props.rating && <span className="rating">{props.rating}</span>}
+    </button>
+  );
+}
+
 export function SubsPanel({ club, send }: { club: Club; send(c: MatchCommand): Promise<{ ok: boolean; error?: string }> }) {
   const priv = useMatch((s) => s.priv);
   const pub = useMatch((s) => s.pub);
   const [out, setOut] = useState<string | null>(null);
-  const noop = useMoveGestures(() => {});
-  const onPitch = useMemo(() => (priv ? priv.players.filter((p) => p.onPitch) : []), [priv]);
   if (!priv) return null;
+  const f = FORMATIONS[priv.tactic.formation];
+  const slotOf = (id: string) => priv.tactic.slots.findIndex((s) => s.playerId === id);
+  const onPitch = priv.players.filter((p) => p.onPitch).sort((a, b) => slotOf(a.id) - slotOf(b.id));
   const bench = priv.bench.filter((id) => !priv.subbedOff.includes(id));
   const pendingOut = new Set(priv.pendingSubs.map((p) => p.out));
   const pendingIn = new Set(priv.pendingSubs.map((p) => p.in));
@@ -240,22 +284,27 @@ export function SubsPanel({ club, send }: { club: Club; send(c: MatchCommand): P
           ))}
         </div>
       )}
-      <div className="pot-h">{out ? `Who replaces ${playerName(out)}?` : '1 · Choose who comes off'}</div>
+      <div className="pot-h">{out ? `Who replaces ${playerName(out)}?` : 'Tap the player to take off'}</div>
       {!out && (
         <div className="stack" style={{ gap: 4 }}>
           {onPitch.map((p) => (
-            <div key={p.id} onClick={() => !pendingOut.has(p.id) && left > 0 && setOut(p.id)} style={{ opacity: pendingOut.has(p.id) ? 0.4 : 1 }}>
-              <SquadRow club={club} id={p.id} g={noop} meta={{ cond: p.condition }} note={`${p.rating.toFixed(1)}${p.yellow ? ' · 🟨' : ''}`} />
-            </div>
+            <SubRow
+              key={p.id}
+              club={club}
+              id={p.id}
+              pos={f.slots[slotOf(p.id)]?.pos}
+              cond={p.condition}
+              rating={`${p.rating.toFixed(1)}${p.yellow ? ' 🟨' : ''}`}
+              dim={pendingOut.has(p.id) || left <= 0}
+              onClick={() => setOut(p.id)}
+            />
           ))}
         </div>
       )}
       {out && (
         <div className="stack" style={{ gap: 4 }}>
           {bench.map((id) => (
-            <div key={id} onClick={() => !pendingIn.has(id) && doSub(id)} style={{ opacity: pendingIn.has(id) ? 0.4 : 1 }}>
-              <SquadRow club={club} id={id} g={noop} />
-            </div>
+            <SubRow key={id} club={club} id={id} dim={pendingIn.has(id)} onClick={() => doSub(id)} />
           ))}
           <button className="btn" onClick={() => setOut(null)}>
             Back
