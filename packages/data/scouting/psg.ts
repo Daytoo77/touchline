@@ -1,0 +1,30 @@
+import { FLAG_LEAVE, kit, scout } from '../src/scout';
+
+export default scout({
+  id: 'psg', name: 'Paris Saint-Germain', shortName: 'PSG', abbr: 'PSG', country: 'FRA', pot: 1, prefix: 'psg',
+  kits: { home: kit('#1b2a4e', '#da291c', 'plain', '#1b2a4e', '#ffffff'), away: kit('#f5f5f5', '#1b2a4e', 'plain', '#f5f5f5', '#1b2a4e'), gk: kit('#22c55e', '#111111', 'plain', '#111111', '#111111') },
+  formation: '4-3-3', instructions: { mentality: 1, pressing: 2, line: 1, tempo: 1, directness: -1 },
+  players: [
+    [30, 'Lucas Chevalier', 25, 'FRA', 'GK', 'R', 15.5, 'gkSweeper'],
+    [39, 'Matvey Safonov', 27, 'RUS', 'GK', 'R', 14, 'gk'],
+    [89, 'Renato Marin', 20, 'ITA', 'GK', 'R', 11, 'gk'],
+    [2, 'Achraf Hakimi', 27, 'MAR', 'DR,WBR', 'R', 16.5, 'fbAttacking', { pace: 19, crossing: 17 }],
+    [5, 'Marquinhos', 32, 'BRA', 'DC', 'R', 16, 'cbBallPlayer', { leadership: 18 }],
+    [51, 'Willian Pacho', 24, 'ECU', 'DC', 'L', 16, 'cbAthletic'],
+    [6, 'Illia Zabarnyi', 23, 'UKR', 'DC', 'R', 15, 'cbStopper'],
+    [4, 'Lucas Beraldo', 22, 'BRA', 'DC,DL', 'L', 14, 'cbBallPlayer'],
+    [21, 'Lucas Hernández', 30, 'FRA', 'DL,DC', 'L', 15, 'fbDefensive'],
+    [25, 'Nuno Mendes', 24, 'POR', 'DL,WBL', 'L', 16.5, 'fbAttacking', { pace: 18, dribbling: 17 }],
+    [17, 'Vitinha', 26, 'POR', 'DM,MC', 'R', 17, 'dmPlaymaker', { passing: 19, vision: 18 }],
+    [87, 'João Neves', 21, 'POR', 'MC,DM', 'R', 16.5, 'cmBoxToBox', { workRate: 19, tackling: 16 }],
+    [8, 'Fabián Ruiz', 30, 'ESP', 'MC', 'L', 15.5, 'cmPlaymaker'],
+    [33, 'Warren Zaïre-Emery', 20, 'FRA', 'MC,DR', 'R', 15, 'cmBoxToBox'],
+    [24, 'Senny Mayulu', 20, 'FRA', 'MC,AMC', 'R', 13, 'cmMezzala', {}, FLAG_LEAVE],
+    [10, 'Ousmane Dembélé', 29, 'FRA', 'AMR,ST,AML', 'B', 17.5, 'wingerInverted', { dribbling: 19, finishing: 17, flair: 19 }],
+    [7, 'Khvicha Kvaratskhelia', 25, 'GEO', 'AML', 'R', 17, 'wingerInverted', { dribbling: 19, flair: 19 }],
+    [14, 'Désiré Doué', 21, 'FRA', 'AMR,AML,AMC', 'R', 16, 'wingerInverted'],
+    [29, 'Bradley Barcola', 24, 'FRA', 'AML,AMR', 'R', 15.5, 'wingerClassic', { pace: 18 }, FLAG_LEAVE],
+    [9, 'Gonçalo Ramos', 25, 'POR', 'ST', 'R', 15, 'stPoacher', {}, FLAG_LEAVE],
+    [20, 'Quentin Ndjantou', 19, 'FRA', 'ST,AMR', 'R', 12, 'stPacey'],
+  ],
+});

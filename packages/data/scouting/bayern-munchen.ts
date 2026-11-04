@@ -1,0 +1,32 @@
+import { FLAG_LEAVE, FLAG_NEW, kit, scout } from '../src/scout';
+
+export default scout({
+  id: 'bayern-munchen', name: 'Bayern München', shortName: 'Bayern', abbr: 'FCB', country: 'GER', pot: 1, prefix: 'fcb',
+  kits: { home: kit('#dc052d', '#ffffff', 'plain', '#dc052d', '#ffffff'), away: kit('#f2f2f2', '#dc052d', 'plain', '#f2f2f2', '#dc052d'), gk: kit('#334155', '#111111', 'plain', '#334155', '#ffffff') },
+  formation: '4-2-3-1', instructions: { mentality: 2, pressing: 2, line: 2, tempo: 1 },
+  players: [
+    [1, 'Manuel Neuer', 40, 'GER', 'GK', 'R', 16, 'gkSweeper', { leadership: 19 }, 'Contract ran to June 2026; not confirmed for 2026-27.'],
+    [40, 'Jonas Urbig', 23, 'GER', 'GK', 'R', 14, 'gk'],
+    [26, 'Sven Ulreich', 38, 'GER', 'GK', 'R', 11, 'gk'],
+    [2, 'Dayot Upamecano', 27, 'FRA', 'DC', 'R', 16, 'cbAthletic'],
+    [4, 'Jonathan Tah', 30, 'GER', 'DC', 'R', 16, 'cbStopper'],
+    [3, 'Kim Min-jae', 29, 'KOR', 'DC', 'R', 15.5, 'cbAthletic', {}, '', 'Kim'],
+    [21, 'Hiroki Itō', 27, 'JPN', 'DC,DL', 'L', 14.5, 'cbBallPlayer'],
+    [19, 'Alphonso Davies', 25, 'CAN', 'DL,WBL', 'L', 15.5, 'fbAttacking', { pace: 20, acceleration: 19 }],
+    [44, 'Josip Stanišić', 26, 'CRO', 'DR,DL,DC', 'R', 14.5, 'fbDefensive'],
+    [27, 'Konrad Laimer', 29, 'AUT', 'DR,MC,DM', 'R', 15, 'fbAttacking', { workRate: 19, stamina: 18 }],
+    [23, 'Sacha Boey', 26, 'FRA', 'DR', 'R', 13.5, 'fbAttacking', {}, FLAG_LEAVE],
+    [22, 'Nathaniel Brown', 23, 'GER', 'DL,WBL', 'L', 14, 'fbAttacking', {}, FLAG_NEW],
+    [6, 'Joshua Kimmich', 31, 'GER', 'DM,DR,MC', 'R', 16.5, 'dmPlaymaker', { passing: 18, corners: 17, leadership: 18 }],
+    [45, 'Aleksandar Pavlović', 22, 'GER', 'DM,MC', 'L', 15.5, 'dmPlaymaker'],
+    [20, 'Tom Bischof', 21, 'GER', 'MC,DL', 'L', 13.5, 'cmPlaymaker'],
+    [10, 'Jamal Musiala', 23, 'GER', 'AMC,AML', 'R', 17.5, 'amCreator', { dribbling: 20, agility: 19 }],
+    [8, 'Ismael Saibari', 25, 'MAR', 'AMC,MC,AMR', 'R', 15, 'cmMezzala', {}, FLAG_NEW],
+    [42, 'Lennart Karl', 18, 'GER', 'AMR,AMC', 'L', 14, 'wingerInverted'],
+    [9, 'Harry Kane', 33, 'ENG', 'ST', 'R', 18, 'stComplete', { finishing: 20, passing: 18, penalties: 20, longShots: 18 }],
+    [17, 'Michael Olise', 24, 'FRA', 'AMR,AMC', 'L', 17.5, 'wingerInverted', { crossing: 18, vision: 18, dribbling: 18 }],
+    [14, 'Luis Díaz', 29, 'COL', 'AML,ST', 'R', 16.5, 'wingerInverted', { workRate: 18 }],
+    [7, 'Serge Gnabry', 31, 'GER', 'AMR,AML,ST', 'R', 15, 'wingerInverted', {}, FLAG_LEAVE],
+    [36, 'Bara Sapoko Ndiaye', 18, 'SEN', 'ST,AML', 'R', 11.5, 'stPacey', {}, FLAG_NEW],
+  ],
+});
